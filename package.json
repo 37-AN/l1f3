@@ -1,0 +1,36 @@
+{
+  "name": "lif3-dashboard",
+  "version": "1.0.0",
+  "description": "LIF3 Financial Dashboard for Ethan Barnes - Personal wealth tracking to R1.8M target",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
+    "backend:dev": "npm run dev --workspace=backend",
+    "frontend:dev": "npm run dev --workspace=frontend",
+    "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
+    "test": "npm run test --workspace=backend && npm run test --workspace=frontend",
+    "lint": "npm run lint --workspace=backend && npm run lint --workspace=frontend",
+    "docker:up": "docker-compose up -d",
+    "docker:down": "docker-compose down"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "typescript": "^5.2.0",
+    "@types/node": "^20.8.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ethanbarnes/lif3-dashboard.git"
+  },
+  "keywords": ["financial", "dashboard", "zar", "wealth-tracking", "43v3r"],
+  "author": "Ethan Barnes <ethan@43v3r.ai>",
+  "license": "MIT"
+}

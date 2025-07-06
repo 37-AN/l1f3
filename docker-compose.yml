@@ -1,0 +1,275 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database (ARM64 optimized for M1 MacBook)
+  postgres:
+    image: postgres:15-alpine
+    platform: linux/arm64
+    container_name: lif3_postgres
+    environment:
+      POSTGRES_DB: lif3_db
+      POSTGRES_USER: ethan
+      POSTGRES_PASSWORD: lif3_secure_pass
+      POSTGRES_INITDB_ARGS: "--encoding=UTF-8 --lc-collate=C --lc-ctype=C"
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+      - ./backend/database/init:/docker-entrypoint-initdb.d
+    networks:
+      - lif3_network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ethan -d lif3_db"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Redis Cache (ARM64 optimized)
+  redis:
+    image: redis:7-alpine
+    platform: linux/arm64
+    container_name: lif3_redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    networks:
+      - lif3_network
+    command: redis-server --appendonly yes --maxmemory 256mb --maxmemory-policy allkeys-lru
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # pgAdmin for database management
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    platform: linux/arm64
+    container_name: lif3_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ethan@43v3r.ai
+      PGADMIN_DEFAULT_PASSWORD: admin123
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    networks:
+      - lif3_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # LIF3 Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+      platform: linux/arm64
+    container_name: lif3_backend
+    environment:
+      NODE_ENV: development
+      DATABASE_URL: postgres://ethan:lif3_secure_pass@postgres:5432/lif3_db
+      REDIS_URL: redis://redis:6379
+      JWT_SECRET: lif3_jwt_secret_key_for_development
+      JWT_EXPIRES_IN: 1h
+      JWT_REFRESH_EXPIRES_IN: 7d
+      GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+      GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+      GOOGLE_REDIRECT_URI: ${GOOGLE_REDIRECT_URI}
+      GOOGLE_REFRESH_TOKEN: ${GOOGLE_REFRESH_TOKEN}
+      DISCORD_BOT_TOKEN: ${DISCORD_BOT_TOKEN}
+      DISCORD_GUILD_ID: ${DISCORD_GUILD_ID}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      FRONTEND_URL: http://localhost:3000
+      LOG_LEVEL: debug
+      LOG_FILE_ENABLED: true
+      LOG_CONSOLE_ENABLED: true
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./backend/logs:/app/logs
+      - ./backend/uploads:/app/uploads
+    networks:
+      - lif3_network
+    depends_on:
+      postgres:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:3001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # LIF3 Frontend (React + Vite)
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+      platform: linux/arm64
+    container_name: lif3_frontend
+    environment:
+      VITE_API_URL: http://localhost:3001/api
+      VITE_WS_URL: ws://localhost:3001
+      VITE_ENVIRONMENT: development
+      VITE_LOG_LEVEL: debug
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    networks:
+      - lif3_network
+    depends_on:
+      - backend
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Nginx reverse proxy and load balancer
+  nginx:
+    image: nginx:alpine
+    platform: linux/arm64
+    container_name: lif3_nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl:/etc/nginx/ssl
+      - nginx_logs:/var/log/nginx
+    networks:
+      - lif3_network
+    depends_on:
+      - frontend
+      - backend
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Log aggregation and monitoring with Grafana Loki
+  loki:
+    image: grafana/loki:latest
+    platform: linux/arm64
+    container_name: lif3_loki
+    ports:
+      - "3100:3100"
+    volumes:
+      - loki_data:/loki
+      - ./monitoring/loki-config.yml:/etc/loki/local-config.yaml
+    networks:
+      - lif3_network
+    command: -config.file=/etc/loki/local-config.yaml
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Prometheus for metrics collection
+  prometheus:
+    image: prom/prometheus:latest
+    platform: linux/arm64
+    container_name: lif3_prometheus
+    ports:
+      - "9090:9090"
+    volumes:
+      - prometheus_data:/prometheus
+      - ./monitoring/prometheus.yml:/etc/prometheus/prometheus.yml
+    networks:
+      - lif3_network
+    command:
+      - '--config.file=/etc/prometheus/prometheus.yml'
+      - '--storage.tsdb.path=/prometheus'
+      - '--web.console.libraries=/etc/prometheus/console_libraries'
+      - '--web.console.templates=/etc/prometheus/consoles'
+      - '--storage.tsdb.retention.time=200h'
+      - '--web.enable-lifecycle'
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # Grafana for visualization and monitoring dashboards
+  grafana:
+    image: grafana/grafana:latest
+    platform: linux/arm64
+    container_name: lif3_grafana
+    environment:
+      GF_SECURITY_ADMIN_USER: ethan
+      GF_SECURITY_ADMIN_PASSWORD: grafana123
+      GF_USERS_ALLOW_SIGN_UP: false
+      GF_INSTALL_PLUGINS: grafana-piechart-panel,grafana-worldmap-panel
+    ports:
+      - "3300:3000"
+    volumes:
+      - grafana_data:/var/lib/grafana
+      - ./monitoring/grafana/dashboards:/etc/grafana/provisioning/dashboards
+      - ./monitoring/grafana/datasources:/etc/grafana/provisioning/datasources
+    networks:
+      - lif3_network
+    depends_on:
+      - prometheus
+      - loki
+    restart: unless-stopped
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  postgres_data:
+    driver: local
+  redis_data:
+    driver: local
+  pgadmin_data:
+    driver: local
+  loki_data:
+    driver: local
+  prometheus_data:
+    driver: local
+  grafana_data:
+    driver: local
+  nginx_logs:
+    driver: local
+
+networks:
+  lif3_network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16

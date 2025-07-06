@@ -1,0 +1,15 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 30
+    },
+    "auditLog": "logs/.5ce7140095ddafd54540e9f6cc59b38634e2d2ab-audit.json",
+    "files": [
+        {
+            "date": 1751787033711,
+            "name": "logs/lif3-error-2025-07-06.log",
+            "hash": "af240aae9e0d6385ad887a947777fe00bc5dd9d4f296152113be70fcf1128848"
+        }
+    ],
+    "hashType": "sha256"
+}

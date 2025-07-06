@@ -1,0 +1,162 @@
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:16:21'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:16:21'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:32:59'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:32:59'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:44:58'
+}

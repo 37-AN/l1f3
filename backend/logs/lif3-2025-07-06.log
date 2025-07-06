@@ -1,0 +1,5987 @@
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T07:37:06.475Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-06T07:37:06.491Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 19,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-06T07:37:06.497Z,
+  metadata: { initializationFailed: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T07:37:06.626Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 09:37:06'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T07:40:57.543Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-06T07:40:57.560Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 20,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-06T07:40:57.566Z,
+  metadata: { initializationFailed: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T07:40:57.698Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 09:40:57'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:16:21.940Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 10:16:21'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-06T08:16:21.957Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 10:16:21'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 10:16:21'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:16:21'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:16:21'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 20,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-06T08:16:21.963Z,
+  metadata: { initializationFailed: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 10:16:22'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:16:22.100Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 10:16:22'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 10:16:22'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 10:16:22'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 10:16:22'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 10:16:22'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:26:20.325Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-06T08:26:20.342Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 20,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-06T08:26:20.347Z,
+  metadata: { initializationFailed: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:26:20.493Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 10:26:20'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:27:32.885Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:27:32.885Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:27:32.886Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:27:32'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:27:32.886Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:27:32.887Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:27:32.887Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:27:32.887Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:32:59.850Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 10:32:59'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 1,
+  timestamp: 2025-07-06T08:32:59.870Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 10:32:59'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 10:32:59'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:32:59'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:32:59'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 22,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-06T08:32:59.875Z,
+  metadata: { initializationFailed: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 10:33:00'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:33:00.013Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 10:33:00'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 10:33:00'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 10:33:00'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 10:33:00'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 10:33:00'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T08:37:59.877Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 10:37:59'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 10:37:59'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:44:58.278Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 1,
+  timestamp: 2025-07-06T08:44:58.296Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  trace: 'Error: Expected token to be set for this request, but none was present\n' +
+    '    at _REST.resolveRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:313:11)\n' +
+    '    at _REST.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:255:44)\n' +
+    '    at _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:31)\n' +
+    '    at _REST.get (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:161:15)\n' +
+    '    at GuildManager.fetch (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/managers/GuildManager.js:282:41)\n' +
+    '    at DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:253:48)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:44:18)\n' +
+    '    at new DiscordBotService (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:27:10)\n' +
+    '    at Injector.instantiateClass (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:373:19)\n' +
+    '    at callback (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/core/injector/injector.js:65:45)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: Expected token to be set for this request, but none was present',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:217:52)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:45:25)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 21,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-06T08:44:58.301Z,
+  metadata: { initializationFailed: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T08:44:58.446Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 10:44:58'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ZvzyAYvGVN5uFBE1AAAC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:44:59.715Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:44:59.811Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:44:59.811Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:44:59.812Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:44:59'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:44:59.812Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:44:59.812Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:44:59.812Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:44:59.813Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'OzaeXC6qFclhhVrHAAAE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:04.992Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'zryRWLbIpoMzeD2cAAAG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:10.010Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '8mSvNzWEIBPjHIWSAAAI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:15.022Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'hD9QGVBH9Me2tY8ZAAAK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:20.031Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'XIpLtbFyDFkYOWF0AAAM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:25.042Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:45:29.984Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:45:29.985Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:45:29.985Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:45:29'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:45:29.986Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:45:29.986Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:45:29.987Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:45:29.987Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'oolIlxj2iASp7x-NAAAO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:30.049Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'spc4Xe_99vKGUbayAAAQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:35.067Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'FStB358Mi85d77KmAAAS',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:40.082Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '3Y2qHP4o5ihTdJeeAAAU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:45.097Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '9J1YgKCu4TDOlVB4AAAW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:50.111Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'iq9L5kodNSgg3W4YAAAY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:45:55.264Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '9eslGmzUrPT8wv3mAAAa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:00.386Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'z9LcYfpG1XWoSoTXAAAc',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:05.503Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'iMVlGrWdpbgiODjxAAAe',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:10.613Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'hmyyNb6ICz8KxATtAAAg',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:15.728Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'bj0KwvivCxrRVbPtAAAi',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:20.843Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'DYfe_RHdxhu-QBkrAAAk',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:21.107Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '537P8r4h6RQrAnJbAAAm',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:26.174Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'njux5Shoo9pejN4nAAAo',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:31.278Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'zcyVAZzTTiSfZmOXAAAq',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:36.383Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'O-qVWHQsoKfk9wjbAAAs',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:41.494Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'OjmiPawlChxZofXnAAAu',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:46.603Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '74MwjZB0yoyPkWyxAAAw',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:51.717Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'PWt3RN36R-T8GlPqAAAy',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:46:56.828Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'eNTcxAKzejzqvJwPAAA0',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:01.937Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'BkRZ8felPhj6xUDXAAA2',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:07.043Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'o1ZgZhfCHF6O6l9_AAA4',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:12.156Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Gipo_-i-ZnZN4F4gAAA6',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:17.166Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:47:17.992Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:47:17.993Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:47:17.994Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:47:17'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 4,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:47:17.995Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:47:17.995Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 4
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 6,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:47:17.995Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:47:17.995Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 6
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ISC_uwIcOiCdf-wqAAA9',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:18.074Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'nInimy2m8KfwICJhAAA_',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:23.248Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'A3Kkkzhz1wFLKCjaAABB',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:28.278Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'kkrehuEtrjpZwS_vAABD',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:33.291Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'aivXyXsZ8czFq-97AABF',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:38.304Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'fPA0rxrmk3jbJ1QfAABH',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:43.316Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:47:48.062Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:47:48.063Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:47:48.064Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:47:48'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:47:48.064Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:47:48.064Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:47:48.065Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:47:48.065Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'X2ITBrevN5sHO2eXAABJ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:48.332Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'FyB_EtHG0-jKRNn-AABL',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:53.361Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'm79I4bTq46FvqUy8AABN',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:47:58.373Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'R-vAfv1F7_bIGwV1AABP',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:03.404Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'dh6De_gPJNV3hKy4AABR',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:08.436Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'EFdp5a6weo4hSrPUAABT',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:13.483Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'l9oNayDFbAVsdADjAABV',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:18.591Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '2SB6bmXT_8UV65bmAABX',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:23.698Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LKZnMLcAqUrAQ6wwAABZ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:25.285Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'MXikCAqpVXZdCSBCAABb',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:30.392Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4FuaoDM0d3lCOxaoAABd',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:35.499Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:48:37.219Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:48:37.223Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 7,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:48:37.226Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:48:37'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 9,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:48:37.227Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:48:37.228Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 9
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 12,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:48:37.229Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:48:37.229Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 12
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '_7wgnZFgfuJpyfMXAABg',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:37.407Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '1C84Gre4z53OUZSXAABi',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:42.595Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:48:47.758Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:48:47.759Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:48:47.759Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:48:47'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:48:47.760Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:48:47.760Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:48:47.761Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:48:47.761Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'WRVF0uZD-Kv8d7ULAABl',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:47.805Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LjmkDdDdcl_6g0ksAABn',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:52.947Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:48:57.606Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:48:57.606Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:48:57.607Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:48:57'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:48:57.607Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:48:57.607Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:48:57.607Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:48:57.608Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'B10OawjghzD2N3dvAABq',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:48:57.794Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'rU0w1LXk-BjHuOzZAABs',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:02.935Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '_mM8IggsPpicIjGRAABu',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:08.044Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'PUHctPzC_SMaB9SgAABw',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:13.154Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'lpe2k6h5C6WFNkMTAABy',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:18.260Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'veldGM31UuL3cnmMAAB0',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:23.369Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '6bqCn8qLsSRLIntWAAB2',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:28.478Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '58u54uB1gOv3pymMAAB4',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:33.586Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'S0cUQWcSbGrkl1kiAAB6',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:38.695Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'T6XkcgQEpojMGUM_AAB8',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:43.804Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '_oQMq7xMqNdUwef_AAB-',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:48.920Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'n7wfjcvSmpPY8fpAAACA',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:54.028Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T08:49:58.300Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 10:49:58'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 10:49:58'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'M6sKbR1gWAgkCCgjAACC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:49:59.137Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'M5_BHd5ZFHLibsvhAACE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:04.244Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'PO7NivXDIP9fp1XKAACG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:09.356Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '8EkiMvqZOk2ByzjgAACI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:14.504Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'IplBsL2kMt5hGVtqAACK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:19.628Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LTAsWxguWNfa5vOKAACM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:24.736Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'gwoevmeKq5aidg8xAACO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:29.844Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'UUA9IySlrZDcpHweAACQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:34.952Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '-vAJcjkyhfwo_tGWAACS',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:40.062Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'CQxKgZmjMJMm1OuQAACU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:45.170Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LUvjeGdvCzpuzzAaAACW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:50.278Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'IV9iEfMxfGUq7NvdAACY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:50:55.387Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'PulZsHwODTbblAn0AACa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:00.494Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'k2GvrONf_LpSp88FAACc',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:05.603Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'racWBjooMhO97QgVAACe',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:10.714Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'NfM4r8JOZ_NXYfHdAACg',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:15.828Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ljM2GVOf5kLybyEoAACi',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:20.936Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '5YKCJ9IdXkUUQkWFAACk',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:26.046Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ycOwX6z13IEcEMUFAACm',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:31.153Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'IZcjf-PHpG6Xn0veAACo',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:36.260Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'GuJDE748Q2X1HC48AACq',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:41.370Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '1dTQkvoJqbULutZ1AACs',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:46.478Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'FzG-Z24RDc5_fMSkAACu',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:51.586Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'uVHhDIlYuGhyZ04cAACw',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:51:56.695Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'HwXr7syzLiC62GTDAACy',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:01.804Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Cdct1ZMRx68e3EK5AAC0',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:06.912Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '99Jjl0Txf9m5cQOwAAC2',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:12.020Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'semJLRQrtuUc77fZAAC4',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:17.128Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'IVxbM1a6nfKiqVGkAAC6',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:22.236Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'JgoKsyp0_PshI-h9AAC8',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:27.346Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'u22vg3Ogbbz5DDF0AAC-',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:32.453Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'SATEE_qXU4yhI26WAADA',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:37.561Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'sGyDa8oAclN2lHbaAADC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:42.670Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'tH7mLeO9eS-7o5B_AADE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:47.778Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'yukNPA0r3RPYjdChAADG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:52.888Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'YUWfs9moXaOoyxnYAADI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:52:58.005Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'k0_wZhot6cZoiVdZAADK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:03.113Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'olLZ6Ubv9clngKlEAADM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:08.220Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'trgJ_8i8Bi4e77gMAADO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:13.328Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'mhYdyxvTT2oVBdaoAADQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:18.534Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'WMo460Edkic3qiCJAADS',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:23.749Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ncC3xw-5-Wl8uGczAADU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:28.961Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '07DQyz_gaZI584mTAADW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:34.170Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'cYPYH004ge31Rm3XAADY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:39.294Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:53:42.769Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:53:42.771Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:53:42.771Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:53:42'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:53:42.772Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:53:42.772Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:53:42.772Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:53:42.773Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'O-KzFhlbOMBkCpUAAADa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:44.315Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:53:46.301Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:53:46.302Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:53:46.303Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:53:46'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:53:46.304Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:53:46.304Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:53:46.304Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:53:46.304Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'E2kJWC394fF8agbaAADd',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:46.374Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ZwGmO0vVZY00CGlfAADf',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:51.445Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'OWMjJZXrr0RzNmlQAADh',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:53:56.479Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'MbjM7W9R2Vd8e72rAADj',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:01.490Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'GU_Q7c7ZfYLeh7LnAADl',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:06.515Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'bnqtoASxrGlM95qAAADn',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:11.535Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'mfYKvms2X9CPABibAADp',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:16.660Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'UFAKi6IG-WLyct7dAADr',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:21.775Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Rl9rGAVLPkkOQBUUAADt',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:26.882Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LZp7BaCCshqQCpfzAADv',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:31.989Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'yCV501sG4Juvz2YsAADx',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:37.144Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'p7V5oGJSMw4wzYCBAADz',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:42.257Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 's3u7tmEWqau24J1xAAD1',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:47.412Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'xvFXGsaMsCHTHWQnAAD3',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:52.566Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'obO67O7sXYGtRPI1AAD5',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:54:57.671Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T08:54:58.312Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 10:54:58'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 10:54:58'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'E_CH8eILuHr-5rIBAAD7',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:02.818Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'yVrwLFY_WHJZHH25AAD9',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:08.089Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'e5sCWoNm8K7usXuVAAD_',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:13.225Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'xfNnTtEFaRyZkznmAAEB',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:18.333Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'WCeCQAAgTjmCG5G0AAED',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:23.446Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '9ikYGg8CDc20vgTcAAEF',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:28.600Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'lXVLQfUJR1rgwfwnAAEH',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:33.750Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'STZqEhF_cSD57ghoAAEJ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:38.909Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'FhNmOGXqddjkA_U7AAEL',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:44.066Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'A9GzkG6kiEZiC4fMAAEN',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:49.172Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '0hC-8uCjnrSQR_nzAAEP',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:54.284Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '7euaBJ5ttwpuamNPAAER',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:55:59.459Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'R1raZn_IT8lUXk2fAAET',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:04.562Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '6t-0kQGpyT4zU815AAEV',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:09.674Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'gQ_JqxNmob9u6aXmAAEX',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:14.780Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'FDtSvpAt3TTe4fLRAAEZ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:19.881Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'qNG2jePcS3TiGYUJAAEb',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:24.992Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'W5lQwT4K003tZV_JAAEd',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:30.146Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Ld3wbNETp-80AjSTAAEf',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:35.212Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'HtRIbGbac22XoxQ8AAEh',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:40.294Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'wUXFKou8f3BfckZMAAEj',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:45.446Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4v79TKXQpMfztJpeAAEl',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:50.551Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Lch-9CZHzK8vdeVwAAEn',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:56:55.695Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'BNClDI0xm6ugAigIAAEp',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:00.854Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4zE2WgRvYDmexjdQAAEr',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:06.016Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ukxsPh0CIXcxUaMAAAEt',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:11.174Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ZrPUqw52184ckFJrAAEv',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:16.279Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'VQwtFcalMxG_nlqCAAEx',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:21.422Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '9RCI_dpe8TQljX4EAAEz',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:26.556Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Et73O4k7YCj4lf1HAAE1',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:31.688Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'AjqHE1jyv7U5DohkAAE3',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:36.830Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'kbhmdBlWjT4vHyrDAAE5',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:41.972Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'caABL_Jyi2zE2RtdAAE7',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:47.110Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'SMQ4sARZ3sK_UQrZAAE9',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:52.220Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'gnrrW95bKEEVeSHgAAE_',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:57:57.355Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'xDLmLF9UIq0-5RUJAAFB',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:02.487Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'GgeJI5njCYztF6i4AAFD',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:07.621Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'u7BelHNojcfvvbaoAAFF',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:12.763Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'WGKI2wmLxXfZdx91AAFH',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:17.872Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'F95YtTfpRSv-iHwGAAFJ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:23.021Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4tda1CCdUURLaSeTAAFL',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:28.162Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'bHjOk7XSPUhtCAO3AAFN',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:33.296Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'rXIqDTq_mDedwllcAAFP',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:38.429Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jSCdaeknEHjrmPgHAAFR',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:43.561Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'wQ6nSWwPmmuJ71BZAAFT',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:48.695Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'HLXcOBsXbMlFo-wyAAFV',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:53.830Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '3Yucf6F8TDFDsek4AAFX',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:58:58.904Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'sL9_Hiv805kzVDNZAAFZ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:04.042Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'cB28wcHFDAr3iQVzAAFb',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:09.187Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'L0757oTEZIfEApQZAAFd',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:14.340Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'okzDYc8wX9mJRVrBAAFf',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:19.446Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'DuB3z7lrxWv5FafVAAFh',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:24.527Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'hU4aeJbgL5c_CPNDAAFj',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:29.687Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LVGISSyNJ5wjOLnUAAFl',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:34.823Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'HKm-MoFuqv-XTejCAAFn',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:39.974Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4QMAySOWZvdJtN_4AAFp',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:45.081Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '6uwINsRKhxsfLYYxAAFr',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:50.248Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T08:59:53.721Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T08:59:53.722Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T08:59:53.723Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 10:59:53'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:59:53.724Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:59:53.724Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 4,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T08:59:53.725Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T08:59:53.725Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 4
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'wTl240qPTdEB1UauAAFt',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T08:59:55.260Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T08:59:58.316Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 10:59:58'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 10:59:58'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'apfyeCbZa5psztUkAAFv',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T09:00:00.287Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'q50p28EnbaqrTMo1AAFx',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T09:00:05.406Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jeFsm7qtir5WqFk5AAFz',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T09:00:10.557Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T10:10:42.384Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Successfully reloaded Discord application (/) commands.',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-06T10:10:42.402Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Discord bot token not configured, skipping connection',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T10:10:42.554Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 12:10:42'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '97Mkck1jd93Tdd6oAAAB',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:10:46.507Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '-6OTfP73o-l2hoUIAAAD',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:10:51.637Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'hnUOMSJt324RHNVdAAAF',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:10:56.726Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Yyqe1Rd1JY18FLY7AAAH',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:01.804Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'OjzSUhoWwse3c-F1AAAJ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:06.911Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'BSwzgCa4buMfES6cAAAL',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:12.046Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'KVbGFGadDxm-LknuAAAN',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:17.100Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '-Z824LMkP-Dk2hD5AAAP',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:22.202Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'lOtHhp_PD8EkFEt9AAAR',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:27.338Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'N9wqDCXekGJ4BF_sAAAT',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:32.445Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '0SRxo23HMyMydNoUAAAV',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:37.579Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '2epaqRMY8eusnabrAAAX',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:42.648Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'EJhh9NcLTrHtADxrAAAZ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:47.719Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'q9t_Qlnl5EL4uZPZAAAb',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:52.769Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'vG9huIgr102VKRp4AAAd',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:11:57.894Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'KQfigHXLhAL6mJu1AAAf',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:12:03.017Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ELEepngmbeNztKtdAAAh',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:12:08.145Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'e11oqlA9Vdg4uVBwAAAj',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:12:13.252Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'a5CTuN2yTTenrwW6AAAl',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:12:18.385Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '3-ymBiWnnrXiM5NfAAAn',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:12:23.492Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Xihe6gluEp2-_AyuAAAp',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:12:28.621Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'CqPxzCI8z3GNgB4oAAAr',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:12:33.717Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T10:21:40.383Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Successfully reloaded Discord application (/) commands.',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-06T10:21:40.401Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Discord bot token not configured, skipping connection',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T10:21:40.551Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 12:21:40'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '2gruczkYHKX411MkAAAB',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:21:45.709Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'UXJltF5YLegFEJ5tAAAD',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:21:50.819Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LjM0SsP66NSUX8XUAAAF',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:21:55.946Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'EIJna_Amm1Qx21cMAAAH',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:01.078Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '7LrjvpIihQfQtG5LAAAJ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:06.211Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'xGnQzBkda2a_hIJ_AAAL',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:11.335Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'uPILdOS8V5NR6jX1AAAN',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:16.469Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'wnkxzO2ARta0hY1tAAAP',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:21.596Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '85y91qhXUo4wKsUVAAAR',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:26.705Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T10:22:27.286Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T10:22:27.287Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T10:22:27.287Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 12:22:27'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:22:27.288Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:22:27.289Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 5,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:22:27.290Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:22:27.291Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 5
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T10:22:28.126Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T10:22:28.127Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T10:22:28.127Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 12:22:28'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:22:28.128Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:22:28.129Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 4,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:22:28.129Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:22:28.129Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 4
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'o-e-60tlyaTliMUDAAAU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:28.137Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'wgIhooofytUgeWlaAAAW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:33.166Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jnDqmBhCDQ0SppUzAAAY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:38.193Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'pPfHMV8Nzo67oA1vAAAa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:43.305Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'fNlO_kMjlkHNc0wIAAAc',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:48.318Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ikRRgJ2YUVic6FUMAAAe',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:53.346Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T10:22:58.151Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T10:22:58.153Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T10:22:58.153Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 12:22:58'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 4,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:22:58.155Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:22:58.155Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 4
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 6,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:22:58.156Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:22:58.156Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 6
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'h47A1fCvxbeNDc46AAAg',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:22:58.372Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '57YO3QRFKuFx2oXfAAAi',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:03.394Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '5NJN_k7rx70BqlvkAAAk',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:08.418Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jvycPIx9xwoRFnuGAAAm',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:13.443Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '54bKxCfirJMW34aGAAAo',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:18.469Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'OZZMslmkcu0me2puAAAq',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:23.495Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T10:23:28.175Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T10:23:28.176Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T10:23:28.176Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 12:23:28'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:23:28.177Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:23:28.177Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:23:28.177Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:23:28.178Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LNoqeX0cgcJE656cAAAs',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:28.518Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LfLbVlxOkUJqc5q3AAAu',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:33.540Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'IaqQHi6TDVjMSQcLAAAw',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:38.562Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jL0PvI8C4Au0VcbrAAAy',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:43.585Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '3JYpdqRFTlcrob3jAAA0',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:48.610Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'FfRGb8kOtSWoEOqCAAA2',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:53.633Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T10:23:58.198Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T10:23:58.199Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T10:23:58.200Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 12:23:58'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:23:58.201Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:23:58.202Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 5,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:23:58.203Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:23:58.204Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 5
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'KE-crYukTsPqY1mYAAA4',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:23:58.658Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'R1q10rQQA1xZEwSVAAA6',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:03.684Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '30Oa209tP9QJqcH6AAA8',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:08.705Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'gCZvZN-cwAqPwhYRAAA-',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:13.726Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'D24XSjeGW-EzJ5gLAABA',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:18.748Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '7AajHhf-XJNdpFtHAABC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:23.773Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T10:24:28.223Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T10:24:28.223Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T10:24:28.224Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 12:24:28'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:24:28.225Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:24:28.226Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 4,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:24:28.226Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:24:28.226Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 4
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '3RwVPYzQcBMmE5XCAABE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:28.800Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'PA5wTN9lDtKbgK34AABG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:33.824Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'qSi3lfxM_bC3SoMAAABI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:38.848Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '37r0CVfBX_3-XgUaAABK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:43.872Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'g6_ase4V8PyfMkp3AABM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:48.885Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jaNdK84yMrpSUKhMAABO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:53.907Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T10:24:58.245Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T10:24:58.246Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T10:24:58.246Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 12:24:58'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 2,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:24:58.247Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:24:58.247Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 2
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T10:24:58.248Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T10:24:58.248Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'dL8k6-gnlLpqgfxvAABQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T10:24:58.931Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
