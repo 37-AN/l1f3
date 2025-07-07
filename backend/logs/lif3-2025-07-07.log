@@ -6408,3 +6408,335 @@
   message: 'ALERT [CRITICAL]: System health is critical',
   timestamp: '2025-07-07 14:54:46'
 }
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T12:59:46.739Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 14:59:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 14:59:46'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: '🔄 Creating fresh start hourly snapshot',
+  timestamp: '2025-07-07 15:00:00'
+}
+{
+  trace: 'Error: No access, refresh token, API key or refresh handler callback is set.\n' +
+    '    at OAuth2Client.getRequestMetadataAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:307:19)\n' +
+    '    at OAuth2Client.requestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:418:34)\n' +
+    '    at OAuth2Client.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:412:25)\n' +
+    '    at createAPIRequestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:303:31)\n' +
+    '    at createAPIRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:52:16)\n' +
+    '    at Resource$Files.create (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis/build/src/apis/drive/v3.js:657:65)\n' +
+    '    at GoogleDriveService.backupFinancialData (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:330:47)\n' +
+    '    at GoogleDriveService.automatedHourlySnapshot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:653:33)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async CronJob.<anonymous> (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/schedule/dist/schedule.explorer.js:119:17)',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: 'Failed to backup financial data: No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: '2025-07-07 15:00:00'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'SYNC',
+  status: 'FAILED',
+  duration: 4,
+  errorMessage: 'No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: 2025-07-07T13:00:00.013Z,
+  metadata: { operation: 'BACKUP_FINANCIAL_DATA' },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  trace: 'No access, refresh token, API key or refresh handler callback is set.',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: '❌ Failed to create hourly snapshot',
+  timestamp: '2025-07-07 15:00:00'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-07 15:03:48'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751893428609.md',
+  timestamp: '2025-07-07 15:03:48'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 8,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:03:48.610Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:04:46.737Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 15:04:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 15:04:46'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:09:46.734Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 15:09:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 15:09:46'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:14:46.735Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 15:14:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 15:14:46'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 1,
+  timestamp: 2025-07-07T13:17:04.438Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-07 15:17:04'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-07T13:17:04.440Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-07 15:17:04'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-07 15:17:04'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-07T13:17:04.455Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-07 15:17:04'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-07 15:17:04'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-07 15:17:04'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-07T13:17:04.576Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'RAG_CHROMADB',
+  action: 'INITIALIZE',
+  status: 'SUCCESS',
+  timestamp: 2025-07-07T13:17:04.619Z,
+  metadata: {
+    collectionName: 'lif3_financial_docs',
+    embeddingModel: 'Xenova/all-MiniLM-L6-v2',
+    persistPath: './storage/chromadb'
+  },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:19:46.752Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 15:19:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 15:19:46'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:24:46.756Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 15:24:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 15:24:46'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:29:46.755Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 15:29:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 15:29:46'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T13:34:46.658Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-07 15:34:46'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-07 15:34:46'
+}
