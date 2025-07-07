@@ -40,6 +40,12 @@ export declare class ClaudeAIService {
     optimize43V3RStrategy(userId: string, businessData: any): Promise<FinancialInsight>;
     assessFinancialRisk(userId: string, financialData: any): Promise<FinancialInsight>;
     generateDailyInsights(userId: string, dailyData: any): Promise<FinancialInsight[]>;
+    generateFinancialAnalysis(request: {
+        query: string;
+        context: any;
+    }): Promise<{
+        response: string;
+    }>;
     conversationalQuery(userId: string, query: string, context?: any): Promise<string>;
     private buildSpendingAnalysisPrompt;
     private buildInvestmentAdvicePrompt;

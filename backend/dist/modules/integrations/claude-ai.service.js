@@ -310,6 +310,49 @@ let ClaudeAIService = class ClaudeAIService {
             throw error;
         }
     }
+    async generateFinancialAnalysis(request) {
+        const startTime = Date.now();
+        try {
+            const response = await this.anthropic.messages.create({
+                model: 'claude-3-sonnet-20240229',
+                max_tokens: 2000,
+                messages: [{
+                        role: 'user',
+                        content: request.query
+                    }]
+            });
+            const responseText = response.content[0].text;
+            const duration = Date.now() - startTime;
+            this.logger.logIntegration({
+                service: 'CLAUDE_AI',
+                action: 'SYNC',
+                status: 'SUCCESS',
+                duration,
+                timestamp: new Date(),
+                metadata: {
+                    operation: 'FINANCIAL_ANALYSIS',
+                    queryLength: request.query.length,
+                    responseLength: responseText.length
+                }
+            });
+            return { response: responseText };
+        }
+        catch (error) {
+            const duration = Date.now() - startTime;
+            this.logger.logIntegration({
+                service: 'CLAUDE_AI',
+                action: 'SYNC',
+                status: 'FAILED',
+                duration,
+                errorMessage: error.message,
+                timestamp: new Date(),
+                metadata: {
+                    operation: 'FINANCIAL_ANALYSIS'
+                }
+            });
+            throw error;
+        }
+    }
     async conversationalQuery(userId, query, context) {
         const startTime = Date.now();
         try {

@@ -52,7 +52,7 @@ export class GoogleDriveController {
   @UseGuards(AuditLogGuard)
   @LogIntegrationEvent('LIF3 folder structure creation')
   async createFolderStructure(): Promise<{ success: boolean }> {
-    const success = await this.googleDriveService.createLIF3FolderStructure();
+    const success = await this.googleDriveService.createLIF3FreshStartFolderStructure();
     return { success };
   }
 

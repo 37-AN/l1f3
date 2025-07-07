@@ -34,8 +34,8 @@ export interface BusinessMetricLog {
     metadata?: any;
 }
 export interface IntegrationLog {
-    service: 'GOOGLE_DRIVE' | 'DISCORD' | 'CLAUDE_AI' | 'BANK_API' | 'WEBSOCKET';
-    action: 'CONNECT' | 'DISCONNECT' | 'SYNC' | 'ERROR' | 'RATE_LIMIT' | 'AUTHENTICATION_FAILED' | 'COMMAND_RECEIVED' | 'COMMAND_COMPLETED' | 'COMMAND_FAILED';
+    service: 'GOOGLE_DRIVE' | 'DISCORD' | 'CLAUDE_AI' | 'BANK_API' | 'WEBSOCKET' | 'RAG_CHROMADB' | 'RAG_AI';
+    action: 'CONNECT' | 'DISCONNECT' | 'SYNC' | 'ERROR' | 'RATE_LIMIT' | 'AUTHENTICATION_FAILED' | 'COMMAND_RECEIVED' | 'COMMAND_COMPLETED' | 'COMMAND_FAILED' | 'INITIALIZE' | 'PROCESS_DOCUMENT' | 'SEMANTIC_SEARCH' | 'GENERATE_RESPONSE' | 'ANALYZE_DOCUMENT' | 'DELETE_DOCUMENT';
     status: 'SUCCESS' | 'FAILED' | 'PARTIAL' | 'PROCESSING';
     duration?: number;
     recordsProcessed?: number;

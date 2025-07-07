@@ -1,0 +1,45 @@
+{
+  "user_id": "ethan_barnes",
+  "name": "Ethan Barnes",
+  "email": "ethan@43v3r.ai",
+  "location": {
+    "city": "Cape Town",
+    "country": "South Africa",
+    "currency": "ZAR"
+  },
+  "financial_profile": {
+    "current_net_worth": 239625,
+    "target_net_worth": 1800000,
+    "progress_percentage": 13.3,
+    "timeline_months": 18,
+    "risk_tolerance": "aggressive",
+    "investment_horizon": "long_term"
+  },
+  "business_profile": {
+    "company_name": "43V3R",
+    "industry": "AI + Web3 + Crypto",
+    "current_revenue": 0,
+    "daily_revenue_target": 4881,
+    "monthly_revenue_target": 147917,
+    "business_model": "AI_SaaS_Digital_Products"
+  },
+  "goals": {
+    "primary": "Reach R1,800,000 net worth in 18 months",
+    "business": "Build 43V3R to R4,881 daily revenue",
+    "investment": "Aggressive growth portfolio",
+    "timeline": "2025-2026"
+  },
+  "preferences": {
+    "communication_style": "technical_detailed",
+    "risk_comfort": "high",
+    "automation_level": "maximum",
+    "update_frequency": "daily"
+  },
+  "current_metrics": {
+    "last_updated": "2025-07-07",
+    "net_worth_growth_rate": "TBD",
+    "business_revenue": 0,
+    "investment_allocation": "TBD",
+    "emergency_fund": "TBD"
+  }
+}

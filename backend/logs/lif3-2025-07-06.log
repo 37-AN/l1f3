@@ -5985,3 +5985,1416 @@
   level: 'info',
   message: 'WEBSOCKET_EVENT'
 }
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T17:22:55.461Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Successfully reloaded Discord application (/) commands.',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-06T17:22:55.479Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Discord bot token not configured, skipping connection',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-06T17:22:55.633Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-06 19:22:55'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'twguZ9N3s03EDoEaAAAC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:01.873Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-06T17:24:01.884Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-06T17:24:01.886Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 3,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-06T17:24:01.887Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-06 19:24:01'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 5,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T17:24:01.889Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T17:24:01.890Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 5
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 9,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-06T17:24:01.891Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-06T17:24:01.891Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 9
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4vO2iot_x37FBtkNAAAE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:06.897Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'aJHHqkkQfSBWk4lIAAAG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:11.969Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jCKKOnRw5zjopPLuAAAI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:17.127Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'hun9WsE-yfqr1lOgAAAK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:22.278Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'oFcAldwFkcdGPhzKAAAM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:27.518Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'qo_I_nFdkWiTW5kXAAAO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:32.624Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '99eAw2S3hmDCsyBAAAAQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:37.780Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'tbNzP5yzHnoRa48dAAAS',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:42.880Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'L8fike-VZRP5TkdIAAAU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:47.960Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'LQeMw_BMWm3QIB65AAAW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:53.028Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '9IeR5gyC0wNQQ5XIAAAY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:24:58.097Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'MsuJylBPIsmILcW_AAAa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:03.227Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'PoQ8U4Wa3ECfx12zAAAc',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:08.329Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '6C0FzWcLD7km17SiAAAe',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:13.459Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'yihj09BfKoMn53jFAAAg',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:18.591Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'rV7Sh64fmJJTNwApAAAi',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:23.636Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'MXfuE5_QgUi9RoJPAAAk',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:28.785Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'VZLY1xpVeNlwYbceAAAm',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:33.877Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'DBfvrkmlZUJ5m_QMAAAo',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:39.029Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Rodcw2VpvJ2G-zhhAAAq',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:44.127Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'cCBQ48EsmUDlEAfoAAAs',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:49.216Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'VTKdPLe6lcWuI4ULAAAu',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:54.360Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'cVcsy1FoN5t_0MYfAAAw',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:25:59.504Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ri7aJFpw0fIr4t4nAAAy',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:04.642Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Dx5hJ5yXvsHSosj8AAA0',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:09.688Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ATdq__HMkFFQzWCSAAA2',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:14.798Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '2D5oxMv8w8Xj5JmpAAA4',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:19.932Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4UBYzOpGLE3z-Ju6AAA6',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:25.021Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'BuBOOkChdv6hRjjRAAA8',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:30.159Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '12gLE0g9HKKCDQimAAA-',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:35.245Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'CBO2B8IiVjTaHfKyAABA',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:40.345Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'x1zEGJ4mTeRpZNsKAABC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:45.430Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'z2J-4QaDMbtaYKM6AABE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:50.567Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'mOrIAJdbHE45-OkDAABG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:26:55.698Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'qCSjcF_lqJWneEEMAABI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:00.797Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'YV9eMRwdjN5Gai6AAABK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:05.884Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '_GoQ4vEg06ilUlEhAABM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:10.995Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4IOhumk1I--98nlMAABO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:16.139Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'lnAWBknI-Tg9gq3kAABQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:21.215Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'HjKi3snc96gLjlJ_AABS',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:26.377Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'yNJrF0auWPO31U4sAABU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:31.464Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'JiXnnPVYZmnzjHhEAABW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:36.597Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'bE0KtC8NT8wWBfUfAABY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:41.729Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4Q0OagVr7dcFeRJCAABa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:46.846Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'lc_6kw62wfR8-gdvAABc',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:51.909Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T17:27:55.459Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 19:27:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 19:27:55'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'E2_zNF8wmBDViqOiAABe',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:27:57.053Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ZZ64XHTuI69hJPKFAABg',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:02.115Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'XDV59FDHb_uSyrBSAABi',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:07.229Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Sioo6u30GP9U5pVOAABk',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:12.369Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '5u4AcOKRmCvrkzt-AABm',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:17.450Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'WtxH4IYro3DAmsAaAABo',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:22.566Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'oOUAXTArojmR8mrnAABq',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:27.658Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '0PafhqnvVHg3tHv-AABs',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:32.726Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'OQADp1AsH7kLkiGsAABu',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:37.865Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '1XNkVIc2JPpTjmWhAABw',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:43.002Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'dCX3sC7jTlA9WZCFAABy',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:48.146Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'zpyPa7FaOZ4RgfGFAAB0',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:53.298Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'DbT9rY4soOMx4zMRAAB2',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:28:58.419Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Bp1_Pd7ZX-KYBTjxAAB4',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:03.534Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'KLE04HqVFFd5ch4QAAB6',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:08.632Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'oH9wiRxTjAgTcRZcAAB8',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:13.741Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ZrTs3gdauFCERUBRAAB-',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:18.857Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'h6asX_xY_-6eme6iAACA',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:23.989Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4J5UZUezJZ-g_8JFAACC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:29.141Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'qmPmAlawgZs4y3B4AACE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:34.243Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'cgoAqe43UroOxC7CAACG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:39.415Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'SwGh1k0HkLt9rM9lAACI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:44.581Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ZoNdAuu0cPg1gFZJAACK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:49.721Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'jaPLKl6MwHNFAkmQAACM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:54.822Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'WzHEFUERBaFl_1dXAACO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:29:59.981Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'v-YthXrPAE_48tdNAACQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:30:05.123Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'MKQxxRoSUiOo2sTyAACS',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:30:10.234Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'b3eFnBL-QPygiurNAACU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:30:15.339Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'F4SY0dltt4_n517ZAACW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:30:20.448Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'JwG0gkVu9jFUC4shAACY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:30:25.588Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'GUElMKkL8DEUECpUAACa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:30:30.727Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '7GtEQkfg2LFyND6ZAACc',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-06T17:30:35.911Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 7,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T17:32:55.463Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 19:32:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 19:32:55'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T17:37:55.453Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 19:37:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 19:37:55'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T17:42:55.466Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 19:42:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 19:42:55'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T17:47:55.463Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 19:47:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 19:47:55'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T17:52:55.464Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 19:52:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 19:52:55'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T17:57:55.496Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 19:57:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 19:57:55'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T18:02:55.498Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 20:02:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 20:02:55'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-06T18:07:55.498Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-06 20:07:55'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-06 20:07:55'
+}

@@ -4,6 +4,7 @@ import { TrendingUp, AccountBalance, Business, Flag } from '@mui/icons-material'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import logger from '../utils/logger'
+import ClaudeAIAssistant from '../components/ClaudeAIAssistant'
 
 interface FinancialData {
   netWorth: {
@@ -282,13 +283,56 @@ const DashboardPage: React.FC = () => {
           </Card>
         </Grid>
 
+        {/* Claude AI Assistant */}
+        <Grid item xs={12} lg={8}>
+          <ClaudeAIAssistant 
+            currentMetrics={{
+              netWorth: financialData?.netWorth.current || 239625,
+              dailyRevenue: financialData?.businessMetrics.dailyRevenue || 0,
+              progress: financialData?.netWorth.progress || 13.3
+            }}
+          />
+        </Grid>
+
         {/* Recent Activity */}
-        <Grid item xs={12}>
-          <Paper sx={{ p: 3 }}>
+        <Grid item xs={12} lg={4}>
+          <Paper sx={{ p: 3, height: '600px', overflow: 'auto' }}>
             <Typography variant="h6" gutterBottom>Recent Activity</Typography>
-            <Typography variant="body2" color="text.secondary">
+            <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>
               Dashboard loaded • WebSocket connected • Real-time updates active
             </Typography>
+            
+            {/* Sample activity items */}
+            <Box sx={{ mt: 2 }}>
+              <Box sx={{ mb: 2, p: 2, bgcolor: 'grey.50', borderRadius: 1 }}>
+                <Typography variant="body2" fontWeight="bold">
+                  Net Worth Updated
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  Current: R{(financialData?.netWorth.current || 239625).toLocaleString()} 
+                  ({(financialData?.netWorth.progress || 13.3).toFixed(1)}% toward goal)
+                </Typography>
+              </Box>
+              
+              <Box sx={{ mb: 2, p: 2, bgcolor: 'grey.50', borderRadius: 1 }}>
+                <Typography variant="body2" fontWeight="bold">
+                  43V3R Business Metrics
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  Daily Revenue: R{(financialData?.businessMetrics.dailyRevenue || 0).toLocaleString()}
+                  / R{(financialData?.businessMetrics.dailyTarget || 4881).toLocaleString()} target
+                </Typography>
+              </Box>
+              
+              <Box sx={{ mb: 2, p: 2, bgcolor: 'grey.50', borderRadius: 1 }}>
+                <Typography variant="body2" fontWeight="bold">
+                  Claude AI Assistant
+                </Typography>
+                <Typography variant="caption" color="text.secondary">
+                  Ready to provide financial insights and business strategy advice
+                </Typography>
+              </Box>
+            </Box>
           </Paper>
         </Grid>
       </Grid>

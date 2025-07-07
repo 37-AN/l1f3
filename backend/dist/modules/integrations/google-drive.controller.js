@@ -36,7 +36,7 @@ let GoogleDriveController = class GoogleDriveController {
         return await this.googleDriveService.listFiles();
     }
     async createFolderStructure() {
-        const success = await this.googleDriveService.createLIF3FolderStructure();
+        const success = await this.googleDriveService.createLIF3FreshStartFolderStructure();
         return { success };
     }
     async createBackup(backupData) {

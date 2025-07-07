@@ -24,12 +24,16 @@ const google_drive_controller_1 = require("./modules/integrations/google-drive.c
 const discord_bot_service_1 = require("./modules/integrations/discord-bot.service");
 const claude_ai_service_1 = require("./modules/integrations/claude-ai.service");
 const monitoring_service_1 = require("./modules/monitoring/monitoring.service");
+const health_controller_1 = require("./modules/health/health.controller");
+const health_service_1 = require("./modules/health/health.service");
+const rag_module_1 = require("./modules/rag/rag.module");
 const jwt_1 = require("@nestjs/jwt");
 let AppModule = class AppModule {
     constructor() {
         console.log('🏗️  LIF3 Financial Dashboard - App Module Initialized');
-        console.log('📊 Net Worth Target: R239,625 → R1,800,000 (13.3% progress)');
-        console.log('🚀 43V3R Daily Revenue Target: R4,881');
+        console.log('📊 FRESH START: Net Worth R0 → R1,800,000 (18-month target)');
+        console.log('🚀 43V3R Daily Revenue Target: R0 → R4,881');
+        console.log('🔄 Database schema ready for fresh start automation');
     }
 };
 exports.AppModule = AppModule;
@@ -47,12 +51,14 @@ exports.AppModule = AppModule = __decorate([
                 signOptions: { expiresIn: '1h' },
             }),
             logger_module_1.LoggerModule,
+            rag_module_1.RAGModule,
         ],
         controllers: [
             financial_controller_1.FinancialController,
             financial_controller_1.BusinessController,
             auth_controller_1.AuthController,
             google_drive_controller_1.GoogleDriveController,
+            health_controller_1.HealthController,
         ],
         providers: [
             financial_service_1.FinancialService,
@@ -62,6 +68,7 @@ exports.AppModule = AppModule = __decorate([
             discord_bot_service_1.DiscordBotService,
             claude_ai_service_1.ClaudeAIService,
             monitoring_service_1.MonitoringService,
+            health_service_1.HealthService,
         ],
     }),
     __metadata("design:paramtypes", [])

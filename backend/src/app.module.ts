@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { ScheduleModule } from '@nestjs/schedule';
 import { LoggerModule } from './common/logger/logger.module';
+import { DatabaseModule } from './database/database.module';
 import { FinancialController, BusinessController } from './modules/financial/financial.controller';
 import { FinancialService } from './modules/financial/financial.service';
 import { AuthController } from './modules/auth/auth.controller';
@@ -12,6 +13,9 @@ import { GoogleDriveController } from './modules/integrations/google-drive.contr
 import { DiscordBotService } from './modules/integrations/discord-bot.service';
 import { ClaudeAIService } from './modules/integrations/claude-ai.service';
 import { MonitoringService } from './modules/monitoring/monitoring.service';
+import { HealthController } from './modules/health/health.controller';
+import { HealthService } from './modules/health/health.service';
+import { RAGModule } from './modules/rag/rag.module';
 import { JwtModule } from '@nestjs/jwt';
 
 @Module({
@@ -34,12 +38,19 @@ import { JwtModule } from '@nestjs/jwt';
     
     // Logging module
     LoggerModule,
+    
+    // Database module - temporarily disabled due to SQLite enum issues
+    // DatabaseModule,
+    
+    // RAG & Semantic Search module
+    RAGModule,
   ],
   controllers: [
     FinancialController,
     BusinessController,
     AuthController,
     GoogleDriveController,
+    HealthController,
   ],
   providers: [
     FinancialService,
@@ -49,12 +60,14 @@ import { JwtModule } from '@nestjs/jwt';
     DiscordBotService,
     ClaudeAIService,
     MonitoringService,
+    HealthService,
   ],
 })
 export class AppModule {
   constructor() {
     console.log('🏗️  LIF3 Financial Dashboard - App Module Initialized');
-    console.log('📊 Net Worth Target: R239,625 → R1,800,000 (13.3% progress)');
-    console.log('🚀 43V3R Daily Revenue Target: R4,881');
+    console.log('📊 FRESH START: Net Worth R0 → R1,800,000 (18-month target)');
+    console.log('🚀 43V3R Daily Revenue Target: R0 → R4,881');
+    console.log('🔄 Database schema ready for fresh start automation');
   }
 }

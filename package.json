@@ -9,14 +9,21 @@
     "shared"
   ],
   "scripts": {
+    "setup": "node setup-api-keys.js",
+    "setup:keys": "node setup-api-keys.js",
+    "setup:complete": "npm run setup && npm run install:all && npm run db:setup",
+    "install:all": "npm install && npm install --workspace=backend && npm install --workspace=frontend",
     "dev": "concurrently \"npm run backend:dev\" \"npm run frontend:dev\"",
     "backend:dev": "npm run dev --workspace=backend",
     "frontend:dev": "npm run dev --workspace=frontend",
     "build": "npm run build --workspace=backend && npm run build --workspace=frontend",
     "test": "npm run test --workspace=backend && npm run test --workspace=frontend",
+    "test:connection": "npm run test:connection --workspace=backend",
     "lint": "npm run lint --workspace=backend && npm run lint --workspace=frontend",
     "docker:up": "docker-compose up -d",
-    "docker:down": "docker-compose down"
+    "docker:down": "docker-compose down",
+    "db:setup": "npm run db:reset:fresh-start --workspace=backend",
+    "fresh-start": "npm run setup && npm run install:all && npm run db:setup && npm run dev"
   },
   "devDependencies": {
     "concurrently": "^8.2.0",

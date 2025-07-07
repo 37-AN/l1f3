@@ -1,0 +1,43 @@
+import { Transaction } from './transaction.entity';
+import { Account } from './account.entity';
+import { NetWorthSnapshot } from './net-worth-snapshot.entity';
+import { BusinessMetrics } from './business-metrics.entity';
+import { Goal } from './goal.entity';
+import { AuditLog } from './audit-log.entity';
+import { SecurityEvent } from './security-event.entity';
+import { UserRole, Currency, Theme } from './enums';
+export declare class User {
+    id: string;
+    email: string;
+    firstName: string;
+    lastName: string;
+    password: string;
+    role: UserRole;
+    isActive: boolean;
+    lastLogin: Date;
+    failedLoginAttempts: number;
+    accountLocked: boolean;
+    mfaEnabled: boolean;
+    netWorth: number;
+    liquidCash: number;
+    investments: number;
+    businessEquity: number;
+    targetNetWorth: number;
+    preferences: {
+        currency: Currency;
+        theme: Theme;
+        notifications: boolean;
+        timezone: string;
+    };
+    createdAt: Date;
+    updatedAt: Date;
+    transactions: Transaction[];
+    accounts: Account[];
+    netWorthSnapshots: NetWorthSnapshot[];
+    businessMetrics: BusinessMetrics[];
+    goals: Goal[];
+    auditLogs: AuditLog[];
+    securityEvents: SecurityEvent[];
+    get name(): string;
+    get progressPercentage(): number;
+}

@@ -35,8 +35,12 @@ export declare class GoogleDriveService {
     deleteFile(fileId: string): Promise<boolean>;
     syncFinancialData(financialData: any): Promise<FileOperationResult>;
     automatedDailyBriefing(): Promise<void>;
+    automatedHourlySnapshot(): Promise<void>;
+    automatedEveningSummary(): Promise<void>;
     automatedWeeklyBackup(): Promise<void>;
-    createLIF3FolderStructure(): Promise<boolean>;
+    createLIF3FreshStartFolderStructure(): Promise<boolean>;
+    autoSyncFinancialData(transactionData: any): Promise<FileOperationResult>;
+    createGoalProgressTracker(goalData: any): Promise<FileOperationResult>;
     getSyncStatus(): Promise<any>;
     private getCurrentFinancialData;
     private generateDailyBriefingContent;

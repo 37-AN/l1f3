@@ -1,0 +1,40 @@
+import { DataSource } from 'typeorm';
+import { User } from '../entities/user.entity';
+import { Account } from '../entities/account.entity';
+import { Goal, GoalType, GoalStatus, GoalPriority } from '../entities/goal.entity';
+import { BusinessMetrics } from '../entities/business-metrics.entity';
+import { NetWorthSnapshot } from '../entities/net-worth-snapshot.entity';
+import { Currency, AccountType, AccountProvider } from '../entities/enums';
+export declare function seedFreshStart(dataSource: DataSource): Promise<{
+    user: User;
+    accounts: ({
+        name: string;
+        type: AccountType;
+        provider: AccountProvider;
+        accountNumber: string;
+        currency: Currency;
+        currentBalance: number;
+        availableBalance: number;
+        isActive: boolean;
+        isConnected: boolean;
+        userId: string;
+    } & Account)[];
+    goals: ({
+        name: string;
+        description: string;
+        type: GoalType;
+        targetAmount: number;
+        currentAmount: number;
+        currency: Currency;
+        deadline: Date;
+        status: GoalStatus;
+        priority: GoalPriority;
+        monthlyTarget: number;
+        weeklyTarget: number;
+        dailyTarget: number;
+        userId: string;
+        notes: string;
+    } & Goal)[];
+    businessMetrics: BusinessMetrics;
+    netWorthSnapshot: NetWorthSnapshot;
+}>;
