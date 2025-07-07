@@ -80,7 +80,10 @@ let RAGService = RAGService_1 = class RAGService {
     }
     async initializeRAGSystem() {
         try {
+            const chromadb = await Promise.resolve().then(() => __importStar(require('chromadb')));
+            this.chromaClient = new chromadb.ChromaClient();
             this.tokenizer = (0, tiktoken_1.get_encoding)('cl100k_base');
+            await this.initializeCollection();
             await fs.mkdir(path.dirname(this.config.persistPath), { recursive: true });
             this.isInitialized = true;
             this.loggerService.logIntegration({

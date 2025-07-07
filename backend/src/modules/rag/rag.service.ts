@@ -53,9 +53,9 @@ export class RAGService implements OnModuleInit {
 
   private async initializeRAGSystem(): Promise<void> {
     try {
-      // Initialize ChromaDB client - temporarily disabled 
-      // const chromadb = await import('chromadb');
-      // this.chromaClient = new chromadb.ChromaClient();
+      // Initialize ChromaDB client
+      const chromadb = await import('chromadb');
+      this.chromaClient = new chromadb.ChromaClient();
 
       // Initialize tokenizer
       this.tokenizer = get_encoding('cl100k_base');
@@ -63,8 +63,8 @@ export class RAGService implements OnModuleInit {
       // Initialize embedding pipeline (lazy-loaded on first use)
       // this.embeddingPipeline = await pipeline('feature-extraction', this.config.embeddingModel);
 
-      // Create or get collection - temporarily disabled
-      // await this.initializeCollection();
+      // Create or get collection
+      await this.initializeCollection();
 
       // Ensure storage directory exists
       await fs.mkdir(path.dirname(this.config.persistPath), { recursive: true });
