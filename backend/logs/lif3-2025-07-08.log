@@ -1,0 +1,396 @@
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T22:28:39.483Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 00:28:39'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 00:28:39'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-08 00:28:39'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751927319542.md',
+  timestamp: '2025-07-08 00:28:39'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T22:28:39.542Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T23:53:19.804Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 01:53:19'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 01:53:19'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-08 01:53:19'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751932399821.md',
+  timestamp: '2025-07-08 01:53:19'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 7,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-07T23:53:19.825Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T01:02:35.327Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 03:02:35'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 03:02:35'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-08 03:02:35'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751936555334.md',
+  timestamp: '2025-07-08 03:02:35'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T01:02:35.335Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T02:08:52.477Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 04:08:52'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 04:08:52'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-08 04:08:52'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751940532484.md',
+  timestamp: '2025-07-08 04:08:52'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T02:08:52.485Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T02:27:31.508Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 04:27:31'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 04:27:31'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T03:20:50.859Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 05:20:50'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 05:20:50'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-08 05:20:50'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751944850875.md',
+  timestamp: '2025-07-08 05:20:50'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T03:20:50.876Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T03:55:21.313Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 05:55:21'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 05:55:21'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: '🌅 Starting FRESH START automated daily briefing generation',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  trace: 'Error: No access, refresh token, API key or refresh handler callback is set.\n' +
+    '    at OAuth2Client.getRequestMetadataAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:307:19)\n' +
+    '    at OAuth2Client.requestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:418:34)\n' +
+    '    at OAuth2Client.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:412:25)\n' +
+    '    at createAPIRequestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:303:31)\n' +
+    '    at createAPIRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:52:16)\n' +
+    '    at Resource$Files.create (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis/build/src/apis/drive/v3.js:657:65)\n' +
+    '    at GoogleDriveService.createDailyBriefing (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:102:47)\n' +
+    '    at GoogleDriveService.automatedDailyBriefing (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:633:33)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at runNextTicks (node:internal/process/task_queues:69:3)\n' +
+    '    at process.processTimers (node:internal/timers:520:9)\n' +
+    '    at async CronJob.<anonymous> (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/schedule/dist/schedule.explorer.js:119:17)',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: 'Failed to create daily briefing: No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'SYNC',
+  status: 'FAILED',
+  duration: 43,
+  errorMessage: 'No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: 2025-07-08T05:02:14.735Z,
+  metadata: { operation: 'CREATE_DAILY_BRIEFING', date: '2025-07-08' },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  trace: 'No access, refresh token, API key or refresh handler callback is set.',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: '❌ Failed to create fresh start daily briefing',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: '🔄 Creating fresh start hourly snapshot',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  trace: 'Error: No access, refresh token, API key or refresh handler callback is set.\n' +
+    '    at OAuth2Client.getRequestMetadataAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:307:19)\n' +
+    '    at OAuth2Client.requestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:418:34)\n' +
+    '    at OAuth2Client.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:412:25)\n' +
+    '    at createAPIRequestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:303:31)\n' +
+    '    at createAPIRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:52:16)\n' +
+    '    at Resource$Files.create (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis/build/src/apis/drive/v3.js:657:65)\n' +
+    '    at GoogleDriveService.backupFinancialData (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:330:47)\n' +
+    '    at GoogleDriveService.automatedHourlySnapshot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:653:33)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at runNextTicks (node:internal/process/task_queues:69:3)\n' +
+    '    at process.processTimers (node:internal/timers:520:9)\n' +
+    '    at async CronJob.<anonymous> (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/schedule/dist/schedule.explorer.js:119:17)',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: 'Failed to backup financial data: No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'SYNC',
+  status: 'FAILED',
+  duration: 1,
+  errorMessage: 'No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: 2025-07-08T05:02:14.742Z,
+  metadata: { operation: 'BACKUP_FINANCIAL_DATA' },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  trace: 'No access, refresh token, API key or refresh handler callback is set.',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: '❌ Failed to create hourly snapshot',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:02:14.742Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751950934743.md',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:02:14.744Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
