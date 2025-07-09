@@ -394,3 +394,551 @@
   level: 'info',
   message: 'PERFORMANCE_METRIC'
 }
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:07:14.744Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:07:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:07:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:12:14.739Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:12:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:12:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:17:14.759Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:17:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:17:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 10,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:22:14.765Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:22:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:22:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:27:14.749Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:27:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:27:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:32:14.713Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:32:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:32:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:37:14.708Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:37:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:37:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:42:14.702Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:42:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:42:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:47:14.644Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:47:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:47:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:52:14.634Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:52:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:52:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T05:57:14.628Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 07:57:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 07:57:14'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: '🔄 Creating fresh start hourly snapshot',
+  timestamp: '2025-07-08 08:00:00'
+}
+{
+  trace: 'Error: No access, refresh token, API key or refresh handler callback is set.\n' +
+    '    at OAuth2Client.getRequestMetadataAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:307:19)\n' +
+    '    at OAuth2Client.requestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:418:34)\n' +
+    '    at OAuth2Client.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:412:25)\n' +
+    '    at createAPIRequestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:303:31)\n' +
+    '    at createAPIRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:52:16)\n' +
+    '    at Resource$Files.create (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis/build/src/apis/drive/v3.js:657:65)\n' +
+    '    at GoogleDriveService.backupFinancialData (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:330:47)\n' +
+    '    at GoogleDriveService.automatedHourlySnapshot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:653:33)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async CronJob.<anonymous> (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/schedule/dist/schedule.explorer.js:119:17)',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: 'Failed to backup financial data: No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: '2025-07-08 08:00:00'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'SYNC',
+  status: 'FAILED',
+  duration: 16,
+  errorMessage: 'No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: 2025-07-08T06:00:00.037Z,
+  metadata: { operation: 'BACKUP_FINANCIAL_DATA' },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  trace: 'No access, refresh token, API key or refresh handler callback is set.',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: '❌ Failed to create hourly snapshot',
+  timestamp: '2025-07-08 08:00:00'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Log analytics completed for timeframe: 1h',
+  timestamp: '2025-07-08 08:02:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Analytics report generated: /Users/ccladysmith/Desktop/dev/l1f3/backend/logs/analytics_1751954534610.md',
+  timestamp: '2025-07-08 08:02:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'LOG_ANALYTICS',
+  value: 9,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:02:14.611Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:02:14.619Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:02:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:02:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:07:14.614Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:07:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:07:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:12:14.604Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:12:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:12:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:17:14.659Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:17:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:17:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:22:14.655Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:22:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:22:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:27:14.650Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:27:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:27:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:32:14.636Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:32:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:32:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:37:14.630Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:37:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:37:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:42:14.624Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:42:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:42:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 0,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:47:14.635Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:47:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:47:14'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 3,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-08T06:52:14.632Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-08 08:52:14'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-08 08:52:14'
+}

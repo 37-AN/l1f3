@@ -1,0 +1,15 @@
+{
+  "name": "lif3-integrations",
+  "version": "1.0.0",
+  "description": "Working LIF3 MCP integrations",
+  "type": "module",
+  "scripts": {
+    "start": "node financial-server.js",
+    "business": "node business-server.js",
+    "test": "node test-server.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "latest",
+    "axios": "^1.6.0"
+  }
+}

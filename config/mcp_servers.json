@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "lif3-financial": {
+      "command": "python3",
+      "args": ["/Users/ccladysmith/Desktop/dev/l1f3/scripts/mcp_financial_server.py"],
+      "env": {
+        "PYTHONPATH": "/Users/ccladysmith/Desktop/dev/l1f3",
+        "DATABASE_PATH": "/Users/ccladysmith/Desktop/dev/l1f3/data/lif3_financial.db"
+      }
+    }
+  }
+}
