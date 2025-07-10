@@ -17,6 +17,7 @@ import { HealthController } from './modules/health/health.controller';
 import { HealthService } from './modules/health/health.service';
 import { RAGModule } from './modules/rag/rag.module';
 import { JwtModule } from '@nestjs/jwt';
+import { BusinessStrategyModule } from './modules/business-strategy/business-strategy.module';
 
 @Module({
   imports: [
@@ -44,6 +45,8 @@ import { JwtModule } from '@nestjs/jwt';
     
     // RAG & Semantic Search module
     RAGModule,
+    // Business Strategy module
+    BusinessStrategyModule,
   ],
   controllers: [
     FinancialController,
