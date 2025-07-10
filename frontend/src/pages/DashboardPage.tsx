@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid, Card, CardContent, Typography, Box, LinearProgress, Paper } from '@mui/material'
+import { Grid, Card, CardContent, Typography, Box, LinearProgress, Paper, TextField, Button, Snackbar, Alert } from '@mui/material'
 import { TrendingUp, AccountBalance, Business, Flag } from '@mui/icons-material'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
@@ -33,8 +33,27 @@ interface FinancialData {
   }>
 }
 
+interface BusinessStrategy {
+  currentMRR: string;
+  targetMRR: string;
+  timeline: string;
+  immediateFocus: string;
+  serviceOfferings: Array<{ name: string; priceRange: string }>;
+  targetMarket: string[];
+  focus: string;
+  technology: string;
+  target: string;
+  revenueModel: string;
+  competitiveAdvantages: string[];
+  generated: string;
+}
+
 const DashboardPage: React.FC = () => {
   const [pageLoadTime, setPageLoadTime] = useState<number>(0)
+  const [strategy, setStrategy] = useState<BusinessStrategy | null>(null);
+  const [strategyLoading, setStrategyLoading] = useState(false);
+  const [strategyError, setStrategyError] = useState<string | null>(null);
+  const [strategySuccess, setStrategySuccess] = useState(false);
 
   // Fetch financial dashboard data
   const { data: financialData, isLoading, error } = useQuery<FinancialData>({
@@ -54,16 +73,88 @@ const DashboardPage: React.FC = () => {
     refetchInterval: 30000, // Refetch every 30 seconds
   })
 
+  // Fetch business strategy data
+  useEffect(() => {
+    setStrategyLoading(true);
+    axios.get('/api/business-strategy')
+      .then(res => setStrategy(res.data))
+      .catch(() => setStrategyError('Failed to load business strategy'))
+      .finally(() => setStrategyLoading(false));
+  }, []);
+
   useEffect(() => {
     const startTime = Date.now()
     const measureLoad = logger.measureComponentRender('DashboardPage')
     
     return () => {
       const loadTime = measureLoad()
-      setPageLoadTime(loadTime)
-      logger.logPageView('Dashboard', loadTime)
+      if (typeof loadTime === 'number') {
+        setPageLoadTime(loadTime)
+        logger.logPageView('Dashboard', loadTime)
+      }
     }
   }, [])
+
+  const handleStrategyChange = (field: keyof BusinessStrategy, value: any) => {
+    setStrategy((prev) => prev ? { ...prev, [field]: value } : prev);
+  };
+
+  const handleServiceOfferingChange = (idx: number, key: 'name' | 'priceRange', value: string) => {
+    setStrategy((prev) => {
+      if (!prev) return prev;
+      const updated = [...(prev.serviceOfferings || [])];
+      updated[idx] = { ...updated[idx], [key]: value };
+      return { ...prev, serviceOfferings: updated };
+    });
+  };
+
+  const handleAddServiceOffering = () => {
+    setStrategy((prev) => prev ? { ...prev, serviceOfferings: [...(prev.serviceOfferings || []), { name: '', priceRange: '' }] } : prev);
+  };
+
+  const handleRemoveServiceOffering = (idx: number) => {
+    setStrategy((prev) => {
+      if (!prev) return prev;
+      const updated = [...(prev.serviceOfferings || [])];
+      updated.splice(idx, 1);
+      return { ...prev, serviceOfferings: updated };
+    });
+  };
+
+  const handleArrayFieldChange = (field: keyof BusinessStrategy, idx: number, value: string) => {
+    setStrategy((prev) => {
+      if (!prev) return prev;
+      const arr = [...(prev[field] as string[])];
+      arr[idx] = value;
+      return { ...prev, [field]: arr };
+    });
+  };
+
+  const handleAddArrayField = (field: keyof BusinessStrategy) => {
+    setStrategy((prev) => prev ? { ...prev, [field]: [...((prev[field] as string[]) || []), ''] } : prev);
+  };
+
+  const handleRemoveArrayField = (field: keyof BusinessStrategy, idx: number) => {
+    setStrategy((prev) => {
+      if (!prev) return prev;
+      const arr = [...(prev[field] as string[])];
+      arr.splice(idx, 1);
+      return { ...prev, [field]: arr };
+    });
+  };
+
+  const handleSaveStrategy = async () => {
+    setStrategyLoading(true);
+    setStrategyError(null);
+    try {
+      await axios.post('/api/business-strategy', strategy);
+      setStrategySuccess(true);
+    } catch {
+      setStrategyError('Failed to save business strategy');
+    } finally {
+      setStrategyLoading(false);
+    }
+  };
 
   // Log user interactions
   const handleCardClick = (cardType: string) => {
@@ -336,6 +427,61 @@ const DashboardPage: React.FC = () => {
           </Paper>
         </Grid>
       </Grid>
+
+      {/* Business Strategy Section */}
+      <Box sx={{ mt: 6 }}>
+        <Card>
+          <CardContent>
+            <Typography variant="h5" gutterBottom>Business Strategy (Editable)</Typography>
+            {strategyLoading && <LinearProgress sx={{ mb: 2 }} />}
+            {strategyError && <Alert severity="error">{strategyError}</Alert>}
+            {strategy && (
+              <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
+                <TextField label="Current MRR" value={strategy.currentMRR} onChange={e => handleStrategyChange('currentMRR', e.target.value)} fullWidth />
+                <TextField label="Target MRR" value={strategy.targetMRR} onChange={e => handleStrategyChange('targetMRR', e.target.value)} fullWidth />
+                <TextField label="Timeline" value={strategy.timeline} onChange={e => handleStrategyChange('timeline', e.target.value)} fullWidth />
+                <TextField label="Immediate Focus" value={strategy.immediateFocus} onChange={e => handleStrategyChange('immediateFocus', e.target.value)} fullWidth />
+                <Typography variant="subtitle1">Service Offerings</Typography>
+                {strategy.serviceOfferings?.map((offering, idx) => (
+                  <Box key={idx} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+                    <TextField label="Name" value={offering.name} onChange={e => handleServiceOfferingChange(idx, 'name', e.target.value)} />
+                    <TextField label="Price Range" value={offering.priceRange} onChange={e => handleServiceOfferingChange(idx, 'priceRange', e.target.value)} />
+                    <Button onClick={() => handleRemoveServiceOffering(idx)} color="error">Remove</Button>
+                  </Box>
+                ))}
+                <Button onClick={handleAddServiceOffering} variant="outlined">Add Service Offering</Button>
+                <Typography variant="subtitle1">Target Market</Typography>
+                {strategy.targetMarket?.map((val, idx) => (
+                  <Box key={idx} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+                    <TextField label={`Target Market #${idx + 1}`} value={val} onChange={e => handleArrayFieldChange('targetMarket', idx, e.target.value)} />
+                    <Button onClick={() => handleRemoveArrayField('targetMarket', idx)} color="error">Remove</Button>
+                  </Box>
+                ))}
+                <Button onClick={() => handleAddArrayField('targetMarket')} variant="outlined">Add Target Market</Button>
+                <TextField label="Brand Focus" value={strategy.focus} onChange={e => handleStrategyChange('focus', e.target.value)} fullWidth />
+                <TextField label="Brand Technology" value={strategy.technology} onChange={e => handleStrategyChange('technology', e.target.value)} fullWidth />
+                <TextField label="Brand Target" value={strategy.target} onChange={e => handleStrategyChange('target', e.target.value)} fullWidth />
+                <TextField label="Revenue Model" value={strategy.revenueModel} onChange={e => handleStrategyChange('revenueModel', e.target.value)} fullWidth />
+                <Typography variant="subtitle1">Competitive Advantages</Typography>
+                {strategy.competitiveAdvantages?.map((val, idx) => (
+                  <Box key={idx} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
+                    <TextField label={`Advantage #${idx + 1}`} value={val} onChange={e => handleArrayFieldChange('competitiveAdvantages', idx, e.target.value)} />
+                    <Button onClick={() => handleRemoveArrayField('competitiveAdvantages', idx)} color="error">Remove</Button>
+                  </Box>
+                ))}
+                <Button onClick={() => handleAddArrayField('competitiveAdvantages')} variant="outlined">Add Competitive Advantage</Button>
+                <TextField label="Generated" value={strategy.generated} onChange={e => handleStrategyChange('generated', e.target.value)} fullWidth />
+                <Button onClick={handleSaveStrategy} variant="contained" color="primary" disabled={strategyLoading}>Save Strategy</Button>
+              </Box>
+            )}
+            <Snackbar open={strategySuccess} autoHideDuration={3000} onClose={() => setStrategySuccess(false)}>
+              <Alert onClose={() => setStrategySuccess(false)} severity="success" sx={{ width: '100%' }}>
+                Business strategy saved successfully!
+              </Alert>
+            </Snackbar>
+          </CardContent>
+        </Card>
+      </Box>
     </Box>
   )
 }
