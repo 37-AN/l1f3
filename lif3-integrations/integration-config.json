@@ -1,0 +1,70 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-07-10T08:06:44.163Z",
+  "discord": {
+    "enabled": false,
+    "botConfigured": false,
+    "commandsDeployed": false,
+    "channels": {
+      "financial": "financial",
+      "business": "business",
+      "general": "general"
+    },
+    "automatedMessages": {
+      "dailyBriefing": {
+        "enabled": true,
+        "time": "08:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "milestoneAlerts": {
+        "enabled": true,
+        "thresholds": [
+          1000,
+          5000,
+          10000,
+          50000
+        ]
+      }
+    }
+  },
+  "slack": {
+    "enabled": false,
+    "appConfigured": false,
+    "commandsConfigured": false,
+    "channels": {
+      "finance": "finance",
+      "business": "business",
+      "general": "general"
+    },
+    "automatedMessages": {
+      "dailyBriefing": {
+        "enabled": true,
+        "time": "08:00",
+        "timezone": "Africa/Johannesburg"
+      },
+      "weeklyReview": {
+        "enabled": true,
+        "day": "sunday",
+        "time": "18:00"
+      }
+    }
+  },
+  "financial": {
+    "currentNetWorth": 239625,
+    "targetNetWorth": 1800000,
+    "monthlyTarget": 86688,
+    "currency": "ZAR"
+  },
+  "business": {
+    "name": "43V3R",
+    "currentRevenue": 0,
+    "dailyTarget": 4881,
+    "mrrTarget": 147917,
+    "sectors": [
+      "AI",
+      "Web3",
+      "Crypto",
+      "Quantum"
+    ]
+  }
+}

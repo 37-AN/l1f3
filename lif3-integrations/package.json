@@ -1,15 +1,39 @@
 {
   "name": "lif3-integrations",
   "version": "1.0.0",
-  "description": "Working LIF3 MCP integrations",
+  "description": "Complete LIF3 MCP integrations with Discord and Slack",
   "type": "module",
   "scripts": {
     "start": "node financial-server.js",
     "business": "node business-server.js",
-    "test": "node test-server.js"
+    "test": "node test-server.js",
+    "discord": "node discord-bot.js",
+    "slack": "node slack-app.js",
+    "discord-server": "node discord-server.js",
+    "slack-server": "node slack-server.js",
+    "install-deps": "npm install",
+    "setup": "node setup-integrations.js"
   },
   "dependencies": {
     "@modelcontextprotocol/sdk": "latest",
-    "axios": "^1.6.0"
-  }
+    "@slack/bolt": "^3.22.0",
+    "axios": "^1.6.0",
+    "discord.js": "^14.21.0",
+    "dotenv": "^16.6.1"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "lif3",
+    "financial",
+    "tracking",
+    "discord",
+    "slack",
+    "mcp",
+    "43v3r",
+    "business"
+  ],
+  "author": "Ethan Barnes",
+  "license": "MIT"
 }

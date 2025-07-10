@@ -1,4 +1,4 @@
-#\!/bin/bash
+#!/bin/bash
 echo "🚀 Starting LIF3 MCP Integrations..."
 
 # Start LIF3 backend if available
