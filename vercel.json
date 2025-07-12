@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "buildCommand": "cd frontend && npm ci && npm run build",
+  "buildCommand": "ls -la && ls -la frontend/ && npm ci --prefix frontend && npm run build --prefix frontend",
   "outputDirectory": "frontend/dist",
-  "installCommand": "cd frontend && npm ci",
+  "installCommand": "ls -la && npm ci --prefix frontend",
   "framework": "vite",
   "rewrites": [
     {
