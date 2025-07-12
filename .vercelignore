@@ -1,0 +1,12 @@
+backend/
+lif3-integrations/
+node_modules/
+*.log
+*.sqlite
+*.db
+chromadb/
+logs/
+test/
+scripts/
+documents/
+data/
