@@ -2,6 +2,7 @@ import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import * as path from 'path';
 import { BusinessStrategy } from './business-strategy.interface';
+import { spawn } from 'child_process';
 
 const STRATEGY_DOC_ID = 'main-strategy';
 
@@ -32,12 +33,22 @@ export class BusinessStrategyService implements OnModuleInit {
 
   private async initializeCollection(): Promise<void> {
     try {
+      // Import the default embedding function
+      const { DefaultEmbeddingFunction } = await import('@chroma-core/default-embed');
+      const embedFunction = new DefaultEmbeddingFunction();
+
       this.collection = await this.chromaClient.getCollection({
-        name: this.collectionName
+        name: this.collectionName,
+        embeddingFunction: embedFunction
       });
     } catch (error) {
+      // Create new collection if it doesn't exist
+      const { DefaultEmbeddingFunction } = await import('@chroma-core/default-embed');
+      const embedFunction = new DefaultEmbeddingFunction();
+      
       this.collection = await this.chromaClient.createCollection({
         name: this.collectionName,
+        embeddingFunction: embedFunction,
         metadata: {
           description: 'Business Strategy Data'
         }
@@ -72,9 +83,64 @@ export class BusinessStrategyService implements OnModuleInit {
     return true;
   }
 
-  // Placeholder for MCP sync logic
+  // Tool-based MCP sync logic
   async syncToMCP(data: BusinessStrategy): Promise<void> {
-    // TODO: Implement MCP sync logic here
-    this.logger.log('MCP sync placeholder called');
+    this.logger.log('Starting MCP sync (tool-based)...');
+    return new Promise((resolve, reject) => {
+      const mcpProcess = spawn('node', [
+        // Path to the MCP business server
+        './lif3-integrations/business-server.js'
+      ], {
+        stdio: ['pipe', 'pipe', 'pipe']
+      });
+
+      const callToolRequest = {
+        jsonrpc: '2.0',
+        id: 1,
+        method: 'call_tool',
+        params: {
+          name: 'update_business_strategy',
+          arguments: { strategy: data }
+        }
+      };
+
+      let output = '';
+      let errorOutput = '';
+      let resolved = false;
+
+      mcpProcess.stdout.on('data', (chunk) => {
+        output += chunk.toString();
+        // Try to parse response and resolve
+        try {
+          const lines = output.split('\n').filter(Boolean);
+          for (const line of lines) {
+            const resp = JSON.parse(line);
+            if (resp && resp.result && resp.result.content) {
+              this.logger.log('MCP sync response: ' + JSON.stringify(resp.result.content));
+              resolved = true;
+              resolve();
+              mcpProcess.kill();
+              return;
+            }
+          }
+        } catch (e) {
+          // Ignore parse errors until complete
+        }
+      });
+
+      mcpProcess.stderr.on('data', (chunk) => {
+        errorOutput += chunk.toString();
+      });
+
+      mcpProcess.on('close', (code) => {
+        if (!resolved) {
+          this.logger.error('MCP sync process closed without success. Code: ' + code + ' Error: ' + errorOutput);
+          reject(new Error('MCP sync failed'));
+        }
+      });
+
+      mcpProcess.stdin.write(JSON.stringify(callToolRequest) + '\n');
+      mcpProcess.stdin.end();
+    });
   }
 } 

@@ -96,14 +96,23 @@ export class RAGService implements OnModuleInit {
 
   private async initializeCollection(): Promise<void> {
     try {
+      // Import the default embedding function
+      const { DefaultEmbeddingFunction } = await import('@chroma-core/default-embed');
+      const embedFunction = new DefaultEmbeddingFunction();
+
       // Try to get existing collection
       this.collection = await this.chromaClient.getCollection({
-        name: this.config.collectionName
+        name: this.config.collectionName,
+        embeddingFunction: embedFunction
       });
     } catch (error) {
       // Create new collection if it doesn't exist
+      const { DefaultEmbeddingFunction } = await import('@chroma-core/default-embed');
+      const embedFunction = new DefaultEmbeddingFunction();
+      
       this.collection = await this.chromaClient.createCollection({
         name: this.config.collectionName,
+        embeddingFunction: embedFunction,
         metadata: {
           'hnsw:space': 'cosine',
           description: 'LIF3 Financial Dashboard document embeddings'

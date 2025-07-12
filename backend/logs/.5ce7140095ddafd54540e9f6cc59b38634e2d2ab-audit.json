@@ -19,6 +19,16 @@
             "date": 1751950934733,
             "name": "logs/lif3-error-2025-07-08.log",
             "hash": "ab546dc29ff73657b290eb7f051bbba71057af2b9c5b69a9b1b05995031b6d4f"
+        },
+        {
+            "date": 1752148126364,
+            "name": "logs/lif3-error-2025-07-10.log",
+            "hash": "8f7e85f50e35650dd034e5fbd9e865704747c1dc9dd448b99bf63001ad980433"
+        },
+        {
+            "date": 1752261436435,
+            "name": "logs/lif3-error-2025-07-11.log",
+            "hash": "4f7c469d1c2e2c605ea8d7c119f3ef86ba56b9b71449769658bcea95626ca98b"
         }
     ],
     "hashType": "sha256"

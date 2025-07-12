@@ -28,6 +28,7 @@ const health_controller_1 = require("./modules/health/health.controller");
 const health_service_1 = require("./modules/health/health.service");
 const rag_module_1 = require("./modules/rag/rag.module");
 const jwt_1 = require("@nestjs/jwt");
+const business_strategy_module_1 = require("./modules/business-strategy/business-strategy.module");
 let AppModule = class AppModule {
     constructor() {
         console.log('🏗️  LIF3 Financial Dashboard - App Module Initialized');
@@ -52,6 +53,7 @@ exports.AppModule = AppModule = __decorate([
             }),
             logger_module_1.LoggerModule,
             rag_module_1.RAGModule,
+            business_strategy_module_1.BusinessStrategyModule,
         ],
         controllers: [
             financial_controller_1.FinancialController,

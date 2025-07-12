@@ -111,13 +111,19 @@ let RAGService = RAGService_1 = class RAGService {
     }
     async initializeCollection() {
         try {
+            const { DefaultEmbeddingFunction } = await Promise.resolve().then(() => __importStar(require('@chroma-core/default-embed')));
+            const embedFunction = new DefaultEmbeddingFunction();
             this.collection = await this.chromaClient.getCollection({
-                name: this.config.collectionName
+                name: this.config.collectionName,
+                embeddingFunction: embedFunction
             });
         }
         catch (error) {
+            const { DefaultEmbeddingFunction } = await Promise.resolve().then(() => __importStar(require('@chroma-core/default-embed')));
+            const embedFunction = new DefaultEmbeddingFunction();
             this.collection = await this.chromaClient.createCollection({
                 name: this.config.collectionName,
+                embeddingFunction: embedFunction,
                 metadata: {
                     'hnsw:space': 'cosine',
                     description: 'LIF3 Financial Dashboard document embeddings'

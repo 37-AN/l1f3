@@ -1,0 +1,409 @@
+<html><head><meta charset="utf-8"/><title>LIF3 Test Report</title><style type="text/css">:root {
+  --text-primary: #111;
+  --text-secondary: #4f4f4f;
+  --success: #006633;
+  --success-bright: #80ffbf;
+  --danger: #cc071e;
+  --danger-bright: #fbdfe0;
+  --warning: #995c00;
+  --warning-bright: #ffeea8;
+  --panel: #eee;
+  --border: #949494;
+  --disabled: #6b6b6b;
+}
+
+html,
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  color: var(--text-primary);
+}
+body {
+  padding: 2rem 1rem;
+}
+.jesthtml-content {
+  margin: 0 auto;
+  max-width: 70rem;
+}
+header {
+  display: flex;
+  align-items: center;
+}
+#title {
+  margin: 0;
+  flex-grow: 1;
+}
+#logo {
+  height: 4rem;
+}
+#timestamp {
+  color: var(--text-secondary);
+  margin-top: 0.5rem;
+}
+
+#metadata-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.additional-information-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+}
+
+/** SUMMARY */
+#summary {
+  color: var(--text-primary);
+  display: flex;
+  font-family: monospace;
+  font-size: 1rem;
+}
+#summary > div {
+  margin-right: 0.5rem;
+  background: var(--panel);
+  padding: 1rem;
+  min-width: 15rem;
+}
+#summary > div:last-child {
+  margin-right: 0;
+}
+@media only screen and (max-width: 720px) {
+  #summary {
+    flex-direction: column;
+  }
+  #summary > div {
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+  #summary > div:first-child {
+    margin-top: 0;
+  }
+}
+
+.summary-total {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+.summary-passed {
+  color: var(--success);
+  border-left: 0.4rem solid var(--success);
+  padding-left: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+.summary-failed,
+.summary-obsolete-snapshots {
+  color: var(--danger);
+  border-left: 0.4rem solid var(--danger);
+  padding-left: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+.summary-pending {
+  color: var(--warning);
+  border-left: 0.4rem solid var(--warning);
+  padding-left: 0.5rem;
+  margin-bottom: 0.15rem;
+}
+.summary-empty {
+  color: var(--disabled);
+  border-left: 0.4rem solid var(--disabled);
+  margin-bottom: 0.15rem;
+}
+
+.test-result {
+  padding: 1rem;
+  margin-bottom: 0.25rem;
+}
+.test-result:last-child {
+  border: 0;
+}
+.test-result.passed {
+  background-color: var(--success-bright);
+  color: var(--success);
+}
+.test-result.failed {
+  background-color: var(--danger-bright);
+  color: var(--danger);
+}
+.test-result.pending {
+  background-color: var(--warning-bright);
+  color: var(--warning);
+}
+
+.test-info {
+  display: flex;
+  justify-content: space-between;
+}
+.test-suitename {
+  width: 20%;
+  text-align: left;
+  font-weight: bold;
+  word-break: break-word;
+}
+.test-title {
+  width: 40%;
+  text-align: left;
+  font-style: italic;
+}
+.test-status {
+  width: 20%;
+  text-align: right;
+}
+.test-duration {
+  width: 10%;
+  text-align: right;
+  font-size: 0.85rem;
+}
+
+.failureMessages {
+  padding: 0 1rem;
+  margin-top: 1rem;
+  border-top: 1px dashed var(--danger);
+}
+.failureMessages.suiteFailure {
+  border-top: none;
+}
+.failureMsg {
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+
+.suite-container {
+  margin-bottom: 1rem;
+}
+.suite-info {
+  padding: 1rem;
+  background-color: var(--panel);
+  color: var(--text-secondary);
+  border: 0.15rem solid;
+  border-color: var(--panel);
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+.suite-info:hover {
+  border-color: var(--border);
+  cursor: pointer;
+}
+.suite-info .suite-path {
+  word-break: break-all;
+  flex-grow: 1;
+  font-family: monospace;
+  font-size: 1rem;
+}
+.suite-info .suite-time {
+  margin-left: 1rem;
+  padding: 0.2rem 0.3rem;
+  font-size: 0.85rem;
+}
+.suite-info .suite-time.warn {
+  background-color: var(--danger);
+  color: #fff;
+}
+.suite-info:before {
+  content: "\2303";
+  display: inline-block;
+  margin-right: 1rem;
+  transform: rotate(180deg) translateY(0.15rem);
+}
+.suite-container[open] .suite-info:before {
+  transform: rotate(0deg) translateY(0.15rem);
+}
+
+/* CONSOLE LOGS */
+.suite-consolelog {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: var(--panel);
+}
+.suite-consolelog-header {
+  font-weight: bold;
+}
+.suite-consolelog-item {
+  padding: 0.5rem;
+}
+.suite-consolelog-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-consolelog-item-origin {
+  color: var(--text-secondary);
+  font-weight: bold;
+}
+.suite-consolelog-item-message {
+  color: var(--text-primary);
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+/* OBSOLETE SNAPSHOTS */
+.suite-obsolete-snapshots {
+  margin-bottom: 0.25rem;
+  padding: 1rem;
+  background-color: var(--danger-bright);
+  color: var(--danger);
+}
+.suite-obsolete-snapshots-header {
+  font-weight: bold;
+}
+.suite-obsolete-snapshots-item {
+  padding: 0.5rem;
+}
+.suite-obsolete-snapshots-item pre {
+  margin: 0.5rem 0;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+}
+.suite-obsolete-snapshots-item-message {
+  color: var(--text-primary);
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+</style></head><body><main class="jesthtml-content"><header><h1 id="title">LIF3 Test Report</h1></header><section id="metadata-container"><div id="timestamp">Started: 2025-07-10 12:46:38</div><div id="summary"><div id="suite-summary"><div class="summary-total">Suites (4)</div><div class="summary-passed  summary-empty">0 passed</div><div class="summary-failed ">4 failed</div><div class="summary-pending  summary-empty">0 pending</div></div><div id="test-summary"><div class="summary-total">Tests (51)</div><div class="summary-passed ">47 passed</div><div class="summary-failed ">4 failed</div><div class="summary-pending  summary-empty">0 pending</div></div></div></section><details id="suite-1" class="suite-container" open=""><summary class="suite-info"><div class="suite-path">/Users/ccladysmith/Desktop/dev/l1f3/backend/test/financial/financial-calculations.test.ts</div><div class="suite-time warn">49.596s</div></summary><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Net Worth Calculations</div><div class="test-title">Net worth calculation accuracy with exact LIF3 values</div><div class="test-status">passed</div><div class="test-duration">0.027s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Net Worth Calculations</div><div class="test-title">Net worth calculation with zero values</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Net Worth Calculations</div><div class="test-title">Net worth calculation with large ZAR amounts</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Net Worth Calculations</div><div class="test-title">Net worth calculation precision with decimals</div><div class="test-status">passed</div><div class="test-duration"> </div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Goal Progress Calculations</div><div class="test-title">Goal progress calculation (R1.8M target) - Current LIF3 status</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Goal Progress Calculations</div><div class="test-title">Goal progress at 0% (starting point)</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Goal Progress Calculations</div><div class="test-title">Goal progress at 100% (target achieved)</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Goal Progress Calculations</div><div class="test-title">Goal progress at 50% milestone</div><div class="test-status">passed</div><div class="test-duration"> </div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Goal Progress Calculations</div><div class="test-title">Goal progress beyond 100% (over-achievement)</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; 43V3R Business Revenue Calculations</div><div class="test-title">43V3R daily revenue tracking - starting point</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; 43V3R Business Revenue Calculations</div><div class="test-title">43V3R daily revenue - partial progress</div><div class="test-status">passed</div><div class="test-duration"> </div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; 43V3R Business Revenue Calculations</div><div class="test-title">43V3R daily revenue - target achieved</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; 43V3R Business Revenue Calculations</div><div class="test-title">43V3R daily revenue - exceeding target</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; MRR (Monthly Recurring Revenue) Calculations</div><div class="test-title">MRR calculation for 43V3R target achievement</div><div class="test-status">failed</div><div class="test-duration">0.009s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBeCloseTo(expected, precision)
+
+Expected: 147917
+Received: 148041
+
+Expected precision:    0
+Expected difference: &lt; 0.5
+Received difference:   124
+    at Object.&lt;anonymous&gt; (/Users/ccladysmith/Desktop/dev/l1f3/backend/test/financial/financial-calculations.test.ts:152:29)
+    at Promise.then.completed (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/testWorker.js:106:12)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; MRR (Monthly Recurring Revenue) Calculations</div><div class="test-title">MRR calculation from zero daily revenue</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; MRR (Monthly Recurring Revenue) Calculations</div><div class="test-title">MRR calculation from partial daily revenue</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; MRR (Monthly Recurring Revenue) Calculations</div><div class="test-title">MRR calculation precision</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; ZAR Currency Validation</div><div class="test-title">Valid ZAR amounts</div><div class="test-status">passed</div><div class="test-duration">0.007s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; ZAR Currency Validation</div><div class="test-title">Invalid ZAR amounts</div><div class="test-status">passed</div><div class="test-duration">0.006s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; ZAR Currency Validation</div><div class="test-title">ZAR formatting</div><div class="test-status">failed</div><div class="test-duration">0.013s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "R239,625.00"
+Received: "R239 625,00"
+    at Object.&lt;anonymous&gt; (/Users/ccladysmith/Desktop/dev/l1f3/backend/test/financial/financial-calculations.test.ts:198:52)
+    at Promise.then.completed (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/testWorker.js:106:12)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Financial Milestones</div><div class="test-title">Identify net worth milestones</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Financial Milestones</div><div class="test-title">Calculate time to reach R1.8M target</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Savings Rate Calculations</div><div class="test-title">Calculate savings rate from financial data</div><div class="test-status">passed</div><div class="test-duration">0.005s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Savings Rate Calculations</div><div class="test-title">Optimal savings rate for R1.8M goal</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Investment Growth Projections</div><div class="test-title">Project investment growth at 8% annual return</div><div class="test-status">failed</div><div class="test-duration">0.002s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(received).toBeCloseTo(expected, precision)
+
+Expected: 208699
+Received: 208644.58690560007
+
+Expected precision:    0
+Expected difference: &lt; 0.5
+Received difference:   54.41309439993347
+    at Object.&lt;anonymous&gt; (/Users/ccladysmith/Desktop/dev/l1f3/backend/test/financial/financial-calculations.test.ts:259:27)
+    at Promise.then.completed (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/testWorker.js:106:12)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Financial Calculations - LIF3 Dashboard &gt; Investment Growth Projections</div><div class="test-title">Monthly investment contribution impact</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div></div></details><details id="suite-2" class="suite-container" open=""><summary class="suite-info"><div class="suite-path">/Users/ccladysmith/Desktop/dev/l1f3/backend/test/logging/logging-system.test.ts</div><div class="suite-time warn">52.691s</div></summary><div class="suite-tests"><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Financial Audit Logging</div><div class="test-title">Log financial transaction with ZAR currency</div><div class="test-status">passed</div><div class="test-duration">0.035s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Financial Audit Logging</div><div class="test-title">Log account balance update with before/after values</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Financial Audit Logging</div><div class="test-title">Log goal progress update toward R1.8M target</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Financial Audit Logging</div><div class="test-title">Log net worth update with calculation details</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Security Event Logging</div><div class="test-title">Log successful login attempt</div><div class="test-status">passed</div><div class="test-duration">0.006s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Security Event Logging</div><div class="test-title">Log failed login attempt with risk assessment</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Security Event Logging</div><div class="test-title">Log account lockout event</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Security Event Logging</div><div class="test-title">Log MFA enable/disable events</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Business Metrics Logging (43V3R)</div><div class="test-title">Log 43V3R daily revenue with target progress</div><div class="test-status">passed</div><div class="test-duration">0.596s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Business Metrics Logging (43V3R)</div><div class="test-title">Log daily revenue target achievement tracking</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Business Metrics Logging (43V3R)</div><div class="test-title">Log MRR progress for 43V3R</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Business Metrics Logging (43V3R)</div><div class="test-title">Log business metric with comprehensive metadata</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Integration Logging</div><div class="test-title">Log Google Drive sync operation</div><div class="test-status">passed</div><div class="test-duration">0.004s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Integration Logging</div><div class="test-title">Log Discord bot command execution</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Integration Logging</div><div class="test-title">Log Claude AI analysis request</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Integration Logging</div><div class="test-title">Log integration failure with error details</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Performance Metrics Logging</div><div class="test-title">Log API response time performance</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Performance Metrics Logging</div><div class="test-title">Log slow operation warning</div><div class="test-status">passed</div><div class="test-duration"> </div></div></div><div class="test-result failed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Performance Metrics Logging</div><div class="test-title">Log WebSocket connection metrics</div><div class="test-status">failed</div><div class="test-duration">0.014s</div></div><div class="failureMessages"> <pre class="failureMsg">Error: expect(jest.fn()).toHaveBeenCalledWith(...expected)
+
+- Expected
++ Received
+
+  "WEBSOCKET_EVENT",
+  Object {
+-   "data": ObjectContaining {
++   "data": Object {
+      "clientId": "ws_client_123",
+      "connectionTime": 250,
++     "userId": "ethan_barnes",
+    },
+    "event": "CONNECTION_ESTABLISHED",
+-   "timestamp": Any&lt;Date&gt;,
++   "timestamp": 2025-07-10T10:47:31.456Z,
+    "type": "WEBSOCKET_EVENT",
+-   "userId": "ethan_barnes",
++   "userId": undefined,
+  },
+
+Number of calls: 1
+    at Object.&lt;anonymous&gt; (/Users/ccladysmith/Desktop/dev/l1f3/backend/test/logging/logging-system.test.ts:492:38)
+    at Promise.then.completed (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at _runTestsForDescribeBlock (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:121:9)
+    at run (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/jest-runner/build/testWorker.js:106:12)</pre></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; ZAR Currency Operations Logging</div><div class="test-title">Log ZAR currency conversion</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; ZAR Currency Operations Logging</div><div class="test-title">Log foreign currency transaction</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Error and Exception Logging</div><div class="test-title">Log application errors with context</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Error and Exception Logging</div><div class="test-title">Log financial operation errors</div><div class="test-status">passed</div><div class="test-duration">0.002s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Log File Management</div><div class="test-title">Verify log files are created with proper naming</div><div class="test-status">passed</div><div class="test-duration">0.003s</div></div></div><div class="test-result passed"><div class="test-info"><div class="test-suitename">Logging System Validation - LIF3 Dashboard &gt; Log File Management</div><div class="test-title">Verify log rotation configuration</div><div class="test-status">passed</div><div class="test-duration">0.001s</div></div></div></div></details><details id="suite-3" class="suite-container" open=""><summary class="suite-info"><div class="suite-path">/Users/ccladysmith/Desktop/dev/l1f3/backend/test/websocket/websocket-realtime.test.ts</div><div class="suite-time">0s</div></summary><div class="suite-tests"><div class="test-result failed"><div class="failureMessages suiteFailure"> <pre class="failureMsg">  ● Test suite failed to run
+
+    test/websocket/websocket-realtime.test.ts:2:10 - error TS2724: '"../../src/modules/websocket/websocket.gateway"' has no exported member named 'WebSocketGateway'. Did you mean 'LIF3WebSocketGateway'?
+
+    2 import { WebSocketGateway } from '../../src/modules/websocket/websocket.gateway';
+               ~~~~~~~~~~~~~~~~
+
+      src/modules/websocket/websocket.gateway.ts:37:14
+        37 export class LIF3WebSocketGateway implements OnGatewayInit, OnGatewayConnection, OnGatewayDisconnect {
+                        ~~~~~~~~~~~~~~~~~~~~
+        'LIF3WebSocketGateway' is declared here.
+    test/websocket/websocket-realtime.test.ts:413:34 - error TS2352: Conversion of type '{ emit: jest.Mock&lt;any, any, any&gt;; disconnect: jest.Mock&lt;any, any, any&gt;; nsp?: Namespace&lt;DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any&gt;; ... 52 more ...; eventNames?: () =&gt; (string | symbol)[]; }' to type 'Socket&lt;DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any&gt;' may be a mistake because neither type sufficiently overlaps with the other. If this was intentional, convert the expression to 'unknown' first.
+      Type '{ emit: Mock&lt;any, any, any&gt;; disconnect: Mock&lt;any, any, any&gt;; nsp?: Namespace&lt;DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any&gt;; ... 52 more ...; eventNames?: () =&gt; (string | symbol)[]; }' is missing the following properties from type 'Socket&lt;DefaultEventsMap, DefaultEventsMap, DefaultEventsMap, any&gt;': pid, server, adapter, acks, and 16 more.
+
+    413         gateway.handleConnection(errorSocket as Socket)
+                                         ~~~~~~~~~~~~~~~~~~~~~
+</pre></div></div></div></details><details id="suite-4" class="suite-container" open=""><summary class="suite-info"><div class="suite-path">/Users/ccladysmith/Desktop/dev/l1f3/backend/test/integrations/external-integrations.test.ts</div><div class="suite-time">0s</div></summary><div class="suite-tests"><div class="test-result failed"><div class="failureMessages suiteFailure"> <pre class="failureMsg">  ● Test suite failed to run
+
+    test/integrations/external-integrations.test.ts:407:49 - error TS2554: Expected 0 arguments, but got 2.
+
+    407       await discordBotService.sendDailyBriefing('test_channel_id', briefingData);
+                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    test/integrations/external-integrations.test.ts:422:76 - error TS2345: Argument of type '{ title: string; amount: number; progress: number; type: string; }' is not assignable to parameter of type 'number'.
+
+    422       await discordBotService.sendMilestoneNotification('test_channel_id', milestoneData);
+                                                                                   ~~~~~~~~~~~~~
+    test/integrations/external-integrations.test.ts:735:56 - error TS2554: Expected 0 arguments, but got 2.
+
+    735       await expect(discordBotService.sendDailyBriefing('channel_id', {})).rejects.toThrow('Discord API unavailable');
+                                                               ~~~~~~~~~~~~~~~~
+</pre></div></div></div></details></main></body></html>

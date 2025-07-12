@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Grid, Card, CardContent, Typography, Box, LinearProgress, Paper, TextField, Button, Snackbar, Alert } from '@mui/material'
+import { Grid, Card, CardContent, Typography, Box, LinearProgress, Paper, TextField, Button, Snackbar, Alert, Divider, FormHelperText, Dialog, DialogTitle, DialogContent, DialogActions } from '@mui/material'
 import { TrendingUp, AccountBalance, Business, Flag } from '@mui/icons-material'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
@@ -54,6 +54,9 @@ const DashboardPage: React.FC = () => {
   const [strategyLoading, setStrategyLoading] = useState(false);
   const [strategyError, setStrategyError] = useState<string | null>(null);
   const [strategySuccess, setStrategySuccess] = useState(false);
+  const [strategyDraft, setStrategyDraft] = useState<BusinessStrategy | null>(null);
+  const [validationErrors, setValidationErrors] = useState<{ [key: string]: string }>({});
+  const [showConfirm, setShowConfirm] = useState(false);
 
   // Fetch financial dashboard data
   const { data: financialData, isLoading, error } = useQuery<FinancialData>({
@@ -77,7 +80,10 @@ const DashboardPage: React.FC = () => {
   useEffect(() => {
     setStrategyLoading(true);
     axios.get('/api/business-strategy')
-      .then(res => setStrategy(res.data))
+      .then(res => {
+        setStrategy(res.data);
+        setStrategyDraft(res.data);
+      })
       .catch(() => setStrategyError('Failed to load business strategy'))
       .finally(() => setStrategyLoading(false));
   }, []);
@@ -95,12 +101,52 @@ const DashboardPage: React.FC = () => {
     }
   }, [])
 
+  const validateStrategy = (data: BusinessStrategy | null) => {
+    const errors: { [key: string]: string } = {};
+    if (!data) return errors;
+    if (!data.currentMRR) errors.currentMRR = 'Current MRR is required';
+    if (!data.targetMRR) errors.targetMRR = 'Target MRR is required';
+    if (data.currentMRR && isNaN(Number(data.currentMRR))) errors.currentMRR = 'Must be a number';
+    if (data.targetMRR && isNaN(Number(data.targetMRR))) errors.targetMRR = 'Must be a number';
+    if (!data.timeline) errors.timeline = 'Timeline is required';
+    if (!data.immediateFocus) errors.immediateFocus = 'Immediate focus is required';
+    if (!data.focus) errors.focus = 'Brand focus is required';
+    if (!data.technology) errors.technology = 'Brand technology is required';
+    if (!data.target) errors.target = 'Brand target is required';
+    if (!data.revenueModel) errors.revenueModel = 'Revenue model is required';
+    if (!data.generated) errors.generated = 'Generated date is required';
+    if (!data.serviceOfferings || data.serviceOfferings.length === 0) errors.serviceOfferings = 'At least one service offering required';
+    if (data.serviceOfferings) {
+      data.serviceOfferings.forEach((o, i) => {
+        if (!o.name) errors[`serviceOfferings.${i}.name`] = 'Name required';
+        if (!o.priceRange) errors[`serviceOfferings.${i}.priceRange`] = 'Price range required';
+      });
+    }
+    if (!data.targetMarket || data.targetMarket.length === 0) errors.targetMarket = 'At least one target market required';
+    if (data.targetMarket) {
+      data.targetMarket.forEach((v, i) => {
+        if (!v) errors[`targetMarket.${i}`] = 'Target market required';
+      });
+    }
+    if (!data.competitiveAdvantages || data.competitiveAdvantages.length === 0) errors.competitiveAdvantages = 'At least one competitive advantage required';
+    if (data.competitiveAdvantages) {
+      data.competitiveAdvantages.forEach((v, i) => {
+        if (!v) errors[`competitiveAdvantages.${i}`] = 'Advantage required';
+      });
+    }
+    return errors;
+  };
+
   const handleStrategyChange = (field: keyof BusinessStrategy, value: any) => {
     setStrategy((prev) => prev ? { ...prev, [field]: value } : prev);
   };
 
+  const handleStrategyDraftChange = (field: keyof BusinessStrategy, value: any) => {
+    setStrategyDraft((prev) => prev ? { ...prev, [field]: value } : prev);
+  };
+
   const handleServiceOfferingChange = (idx: number, key: 'name' | 'priceRange', value: string) => {
-    setStrategy((prev) => {
+    setStrategyDraft((prev) => {
       if (!prev) return prev;
       const updated = [...(prev.serviceOfferings || [])];
       updated[idx] = { ...updated[idx], [key]: value };
@@ -109,11 +155,11 @@ const DashboardPage: React.FC = () => {
   };
 
   const handleAddServiceOffering = () => {
-    setStrategy((prev) => prev ? { ...prev, serviceOfferings: [...(prev.serviceOfferings || []), { name: '', priceRange: '' }] } : prev);
+    setStrategyDraft((prev) => prev ? { ...prev, serviceOfferings: [...(prev.serviceOfferings || []), { name: '', priceRange: '' }] } : prev);
   };
 
   const handleRemoveServiceOffering = (idx: number) => {
-    setStrategy((prev) => {
+    setStrategyDraft((prev) => {
       if (!prev) return prev;
       const updated = [...(prev.serviceOfferings || [])];
       updated.splice(idx, 1);
@@ -122,7 +168,7 @@ const DashboardPage: React.FC = () => {
   };
 
   const handleArrayFieldChange = (field: keyof BusinessStrategy, idx: number, value: string) => {
-    setStrategy((prev) => {
+    setStrategyDraft((prev) => {
       if (!prev) return prev;
       const arr = [...(prev[field] as string[])];
       arr[idx] = value;
@@ -131,11 +177,11 @@ const DashboardPage: React.FC = () => {
   };
 
   const handleAddArrayField = (field: keyof BusinessStrategy) => {
-    setStrategy((prev) => prev ? { ...prev, [field]: [...((prev[field] as string[]) || []), ''] } : prev);
+    setStrategyDraft((prev) => prev ? { ...prev, [field]: [...((prev[field] as string[]) || []), ''] } : prev);
   };
 
   const handleRemoveArrayField = (field: keyof BusinessStrategy, idx: number) => {
-    setStrategy((prev) => {
+    setStrategyDraft((prev) => {
       if (!prev) return prev;
       const arr = [...(prev[field] as string[])];
       arr.splice(idx, 1);
@@ -144,16 +190,30 @@ const DashboardPage: React.FC = () => {
   };
 
   const handleSaveStrategy = async () => {
+    const errors = validateStrategy(strategyDraft);
+    setValidationErrors(errors);
+    if (Object.keys(errors).length > 0) return;
+    setShowConfirm(true);
+  };
+
+  const handleConfirmSave = async () => {
+    setShowConfirm(false);
     setStrategyLoading(true);
     setStrategyError(null);
     try {
-      await axios.post('/api/business-strategy', strategy);
+      await axios.post('/api/business-strategy', strategyDraft);
+      setStrategy(strategyDraft);
       setStrategySuccess(true);
     } catch {
       setStrategyError('Failed to save business strategy');
     } finally {
       setStrategyLoading(false);
     }
+  };
+
+  const handleReset = () => {
+    setStrategyDraft(strategy);
+    setValidationErrors({});
   };
 
   // Log user interactions
@@ -435,43 +495,52 @@ const DashboardPage: React.FC = () => {
             <Typography variant="h5" gutterBottom>Business Strategy (Editable)</Typography>
             {strategyLoading && <LinearProgress sx={{ mb: 2 }} />}
             {strategyError && <Alert severity="error">{strategyError}</Alert>}
-            {strategy && (
+            {strategyDraft && (
               <Box component="form" sx={{ display: 'flex', flexDirection: 'column', gap: 2 }}>
-                <TextField label="Current MRR" value={strategy.currentMRR} onChange={e => handleStrategyChange('currentMRR', e.target.value)} fullWidth />
-                <TextField label="Target MRR" value={strategy.targetMRR} onChange={e => handleStrategyChange('targetMRR', e.target.value)} fullWidth />
-                <TextField label="Timeline" value={strategy.timeline} onChange={e => handleStrategyChange('timeline', e.target.value)} fullWidth />
-                <TextField label="Immediate Focus" value={strategy.immediateFocus} onChange={e => handleStrategyChange('immediateFocus', e.target.value)} fullWidth />
+                <Divider sx={{ mb: 2 }}>Technology</Divider>
+                <TextField label="Current MRR" value={strategyDraft.currentMRR} onChange={e => handleStrategyDraftChange('currentMRR', e.target.value)} error={!!validationErrors.currentMRR} helperText={validationErrors.currentMRR} fullWidth />
+                <TextField label="Target MRR" value={strategyDraft.targetMRR} onChange={e => handleStrategyDraftChange('targetMRR', e.target.value)} error={!!validationErrors.targetMRR} helperText={validationErrors.targetMRR} fullWidth />
+                <TextField label="Timeline" value={strategyDraft.timeline} onChange={e => handleStrategyDraftChange('timeline', e.target.value)} error={!!validationErrors.timeline} helperText={validationErrors.timeline} fullWidth />
+                <TextField label="Immediate Focus" value={strategyDraft.immediateFocus} onChange={e => handleStrategyDraftChange('immediateFocus', e.target.value)} error={!!validationErrors.immediateFocus} helperText={validationErrors.immediateFocus} fullWidth />
                 <Typography variant="subtitle1">Service Offerings</Typography>
-                {strategy.serviceOfferings?.map((offering, idx) => (
+                {validationErrors.serviceOfferings && <FormHelperText error>{validationErrors.serviceOfferings}</FormHelperText>}
+                {strategyDraft.serviceOfferings?.map((offering, idx) => (
                   <Box key={idx} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-                    <TextField label="Name" value={offering.name} onChange={e => handleServiceOfferingChange(idx, 'name', e.target.value)} />
-                    <TextField label="Price Range" value={offering.priceRange} onChange={e => handleServiceOfferingChange(idx, 'priceRange', e.target.value)} />
+                    <TextField label="Name" value={offering.name} onChange={e => handleServiceOfferingChange(idx, 'name', e.target.value)} error={!!validationErrors[`serviceOfferings.${idx}.name`]} helperText={validationErrors[`serviceOfferings.${idx}.name`]} />
+                    <TextField label="Price Range" value={offering.priceRange} onChange={e => handleServiceOfferingChange(idx, 'priceRange', e.target.value)} error={!!validationErrors[`serviceOfferings.${idx}.priceRange`]} helperText={validationErrors[`serviceOfferings.${idx}.priceRange`]} />
                     <Button onClick={() => handleRemoveServiceOffering(idx)} color="error">Remove</Button>
                   </Box>
                 ))}
                 <Button onClick={handleAddServiceOffering} variant="outlined">Add Service Offering</Button>
                 <Typography variant="subtitle1">Target Market</Typography>
-                {strategy.targetMarket?.map((val, idx) => (
+                {validationErrors.targetMarket && <FormHelperText error>{validationErrors.targetMarket}</FormHelperText>}
+                {strategyDraft.targetMarket?.map((val, idx) => (
                   <Box key={idx} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-                    <TextField label={`Target Market #${idx + 1}`} value={val} onChange={e => handleArrayFieldChange('targetMarket', idx, e.target.value)} />
+                    <TextField label={`Target Market #${idx + 1}`} value={val} onChange={e => handleArrayFieldChange('targetMarket', idx, e.target.value)} error={!!validationErrors[`targetMarket.${idx}`]} helperText={validationErrors[`targetMarket.${idx}`]} />
                     <Button onClick={() => handleRemoveArrayField('targetMarket', idx)} color="error">Remove</Button>
                   </Box>
                 ))}
                 <Button onClick={() => handleAddArrayField('targetMarket')} variant="outlined">Add Target Market</Button>
-                <TextField label="Brand Focus" value={strategy.focus} onChange={e => handleStrategyChange('focus', e.target.value)} fullWidth />
-                <TextField label="Brand Technology" value={strategy.technology} onChange={e => handleStrategyChange('technology', e.target.value)} fullWidth />
-                <TextField label="Brand Target" value={strategy.target} onChange={e => handleStrategyChange('target', e.target.value)} fullWidth />
-                <TextField label="Revenue Model" value={strategy.revenueModel} onChange={e => handleStrategyChange('revenueModel', e.target.value)} fullWidth />
+                <Divider sx={{ my: 2 }}>Brand</Divider>
+                <TextField label="Brand Focus" value={strategyDraft.focus} onChange={e => handleStrategyDraftChange('focus', e.target.value)} error={!!validationErrors.focus} helperText={validationErrors.focus} fullWidth />
+                <TextField label="Brand Technology" value={strategyDraft.technology} onChange={e => handleStrategyDraftChange('technology', e.target.value)} error={!!validationErrors.technology} helperText={validationErrors.technology} fullWidth />
+                <TextField label="Brand Target" value={strategyDraft.target} onChange={e => handleStrategyDraftChange('target', e.target.value)} error={!!validationErrors.target} helperText={validationErrors.target} fullWidth />
+                <TextField label="Revenue Model" value={strategyDraft.revenueModel} onChange={e => handleStrategyDraftChange('revenueModel', e.target.value)} error={!!validationErrors.revenueModel} helperText={validationErrors.revenueModel} fullWidth />
                 <Typography variant="subtitle1">Competitive Advantages</Typography>
-                {strategy.competitiveAdvantages?.map((val, idx) => (
+                {validationErrors.competitiveAdvantages && <FormHelperText error>{validationErrors.competitiveAdvantages}</FormHelperText>}
+                {strategyDraft.competitiveAdvantages?.map((val, idx) => (
                   <Box key={idx} sx={{ display: 'flex', gap: 1, alignItems: 'center' }}>
-                    <TextField label={`Advantage #${idx + 1}`} value={val} onChange={e => handleArrayFieldChange('competitiveAdvantages', idx, e.target.value)} />
+                    <TextField label={`Advantage #${idx + 1}`} value={val} onChange={e => handleArrayFieldChange('competitiveAdvantages', idx, e.target.value)} error={!!validationErrors[`competitiveAdvantages.${idx}`]} helperText={validationErrors[`competitiveAdvantages.${idx}`]} />
                     <Button onClick={() => handleRemoveArrayField('competitiveAdvantages', idx)} color="error">Remove</Button>
                   </Box>
                 ))}
                 <Button onClick={() => handleAddArrayField('competitiveAdvantages')} variant="outlined">Add Competitive Advantage</Button>
-                <TextField label="Generated" value={strategy.generated} onChange={e => handleStrategyChange('generated', e.target.value)} fullWidth />
-                <Button onClick={handleSaveStrategy} variant="contained" color="primary" disabled={strategyLoading}>Save Strategy</Button>
+                <Divider sx={{ my: 2 }}>Metadata</Divider>
+                <TextField label="Generated" value={strategyDraft.generated} onChange={e => handleStrategyDraftChange('generated', e.target.value)} error={!!validationErrors.generated} helperText={validationErrors.generated} fullWidth />
+                <Box sx={{ display: 'flex', gap: 2, mt: 2 }}>
+                  <Button onClick={handleSaveStrategy} variant="contained" color="primary" disabled={strategyLoading}>Save Strategy</Button>
+                  <Button onClick={handleReset} variant="outlined" color="secondary" disabled={strategyLoading}>Reset</Button>
+                </Box>
               </Box>
             )}
             <Snackbar open={strategySuccess} autoHideDuration={3000} onClose={() => setStrategySuccess(false)}>
@@ -479,6 +548,14 @@ const DashboardPage: React.FC = () => {
                 Business strategy saved successfully!
               </Alert>
             </Snackbar>
+            <Dialog open={showConfirm} onClose={() => setShowConfirm(false)}>
+              <DialogTitle>Confirm Save</DialogTitle>
+              <DialogContent>Are you sure you want to save changes to the business strategy?</DialogContent>
+              <DialogActions>
+                <Button onClick={() => setShowConfirm(false)}>Cancel</Button>
+                <Button onClick={handleConfirmSave} variant="contained" color="primary">Confirm</Button>
+              </DialogActions>
+            </Dialog>
           </CardContent>
         </Card>
       </Box>

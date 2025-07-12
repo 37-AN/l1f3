@@ -6,12 +6,15 @@ import {
   CallToolRequestSchema,
   ListToolsRequestSchema,
 } from '@modelcontextprotocol/sdk/types.js';
+import fs from 'fs';
 
 const DAILY_REVENUE_TARGET = parseInt(process.env.DAILY_REVENUE_TARGET) || 4881;
 const MRR_TARGET = parseInt(process.env.MRR_TARGET) || 147917;
+const STRATEGY_FILE = './business_strategy.json';
 
 class FourThreeV3RBusinessServer {
   constructor() {
+    this.businessStrategy = null;
     this.server = new Server(
       {
         name: '43v3r-business',
@@ -31,6 +34,15 @@ class FourThreeV3RBusinessServer {
       await this.server.close();
       process.exit(0);
     });
+
+    // Load strategy from file if exists
+    if (fs.existsSync(STRATEGY_FILE)) {
+      try {
+        this.businessStrategy = JSON.parse(fs.readFileSync(STRATEGY_FILE, 'utf-8'));
+      } catch (e) {
+        this.businessStrategy = null;
+      }
+    }
   }
 
   setupToolHandlers() {
@@ -72,6 +84,17 @@ class FourThreeV3RBusinessServer {
             type: 'object',
             properties: {},
           },
+        },
+        {
+          name: 'update_business_strategy',
+          description: 'Update the 43V3R business strategy (admin only)',
+          inputSchema: {
+            type: 'object',
+            properties: {
+              strategy: { type: 'object', description: 'Full business strategy object' }
+            },
+            required: ['strategy']
+          }
         }
       ],
     }));
@@ -86,6 +109,8 @@ class FourThreeV3RBusinessServer {
           return await this.trackMRR();
         case 'business_strategy':
           return await this.getBusinessStrategy();
+        case 'update_business_strategy':
+          return await this.updateBusinessStrategy(request.params.arguments);
         default:
           throw new Error(`Unknown tool: ${request.params.name}`);
       }
@@ -223,56 +248,40 @@ ${amount >= DAILY_REVENUE_TARGET ?
   }
 
   async getBusinessStrategy() {
-    return {
-      content: [
-        {
-          type: 'text',
-          text: `🧠 43V3R STRATEGIC ANALYSIS
+    if (this.businessStrategy) {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `🧠 43V3R STRATEGIC ANALYSIS (Current Strategy)
 
-🎯 MULTI-SECTOR POSITIONING:
-43V3R uniquely bridges four explosive sectors:
+${JSON.stringify(this.businessStrategy, null, 2)}`
+          }
+        ]
+      };
+    } else {
+      return {
+        content: [
+          {
+            type: 'text',
+            text: `🧠 43V3R STRATEGIC ANALYSIS (No Strategy Loaded)
 
-🤖 AI DEVELOPMENT (40% focus):
-• Market: R2.5T global AI market
-• Advantage: Technical expertise + business acumen
-• Services: Automation, ML consulting, AI integration
-• Revenue potential: R50,000+ MRR
+Please update the business strategy using the 'update_business_strategy' tool.`
+          }
+        ]
+      };
+    }
+  }
 
-🌐 WEB3 INTEGRATION (25% focus):
-• Market: R1.8T crypto + blockchain market  
-• Advantage: Early adoption + traditional business bridge
-• Services: Blockchain consulting, dApp development
-• Revenue potential: R30,000+ MRR
-
-💎 CRYPTO SOLUTIONS (25% focus):
-• Market: R2.1T cryptocurrency market
-• Advantage: Technical analysis + portfolio management
-• Services: Investment advisory, DeFi consulting
-• Revenue potential: R40,000+ MRR
-
-⚛️ QUANTUM RESEARCH (10% focus):
-• Market: R850B emerging quantum market
-• Advantage: Forward-thinking + research partnerships
-• Services: Consulting, research collaboration
-• Revenue potential: R20,000+ MRR
-
-🏆 COMPETITIVE ADVANTAGES:
-1. Multi-sector expertise (rare combination)
-2. Technical + business background
-3. Cape Town cost arbitrage vs global pricing
-4. Early adopter advantage in emerging tech
-
-📈 12-MONTH ROADMAP:
-• Q1: Establish AI consulting foundation
-• Q2: Add Web3 services, first partnerships
-• Q3: Launch crypto advisory, scale team
-• Q4: Quantum research collaborations
-
-🎯 ULTIMATE VISION:
-43V3R as the premier African tech consulting firm bridging traditional business with future technologies.`
-        }
-      ]
-    };
+  async updateBusinessStrategy(args) {
+    try {
+      if (!args.strategy) throw new Error('Missing strategy');
+      this.businessStrategy = args.strategy;
+      fs.writeFileSync(STRATEGY_FILE, JSON.stringify(args.strategy, null, 2));
+      return { content: [{ type: 'text', text: 'Business strategy updated successfully.' }] };
+    } catch (e) {
+      return { content: [{ type: 'text', text: `Failed to update business strategy: ${e.message}` }] };
+    }
   }
 
   async run() {
