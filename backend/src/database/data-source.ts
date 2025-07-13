@@ -12,24 +12,48 @@ import { SecurityEvent } from './entities/security-event.entity';
 
 const configService = new ConfigService();
 
-export const AppDataSource = new DataSource({
-  type: 'postgres',
-  host: 'localhost',
-  port: 5432,
-  username: 'ccladysmith',
-  password: 'password123',
-  database: 'lif3_db',
-  entities: [
-    User,
-    Transaction,
-    Account,
-    AccountBalance,
-    NetWorthSnapshot,
-    BusinessMetrics,
-    Goal,
-    AuditLog,
-    SecurityEvent,
-  ],
-  synchronize: true,
-  logging: true,
-});
+// Use DATABASE_URL for production, fallback to individual settings for development
+const databaseUrl = configService.get<string>('DATABASE_URL');
+
+export const AppDataSource = new DataSource(
+  databaseUrl
+    ? {
+        type: 'postgres',
+        url: databaseUrl,
+        entities: [
+          User,
+          Transaction,
+          Account,
+          AccountBalance,
+          NetWorthSnapshot,
+          BusinessMetrics,
+          Goal,
+          AuditLog,
+          SecurityEvent,
+        ],
+        synchronize: configService.get('NODE_ENV') !== 'production', // Don't auto-sync in production
+        logging: configService.get('NODE_ENV') !== 'production',
+        ssl: configService.get('NODE_ENV') === 'production' ? { rejectUnauthorized: false } : false,
+      }
+    : {
+        type: 'postgres',
+        host: configService.get('DB_HOST', 'localhost'),
+        port: configService.get<number>('DB_PORT', 5432),
+        username: configService.get('DB_USERNAME', 'ccladysmith'),
+        password: configService.get('DB_PASSWORD', 'password123'),
+        database: configService.get('DB_DATABASE', 'lif3_db'),
+        entities: [
+          User,
+          Transaction,
+          Account,
+          AccountBalance,
+          NetWorthSnapshot,
+          BusinessMetrics,
+          Goal,
+          AuditLog,
+          SecurityEvent,
+        ],
+        synchronize: true,
+        logging: true,
+      }
+);

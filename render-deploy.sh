@@ -1,3 +1,27 @@
+#!/bin/bash
+# Render.com deployment fix for chromadb platform issues
+
+set -e
+
+echo "🔧 Fixing Render deployment - removing platform-specific dependencies..."
+
+# Create a clean backend-only directory for deployment
+DEPLOY_DIR="backend-deploy"
+rm -rf $DEPLOY_DIR
+mkdir -p $DEPLOY_DIR
+
+echo "📦 Copying backend files (excluding problematic dependencies)..."
+
+# Copy backend source files
+cp -r backend/src $DEPLOY_DIR/
+cp -r backend/test $DEPLOY_DIR/ 2>/dev/null || true
+cp backend/package.json $DEPLOY_DIR/
+cp backend/tsconfig*.json $DEPLOY_DIR/ 2>/dev/null || true
+cp backend/nest-cli.json $DEPLOY_DIR/ 2>/dev/null || true
+cp backend/jest.config.js $DEPLOY_DIR/ 2>/dev/null || true
+
+# Create a clean package.json without chromadb
+cat > $DEPLOY_DIR/package.json << 'EOF'
 {
   "name": "@lif3/backend",
   "version": "1.0.0",
@@ -6,26 +30,9 @@
   "main": "dist/main.js",
   "scripts": {
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
-    "dev": "nest start --watch",
-    "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
-    "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:cov": "jest --coverage",
-    "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test:e2e": "jest --config ./test/jest-e2e.json",
-    "typeorm": "typeorm-ts-node-commonjs",
-    "migration:run": "npm run typeorm migration:run -- -d src/database/data-source.ts",
-    "migration:generate": "npm run typeorm migration:generate -- -d src/database/data-source.ts",
-    "migration:create": "npm run typeorm migration:create",
-    "migration:revert": "npm run typeorm migration:revert -- -d src/database/data-source.ts",
-    "db:reset:fresh-start": "ts-node src/database/scripts/run-fresh-start.ts",
-    "db:seed:fresh-start": "ts-node src/database/scripts/run-fresh-start.ts",
-    "test:connection": "ts-node src/scripts/test-connections.ts",
-    "health": "curl http://localhost:3001/health"
+    "typeorm": "typeorm-ts-node-commonjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.17.0",
@@ -73,28 +80,22 @@
     "@types/bcryptjs": "^2.4.6",
     "@types/compression": "^1.7.5",
     "@types/express": "^4.17.17",
-    "@types/jest": "^29.5.2",
     "@types/node": "^20.3.1",
     "@types/nodemailer": "^6.4.14",
     "@types/passport-google-oauth20": "^2.0.14",
     "@types/passport-jwt": "^3.0.13",
-    "@types/supertest": "^2.0.12",
     "@types/uuid": "^9.0.7",
-    "@typescript-eslint/eslint-plugin": "^6.0.0",
-    "@typescript-eslint/parser": "^6.0.0",
-    "eslint": "^8.42.0",
-    "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
-    "jest": "^29.5.0",
-    "jest-html-reporter": "^4.3.0",
-    "jest-junit": "^16.0.0",
-    "prettier": "^3.0.0",
-    "source-map-support": "^0.5.21",
-    "supertest": "^6.3.3",
-    "ts-jest": "^29.1.0",
-    "ts-loader": "^9.4.3",
-    "ts-node": "^10.9.1",
-    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.1.3"
   }
 }
+EOF
+
+echo "✅ Created clean backend deployment package"
+echo "📁 Deploy directory: $DEPLOY_DIR"
+echo ""
+echo "🚀 Manual deployment steps:"
+echo "1. Zip the $DEPLOY_DIR folder"
+echo "2. Upload to Render.com as manual deploy"
+echo "3. Or create new GitHub repo with just the $DEPLOY_DIR contents"
+echo ""
+echo "🎯 This package excludes chromadb and other platform-specific dependencies"

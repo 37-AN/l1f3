@@ -1,0 +1,55 @@
+name: Deploy to Free Stack
+
+on:
+  push:
+    branches: [vercel-deployment-fix, main]
+  workflow_dispatch:
+
+jobs:
+  deploy-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy Frontend
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          vercel-args: '--prod'
+
+  deploy-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Deploy to Render
+        uses: johnbeynon/render-deploy-action@v0.0.8
+        with:
+          service-id: ${{ secrets.RENDER_SERVICE_ID }}
+          api-key: ${{ secrets.RENDER_API_KEY }}
+
+  notify:
+    needs: [deploy-frontend, deploy-backend]
+    runs-on: ubuntu-latest
+    if: always()
+    steps:
+      - name: Discord Notification
+        run: |
+          curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+          -H "Content-Type: application/json" \
+          -d '{
+            "embeds": [{
+              "title": "🆓 LIF3 Free Stack Deployed",
+              "description": "Your personal financial dashboard is live!",
+              "color": 3066993,
+              "fields": [
+                {"name": "Frontend", "value": "Vercel (Free)", "inline": true},
+                {"name": "Backend", "value": "Render (Free)", "inline": true},
+                {"name": "Database", "value": "Neon PostgreSQL (Free)", "inline": true},
+                {"name": "Cache", "value": "Upstash Redis (Free)", "inline": true},
+                {"name": "Status", "value": "✅ Live", "inline": true},
+                {"name": "Cost", "value": "$0/month", "inline": true}
+              ]
+            }]
+          }'

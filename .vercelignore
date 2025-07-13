@@ -1,12 +1,9 @@
-backend/
-lif3-integrations/
-package-lock.json
-*.log
-*.sqlite
-*.db
-chromadb/
-logs/
-test/
-scripts/
-documents/
-data/
+# Ignore everything except frontend
+*
+!frontend/
+!frontend/**
+!vercel.json
+
+# Ignore these in frontend too
+frontend/node_modules/
+frontend/.env.local
