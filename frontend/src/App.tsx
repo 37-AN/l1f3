@@ -14,7 +14,7 @@ function App() {
   const [notifications, setNotifications] = useState<any[]>([])
   
   // WebSocket connection for real-time updates  
-  const { isConnected, lastEvent } = useWebSocket('http://localhost:3001')
+  const { isConnected, lastEvent } = useWebSocket('https://lif3-backend-clean.onrender.com')
 
   useEffect(() => {
     // Handle real-time events

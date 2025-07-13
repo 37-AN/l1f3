@@ -38,13 +38,15 @@ export default defineConfig({
     host: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:3001',
-        changeOrigin: true
+        target: 'https://lif3-backend-clean.onrender.com',
+        changeOrigin: true,
+        secure: true
       },
       '/socket.io': {
-        target: 'http://localhost:3001',
+        target: 'https://lif3-backend-clean.onrender.com',
         changeOrigin: true,
-        ws: true
+        ws: true,
+        secure: true
       }
     }
   },
