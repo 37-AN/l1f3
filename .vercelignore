@@ -1,0 +1,13 @@
+backend/
+lif3-integrations/
+node_modules/
+package-lock.json
+*.log
+*.sqlite
+*.db
+chromadb/
+logs/
+test/
+scripts/
+documents/
+data/
