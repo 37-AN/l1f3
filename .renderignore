@@ -1,0 +1,18 @@
+# Ignore everything except backend
+*
+!backend/
+!backend/**
+!render.yaml
+
+# But ignore these in backend
+backend/node_modules/
+backend/dist/
+backend/.env*
+backend/logs/
+backend/storage/
+backend/test-results/
+
+# Ignore root dependencies that cause platform issues
+package.json
+package-lock.json
+node_modules/
