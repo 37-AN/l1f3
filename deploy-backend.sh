@@ -13,7 +13,7 @@ fi
 
 # Login to Railway (if not already logged in)
 echo "🔐 Logging into Railway..."
-railway login
+railway login --browserless
 
 # Create new project or link existing
 echo "🔗 Setting up Railway project..."

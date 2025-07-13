@@ -15,7 +15,7 @@ async function bootstrap() {
 
   const configService = app.get(ConfigService);
   const loggerService = app.get(LoggerService);
-  const port = configService.get('PORT', 3001);
+  const port = configService.get('PORT', process.env.PORT || 3001);
 
   // Security middleware
   app.use(helmet({
