@@ -1,0 +1,35 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 365
+    },
+    "auditLog": "logs/.b0e11d14be47af74a4f8e4cfe67db9a52517cc1d-audit.json",
+    "files": [
+        {
+            "date": 1751787033711,
+            "name": "logs/financial-audit-2025-07-06.log",
+            "hash": "4e160260d508c8a55a83b8e07cfe2a9b12c6918985888d09b34de2fad3429c03"
+        },
+        {
+            "date": 1751873690706,
+            "name": "logs/financial-audit-2025-07-07.log",
+            "hash": "22fa1fd95f66efebbac8d4d7cc88806677f57bcfb2a92b664b9f179ae3dbbbbf"
+        },
+        {
+            "date": 1751927319535,
+            "name": "logs/financial-audit-2025-07-08.log",
+            "hash": "fe89dc5dbe385bf0d2dc883466d58de75aeec1c271eecbf7cb6a40f9951618bf"
+        },
+        {
+            "date": 1752148126364,
+            "name": "logs/financial-audit-2025-07-10.log",
+            "hash": "424e537b8a54259efb68032deb4ec55f585253c200eb8a580adfc18cc7c35f69"
+        },
+        {
+            "date": 1752261436436,
+            "name": "logs/financial-audit-2025-07-11.log",
+            "hash": "9af828af6ebec2c6359ec89f5144c91c2d7bcc1a6d56777532e98d17ac8fdc82"
+        }
+    ],
+    "hashType": "sha256"
+}

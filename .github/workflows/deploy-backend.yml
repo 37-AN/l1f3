@@ -1,0 +1,48 @@
+name: Deploy Backend to Railway
+
+on:
+  push:
+    branches: [vercel-deployment-fix, main]
+    paths: ['backend/**', 'railway.toml']
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: backend/package-lock.json
+    
+    - name: Install Railway CLI
+      run: npm install -g @railway/cli
+    
+    - name: Deploy to Railway
+      run: railway up --service ${{ secrets.RAILWAY_SERVICE_ID }}
+      env:
+        RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+    
+    - name: Notify Discord
+      if: success()
+      run: |
+        curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "embeds": [{
+            "title": "🚀 LIF3 Backend Deployed",
+            "description": "NestJS API is now live on Railway!",
+            "color": 3066993,
+            "fields": [
+              {"name": "Service", "value": "Backend API", "inline": true},
+              {"name": "Status", "value": "Live", "inline": true},
+              {"name": "Health Check", "value": "https://lif3-backend.railway.app/health", "inline": false}
+            ]
+          }]
+        }'

@@ -1,0 +1,1659 @@
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 1,
+  timestamp: 2025-07-11T19:17:17.966Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:17:17'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:17:17.968Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-11 21:17:17'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-11 21:17:17'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:17:17.984Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:17:17'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-11 21:17:17'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:17:18.105Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'RAG_CHROMADB',
+  action: 'INITIALIZE',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:17:18.379Z,
+  metadata: {
+    collectionName: 'lif3_financial_docs',
+    embeddingModel: 'Xenova/all-MiniLM-L6-v2',
+    persistPath: './storage/chromadb'
+  },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:17:19'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 1627,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-11T19:17:19.597Z,
+  metadata: { guildId: '1387401942254358588', channelId: undefined },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'yOjR4bA7-bsfd3gjAAAC',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:17:37.678Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-11T19:17:37.690Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-11T19:17:37.692Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 3,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-11T19:17:37.693Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-11 21:17:37'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 4,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:17:37.694Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-11T19:17:37.695Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 4
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 6,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:17:37.695Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-11T19:17:37.695Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 6
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 24,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:17:37.789Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 25,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:17:37.790Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '1k4ELPFNpIViYbyUAAAE',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:17:42.701Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '2w3LXZN38A7wapEYAAAG',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:17:47.752Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'qR75PFxt-VnryQfNAAAI',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:17:52.800Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'IA8JmOfb_kKgGVi5AAAK',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:17:57.846Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'mgeymaGjbEp8K_8bAAAM',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:02.896Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'NET_WORTH_UPDATE',
+  userId: 'ethan_barnes',
+  previousNetWorth: 235000,
+  newNetWorth: 239625,
+  changeAmount: 4625,
+  changePercent: 1.9680851063829787,
+  timestamp: 2025-07-11T19:18:07.724Z,
+  level: 'info',
+  message: 'NET_WORTH_UPDATE'
+}
+{
+  type: 'GOAL_PROGRESS',
+  goalId: 'net_worth_goal',
+  userId: 'ethan_barnes',
+  currentAmount: 239625,
+  targetAmount: 1800000,
+  progressPercent: 13.3,
+  timestamp: 2025-07-11T19:18:07.725Z,
+  level: 'info',
+  message: 'GOAL_PROGRESS'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'NET_WORTH_CALCULATION',
+  value: 2,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-11T19:18:07.726Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Net worth calculated for user: ethan_barnes',
+  timestamp: '2025-07-11 21:18:07'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 3,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:18:07.727Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-11T19:18:07.732Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 3
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/financial/dashboard',
+  userId: null,
+  statusCode: 200,
+  duration: 10,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:18:07.733Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Safari/605.1.15',
+  timestamp: 2025-07-11T19:18:07.734Z,
+  metadata: {
+    endpoint: '/api/financial/dashboard',
+    method: 'GET',
+    statusCode: 200,
+    duration: 10
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: '4heEJps2LUcAtLp_AAAO',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:07.938Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'QnpVb1D6Qr6SoNzUAAAQ',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:13.016Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'uH7W0ptD3CU1P1zcAAAS',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:18.213Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'BzUUDMookevRhAC6AAAU',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:23.422Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'zGeBgxbHTsnC2WFMAAAW',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:28.615Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'nbl4tUZQifMOedqqAAAY',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:33.783Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'C9WKPVpn0KKDjyiWAAAa',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:38.889Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'ZWbti-0MkhCxmbM8AAAc',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:44.107Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'goSlJDNh9LoNeR5QAAAe',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:49.295Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'SQdkFOn896ljNl8eAAAg',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:54.472Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'hG-PkF8eFTUx-kyfAAAi',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:18:59.643Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'YAv1FlaNcfvnfoScAAAk',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:19:04.844Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'Rh0N352X4vJeVH2bAAAm',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:19:09.955Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'WEBSOCKET_EVENT',
+  event: 'CONNECTION_REJECTED',
+  userId: undefined,
+  data: {
+    reason: 'NO_TOKEN',
+    clientId: 'TuL7K_jtYQPM1Sm3AAAo',
+    ipAddress: '127.0.0.1'
+  },
+  timestamp: 2025-07-11T19:19:15.067Z,
+  level: 'info',
+  message: 'WEBSOCKET_EVENT'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'CREATE',
+  entity: 'TRANSACTION',
+  entityId: undefined,
+  amount: 3000,
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:20:44.363Z,
+  metadata: {
+    endpoint: '/api/financial/transactions',
+    method: 'POST',
+    description: 'New financial transaction created',
+    sensitive: true,
+    requestBody: '[REDACTED]',
+    params: '[REDACTED]'
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'ethan_barnes',
+  action: 'CREATE',
+  entity: 'TRANSACTION',
+  entityId: undefined,
+  amount: 3000,
+  currency: undefined,
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:20:44.364Z,
+  metadata: {
+    category: 'business_income',
+    type: 'income',
+    description: 'AI Dashboard Demo - ChromaDB Integration',
+    date: undefined
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'ZAR_CURRENCY_OPERATION',
+  operation: 'FOREIGN_CURRENCY_TRANSACTION',
+  amount: 3000,
+  fromCurrency: undefined,
+  exchangeRate: undefined,
+  userId: 'ethan_barnes',
+  timestamp: 2025-07-11T19:20:44.365Z,
+  level: 'info',
+  message: 'ZAR_CURRENCY_OPERATION'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'TRANSACTION_CREATION',
+  value: 1,
+  unit: 'ms',
+  context: 'FinancialService',
+  timestamp: 2025-07-11T19:20:44.365Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'FinancialService',
+  level: 'info',
+  message: 'Transaction created successfully: tx_1752261644365',
+  timestamp: '2025-07-11 21:20:44'
+}
+{
+  type: 'API_ACCESS',
+  method: 'POST',
+  endpoint: '/api/financial/transactions',
+  userId: null,
+  statusCode: 201,
+  duration: 1,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:20:44.365Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:20:44.365Z,
+  metadata: {
+    endpoint: '/api/financial/transactions',
+    method: 'POST',
+    statusCode: 201,
+    duration: 1
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'API_ACCESS',
+  method: 'POST',
+  endpoint: '/api/financial/transactions',
+  userId: null,
+  statusCode: 201,
+  duration: 1,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:20:44.365Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'VIEW',
+  entity: 'TRANSACTION',
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:20:44.365Z,
+  metadata: {
+    endpoint: '/api/financial/transactions',
+    method: 'POST',
+    statusCode: 201,
+    duration: 1
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'CREATE',
+  entity: 'BUSINESS_METRIC',
+  entityId: undefined,
+  amount: undefined,
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:21:43.379Z,
+  metadata: {
+    endpoint: '/api/rag/search',
+    method: 'POST',
+    description: 'Semantic search performed',
+    sensitive: false,
+    requestBody: {
+      query: 'Find consulting revenue transactions',
+      collection: 'financial_transactions'
+    },
+    params: {}
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-11T19:22:17.991Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-11 21:22:17'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-11 21:22:17'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'CREATE',
+  entity: 'BUSINESS_METRIC',
+  entityId: undefined,
+  amount: undefined,
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:25:01.778Z,
+  metadata: {
+    endpoint: '/api/rag/search',
+    method: 'POST',
+    description: 'Semantic search performed',
+    sensitive: false,
+    requestBody: { query: 'Find consulting revenue transactions', limit: 5 },
+    params: {}
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'INTEGRATION',
+  service: 'RAG_CHROMADB',
+  action: 'SEMANTIC_SEARCH',
+  status: 'FAILED',
+  duration: 130,
+  errorMessage: `Embedding generation failed: The worker script or module filename must be an absolute path or a relative path starting with './' or '../'. Received "blob:nodedata:bd032183-39e2-49c4-b6b9-fef81ba53535"`,
+  timestamp: 2025-07-11T19:25:01.914Z,
+  metadata: { query: 'Find consulting revenue transactions' },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 12,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:26:05.274Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 13,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:26:05.275Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'CREATE',
+  entity: 'BUSINESS_METRIC',
+  entityId: undefined,
+  amount: undefined,
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:26:57.858Z,
+  metadata: {
+    endpoint: '/api/rag/query',
+    method: 'POST',
+    description: 'RAG-enhanced AI query processed',
+    sensitive: false,
+    requestBody: {
+      query: 'Show me business income transactions',
+      context: 'financial_analysis'
+    },
+    params: {}
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 2,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-11T19:27:17.992Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-11 21:27:17'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-11 21:27:17'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'CREATE',
+  entity: 'BUSINESS_METRIC',
+  entityId: undefined,
+  amount: undefined,
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:27:38.100Z,
+  metadata: {
+    endpoint: '/api/rag/analyze',
+    method: 'POST',
+    description: 'Document analysis performed',
+    sensitive: false,
+    requestBody: {
+      text: 'AI consulting revenue R3000',
+      type: 'transaction_analysis'
+    },
+    params: {}
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'CREATE',
+  entity: 'BUSINESS_METRIC',
+  entityId: undefined,
+  amount: undefined,
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:31:10.148Z,
+  metadata: {
+    endpoint: '/api/rag/upload',
+    method: 'POST',
+    description: 'Document uploaded for RAG processing',
+    sensitive: false,
+    requestBody: {
+      content: 'AI Dashboard Demo - ChromaDB Integration - R3000 business income',
+      metadata: {
+        amount: 3000,
+        category: 'business_income',
+        type: 'income',
+        date: '2025-07-11'
+      },
+      document_type: 'financial_transaction'
+    },
+    params: {}
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 1,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-11T19:32:17.893Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-11 21:32:17'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-11 21:32:17'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 22,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:33:51.260Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 24,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:33:51.261Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'FINANCIAL_AUDIT',
+  userId: 'anonymous',
+  action: 'CREATE',
+  entity: 'BUSINESS_METRIC',
+  entityId: undefined,
+  amount: undefined,
+  currency: 'ZAR',
+  ipAddress: '127.0.0.1',
+  userAgent: 'curl/8.7.1',
+  timestamp: 2025-07-11T19:34:46.000Z,
+  metadata: {
+    endpoint: '/api/rag/query',
+    method: 'POST',
+    description: 'RAG-enhanced AI query processed',
+    sensitive: false,
+    requestBody: { query: 'Show me business income transactions' },
+    params: {}
+  },
+  level: 'info',
+  message: 'FINANCIAL_AUDIT'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 1,
+  timestamp: 2025-07-11T19:45:25.103Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:45:25.105Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:45:25.122Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:45:25.245Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'RAG_CHROMADB',
+  action: 'INITIALIZE',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:45:25.331Z,
+  metadata: {
+    collectionName: 'lif3_financial_docs',
+    embeddingModel: 'Xenova/all-MiniLM-L6-v2',
+    persistPath: './storage/chromadb'
+  },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:45:26'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 1362,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-11T19:45:26.469Z,
+  metadata: { guildId: '1387401942254358588', channelId: undefined },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 16,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:47:33.170Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'API_ACCESS',
+  method: 'GET',
+  endpoint: '/api/rag/stats',
+  userId: null,
+  statusCode: 200,
+  duration: 16,
+  ipAddress: '127.0.0.1',
+  timestamp: 2025-07-11T19:47:33.170Z,
+  level: 'info',
+  message: 'API_ACCESS'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:48:34.440Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:48:34.443Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:48:34.459Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:48:34.569Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'RAG_CHROMADB',
+  action: 'INITIALIZE',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:48:34.771Z,
+  metadata: {
+    collectionName: 'lif3_financial_docs',
+    embeddingModel: 'Xenova/all-MiniLM-L6-v2',
+    persistPath: './storage/chromadb'
+  },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-11 21:48:34'
+}
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:48:35'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:48:35'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 1380,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-11T19:48:35.824Z,
+  metadata: { guildId: '1387401942254358588', channelId: undefined },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:48:47.232Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:48:47.234Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:48:47.250Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:48:47.351Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'RAG_CHROMADB',
+  action: 'INITIALIZE',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:48:47.505Z,
+  metadata: {
+    collectionName: 'lif3_financial_docs',
+    embeddingModel: 'Xenova/all-MiniLM-L6-v2',
+    persistPath: './storage/chromadb'
+  },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🚀 LIF3 Financial Dashboard API started on port 3001',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📊 Target: R239,625 → R1,800,000 (13.3% progress)',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '🏢 43V3R Business: R0 → R4,881 daily target',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '📖 API Documentation: http://localhost:3001/api/docs',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  context: 'Bootstrap',
+  level: 'info',
+  message: '💚 Health Check: http://localhost:3001/health',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:48:48'
+}
+{
+  type: 'INTEGRATION',
+  service: 'DISCORD',
+  action: 'CONNECT',
+  status: 'FAILED',
+  duration: 1258,
+  errorMessage: 'An invalid token was provided.',
+  timestamp: 2025-07-11T19:48:48.494Z,
+  metadata: { guildId: '1387401942254358588', channelId: undefined },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:50:08.606Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:50:08'
+}
+{
+  type: 'INTEGRATION',
+  service: 'GOOGLE_DRIVE',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:50:08.608Z,
+  metadata: { folderId: '1dD8C1e1hkcCPdtlqA3nsxJYWVvilV5Io', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'GoogleDriveService',
+  level: 'info',
+  message: 'Google Drive service initialized successfully',
+  timestamp: '2025-07-11 21:50:08'
+}
+{
+  context: 'DiscordBotService',
+  level: 'info',
+  message: 'Started refreshing Discord application (/) commands.',
+  timestamp: '2025-07-11 21:50:08'
+}
+{
+  type: 'INTEGRATION',
+  service: 'CLAUDE_AI',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  duration: 0,
+  timestamp: 2025-07-11T19:50:08.624Z,
+  metadata: { model: 'claude-3-sonnet-20240229', initialized: true },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  context: 'ClaudeAIService',
+  level: 'info',
+  message: 'Claude AI service initialized successfully',
+  timestamp: '2025-07-11 21:50:08'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'Monitoring service initialized',
+  timestamp: '2025-07-11 21:50:08'
+}
+{
+  context: 'WebSocketGateway',
+  level: 'info',
+  message: 'WebSocket Gateway initialized',
+  timestamp: '2025-07-11 21:50:08'
+}
+{
+  type: 'INTEGRATION',
+  service: 'WEBSOCKET',
+  action: 'CONNECT',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:50:08.727Z,
+  metadata: { event: 'GATEWAY_INITIALIZED', port: 3001 },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'INTEGRATION',
+  service: 'RAG_CHROMADB',
+  action: 'INITIALIZE',
+  status: 'SUCCESS',
+  timestamp: 2025-07-11T19:50:08.892Z,
+  metadata: {
+    collectionName: 'lif3_financial_docs',
+    embeddingModel: 'Xenova/all-MiniLM-L6-v2',
+    persistPath: './storage/chromadb'
+  },
+  level: 'info',
+  message: 'INTEGRATION'
+}
+{
+  type: 'PERFORMANCE_METRIC',
+  metric: 'HEALTH_CHECK',
+  value: 5,
+  unit: 'ms',
+  context: 'MonitoringService',
+  timestamp: 2025-07-11T19:53:47.257Z,
+  level: 'info',
+  message: 'PERFORMANCE_METRIC'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'System health check completed: CRITICAL',
+  timestamp: '2025-07-11 21:53:47'
+}
+{
+  context: 'MonitoringService',
+  level: 'info',
+  message: 'ALERT [CRITICAL]: System health is critical',
+  timestamp: '2025-07-11 21:53:47'
+}

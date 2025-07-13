@@ -1,0 +1,76 @@
+{
+  trace: 'Error: No access, refresh token, API key or refresh handler callback is set.\n' +
+    '    at OAuth2Client.getRequestMetadataAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:307:19)\n' +
+    '    at OAuth2Client.requestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:418:34)\n' +
+    '    at OAuth2Client.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:412:25)\n' +
+    '    at createAPIRequestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:303:31)\n' +
+    '    at createAPIRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:52:16)\n' +
+    '    at Resource$Files.create (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis/build/src/apis/drive/v3.js:657:65)\n' +
+    '    at GoogleDriveService.createDailyBriefing (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:102:47)\n' +
+    '    at GoogleDriveService.automatedDailyBriefing (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:633:33)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at runNextTicks (node:internal/process/task_queues:69:3)\n' +
+    '    at process.processTimers (node:internal/timers:520:9)\n' +
+    '    at async CronJob.<anonymous> (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/schedule/dist/schedule.explorer.js:119:17)',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: 'Failed to create daily briefing: No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  trace: 'No access, refresh token, API key or refresh handler callback is set.',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: '❌ Failed to create fresh start daily briefing',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  trace: 'Error: No access, refresh token, API key or refresh handler callback is set.\n' +
+    '    at OAuth2Client.getRequestMetadataAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:307:19)\n' +
+    '    at OAuth2Client.requestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:418:34)\n' +
+    '    at OAuth2Client.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:412:25)\n' +
+    '    at createAPIRequestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:303:31)\n' +
+    '    at createAPIRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:52:16)\n' +
+    '    at Resource$Files.create (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis/build/src/apis/drive/v3.js:657:65)\n' +
+    '    at GoogleDriveService.backupFinancialData (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:330:47)\n' +
+    '    at GoogleDriveService.automatedHourlySnapshot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:653:33)\n' +
+    '    at processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at runNextTicks (node:internal/process/task_queues:69:3)\n' +
+    '    at process.processTimers (node:internal/timers:520:9)\n' +
+    '    at async CronJob.<anonymous> (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/schedule/dist/schedule.explorer.js:119:17)',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: 'Failed to backup financial data: No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  trace: 'No access, refresh token, API key or refresh handler callback is set.',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: '❌ Failed to create hourly snapshot',
+  timestamp: '2025-07-08 07:02:14'
+}
+{
+  trace: 'Error: No access, refresh token, API key or refresh handler callback is set.\n' +
+    '    at OAuth2Client.getRequestMetadataAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:307:19)\n' +
+    '    at OAuth2Client.requestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:418:34)\n' +
+    '    at OAuth2Client.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/google-auth-library/build/src/auth/oauth2client.js:412:25)\n' +
+    '    at createAPIRequestAsync (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:303:31)\n' +
+    '    at createAPIRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis-common/build/src/apirequest.js:52:16)\n' +
+    '    at Resource$Files.create (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/googleapis/build/src/apis/drive/v3.js:657:65)\n' +
+    '    at GoogleDriveService.backupFinancialData (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:330:47)\n' +
+    '    at GoogleDriveService.automatedHourlySnapshot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/google-drive.service.ts:653:33)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async CronJob.<anonymous> (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@nestjs/schedule/dist/schedule.explorer.js:119:17)',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: 'Failed to backup financial data: No access, refresh token, API key or refresh handler callback is set.',
+  timestamp: '2025-07-08 08:00:00'
+}
+{
+  trace: 'No access, refresh token, API key or refresh handler callback is set.',
+  context: 'GoogleDriveService',
+  level: 'error',
+  message: '❌ Failed to create hourly snapshot',
+  timestamp: '2025-07-08 08:00:00'
+}

@@ -1,0 +1,16 @@
+{
+  "name": "LIF3 Financial Dashboard",
+  "short_name": "LIF3",
+  "description": "Personal wealth tracking from R239,625 to R1,800,000 target",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1976d2",
+  "theme_color": "#1976d2",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

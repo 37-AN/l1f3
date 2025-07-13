@@ -1,0 +1,48 @@
+name: Deploy LIF3 to Production
+
+on:
+  push:
+    branches: [production-deployment]
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Deploy to Railway
+      run: |
+        curl -f -X POST "https://backboard.railway.app/graphql/v2" \
+        -H "Authorization: Bearer ${{ secrets.RAILWAY_TOKEN }}" \
+        -H "Content-Type: application/json" \
+        -d '{"query":"mutation { deploymentCreate(input: { projectId: \"${{ secrets.RAILWAY_PROJECT_ID }}\", environmentId: \"${{ secrets.RAILWAY_ENV_ID }}\", serviceId: \"${{ secrets.RAILWAY_SERVICE_ID }}\" }) { id url } }"}'
+    
+    - name: Deploy to Vercel
+      uses: amondnet/vercel-action@v25
+      with:
+        vercel-token: ${{ secrets.VERCEL_TOKEN }}
+        vercel-org-id: ${{ secrets.ORG_ID }}
+        vercel-project-id: ${{ secrets.PROJECT_ID }}
+        working-directory: ./
+        vercel-args: '--prod'
+    
+    - name: Notify Discord
+      run: |
+        curl -X POST "${{ secrets.DISCORD_WEBHOOK_URL }}" \
+        -H "Content-Type: application/json" \
+        -d '{
+          "embeds": [{
+            "title": "🚀 LIF3 Deployed to Production",
+            "description": "Your personal financial dashboard is now live!",
+            "color": 3066993,
+            "fields": [
+              {"name": "Net Worth Progress", "value": "R239,625 → R1,800,000 (13.3%)", "inline": true},
+              {"name": "43V3R Target", "value": "R4,881 daily revenue", "inline": true},
+              {"name": "URL", "value": "https://lif3-dashboard.vercel.app", "inline": false}
+            ]
+          }]
+        }'

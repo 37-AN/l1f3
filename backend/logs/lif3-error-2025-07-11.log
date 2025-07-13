@@ -1,0 +1,100 @@
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:17:18'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:17:19'
+}
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:45:25'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:45:26'
+}
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:48:35'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:48:35'
+}
+{
+  trace: 'DiscordAPIError[0]: 401: Unauthorized\n' +
+    '    at handleErrors (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/Shared.ts:148:10)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)\n' +
+    '    at async SequentialHandler.runRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:417:20)\n' +
+    '    at async SequentialHandler.queueRequest (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/handlers/SequentialHandler.ts:169:11)\n' +
+    '    at async _REST.request (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/@discordjs/rest/src/lib/REST.ts:210:20)\n' +
+    '    at async DiscordBotService.registerSlashCommands (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:293:9)\n' +
+    '    at async DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:46:7)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to register slash commands: 401: Unauthorized',
+  timestamp: '2025-07-11 21:48:47'
+}
+{
+  trace: 'Error [TokenInvalid]: An invalid token was provided.\n' +
+    '    at WebSocketManager.connect (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/websocket/WebSocketManager.js:139:26)\n' +
+    '    at Client.login (/Users/ccladysmith/Desktop/dev/l1f3/node_modules/discord.js/src/client/Client.js:229:21)\n' +
+    '    at DiscordBotService.initializeBot (/Users/ccladysmith/Desktop/dev/l1f3/backend/src/modules/integrations/discord-bot.service.ts:49:27)\n' +
+    '    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)',
+  context: 'DiscordBotService',
+  level: 'error',
+  message: 'Failed to initialize Discord bot: An invalid token was provided.',
+  timestamp: '2025-07-11 21:48:48'
+}

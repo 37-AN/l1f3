@@ -1,0 +1,33 @@
+{
+  "timestamp": "2025-07-07T07:29:27.417Z",
+  "config": {
+    "JWT_SECRET": "✅",
+    "DATABASE_URL": "✅",
+    "REDIS_URL": "✅",
+    "GOOGLE_CLIENT_ID": "✅",
+    "GOOGLE_CLIENT_SECRET": "✅",
+    "GOOGLE_DRIVE_FOLDER_ID": "✅",
+    "DISCORD_BOT_TOKEN": "✅",
+    "DISCORD_CLIENT_ID": "✅",
+    "DISCORD_GUILD_ID": "✅",
+    "CLAUDE_API_KEY": "✅",
+    "SMTP_HOST": "✅",
+    "SMTP_PORT": "✅",
+    "SMTP_USER": "✅",
+    "SMTP_PASS": "[CONFIGURED]",
+    "FNB_API_KEY": "❌",
+    "STANDARD_BANK_API_KEY": "❌",
+    "EASY_EQUITIES_API_KEY": "❌",
+    "LUNO_API_KEY": "❌",
+    "LUNO_API_SECRET": "❌",
+    "RAILWAY_TOKEN": "❌",
+    "VERCEL_TOKEN": "❌",
+    "SENTRY_DSN": "❌",
+    "APP_URL": "✅",
+    "FRONTEND_URL": "✅",
+    "NODE_ENV": "✅",
+    "ENCRYPTION_KEY": "✅",
+    "TZ": "✅"
+  },
+  "issues": []
+}
