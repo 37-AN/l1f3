@@ -3,5 +3,23 @@
   "buildCommand": "npm ci && npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm ci",
-  "cwd": "frontend"
+  "cwd": "frontend",
+  "github": {
+    "enabled": true,
+    "autoAlias": true,
+    "autoJobCancelation": true
+  },
+  "functions": {
+    "frontend/dist/**": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "regions": ["iad1"],
+  "env": {
+    "NODE_ENV": "production",
+    "REACT_APP_API_URL": "https://lif3-backend-clean.onrender.com"
+  },
+  "cleanUrls": true,
+  "trailingSlash": false
 }

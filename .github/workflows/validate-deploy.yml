@@ -1,0 +1,171 @@
+name: Validate Before Deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate-backend:
+    runs-on: ubuntu-latest
+    name: Validate Backend Build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: 'backend-deploy/package-lock.json'
+
+      - name: Install backend dependencies
+        run: |
+          cd backend-deploy
+          npm ci
+
+      - name: Build backend
+        run: |
+          cd backend-deploy
+          npm run build
+
+      - name: Check TypeScript compilation
+        run: |
+          cd backend-deploy
+          npx tsc --noEmit
+
+      - name: Validate package size
+        run: |
+          cd backend-deploy
+          SIZE=$(du -sh node_modules | cut -f1 | sed 's/[^0-9.]//g')
+          echo "Package size: ${SIZE}MB"
+          # Warn if node_modules > 400MB (free tier consideration)
+          if (( $(echo "$SIZE > 400" | bc -l) )); then
+            echo "⚠️ Warning: Large dependency size. Consider optimizing for free tier."
+          fi
+          
+      - name: Verify build artifacts
+        run: |
+          cd backend-deploy
+          if [ -d "dist" ] && [ -f "dist/main.js" ]; then
+            echo "✅ Build artifacts verified"
+            echo "Main bundle size: $(du -sh dist/main.js | cut -f1)"
+          else
+            echo "❌ Build artifacts missing"
+            exit 1
+          fi
+
+  validate-frontend:
+    runs-on: ubuntu-latest
+    name: Validate Frontend Build
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: 'frontend/package-lock.json'
+
+      - name: Install frontend dependencies
+        run: |
+          cd frontend
+          npm ci
+
+      - name: Build frontend
+        run: |
+          cd frontend
+          npm run build
+
+      - name: Check bundle size
+        run: |
+          cd frontend/dist
+          BUNDLE_SIZE=$(du -sh . | cut -f1)
+          echo "Bundle size: $BUNDLE_SIZE"
+          
+          # Check for large bundles (free tier bandwidth consideration)
+          ASSETS_SIZE=$(du -sh assets/ | cut -f1 | sed 's/[^0-9.]//g')
+          echo "Assets size: ${ASSETS_SIZE}MB"
+          
+          if (( $(echo "$ASSETS_SIZE > 10" | bc -l) )); then
+            echo "⚠️ Warning: Large bundle size detected. Consider code splitting."
+          fi
+
+      - name: Validate environment variables
+        run: |
+          cd frontend
+          if ! grep -q "REACT_APP_API_URL" .env* 2>/dev/null; then
+            echo "✅ No hardcoded API URLs found"
+          fi
+
+  deploy-validation:
+    runs-on: ubuntu-latest
+    name: Deployment Validation
+    needs: [validate-backend, validate-frontend]
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - name: Validate commit message
+        run: |
+          COMMIT_MSG="${{ github.event.head_commit.message }}"
+          echo "Commit message: $COMMIT_MSG"
+          
+          # Check for certain keywords that indicate working changes
+          if echo "$COMMIT_MSG" | grep -qE "(fix|feat|add|update|deploy|ready)"; then
+            echo "✅ Valid commit message for deployment"
+          else
+            echo "⚠️ Commit message should indicate the nature of changes"
+          fi
+
+      - name: Check deployment readiness
+        run: |
+          echo "🔍 Deployment readiness check:"
+          echo "✅ Backend build validation passed"
+          echo "✅ Frontend build validation passed"
+          echo "✅ Commit is on main branch"
+          echo "🚀 Ready for auto-deployment"
+
+  notify-deployment:
+    runs-on: ubuntu-latest
+    name: Notify Deployment Status
+    needs: [deploy-validation]
+    if: always() && github.ref == 'refs/heads/main'
+    steps:
+      - name: Set deployment status
+        run: |
+          if [ "${{ needs.deploy-validation.result }}" == "success" ]; then
+            echo "STATUS=✅ DEPLOYMENT READY" >> $GITHUB_ENV
+            echo "COLOR=28a745" >> $GITHUB_ENV
+          else
+            echo "STATUS=❌ DEPLOYMENT BLOCKED" >> $GITHUB_ENV
+            echo "COLOR=d73a49" >> $GITHUB_ENV
+          fi
+
+      - name: Send webhook notification
+        if: github.event_name == 'push'
+        run: |
+          # This will be caught by our webhook handler
+          curl -X POST "https://lif3-backend-clean.onrender.com/api/dashboard/webhooks/github" \
+            -H "Content-Type: application/json" \
+            -H "X-GitHub-Event: workflow_run" \
+            -d '{
+              "action": "deployment_validation",
+              "workflow_run": {
+                "name": "Validate Before Deploy",
+                "conclusion": "${{ needs.deploy-validation.result }}",
+                "status": "${{ env.STATUS }}"
+              },
+              "repository": {
+                "name": "${{ github.repository }}",
+                "html_url": "${{ github.event.repository.html_url }}"
+              },
+              "head_commit": {
+                "id": "${{ github.sha }}",
+                "message": "${{ github.event.head_commit.message }}",
+                "url": "${{ github.event.head_commit.url }}"
+              }
+            }' || echo "Webhook notification failed (expected during first setup)"
