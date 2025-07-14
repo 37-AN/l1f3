@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { io, Socket } from 'socket.io-client'
 import logger from '../utils/logger'
+import { initializeAuth } from '../auth/mockAuth'
 
 interface WebSocketState {
   isConnected: boolean
@@ -22,11 +23,19 @@ export function useWebSocket(url: string) {
   const connectionStartTime = useRef<number>(0)
 
   useEffect(() => {
+    // Initialize authentication before connecting
+    initializeAuth()
+    
     const connectWebSocket = () => {
       connectionStartTime.current = Date.now()
       
       const socket = io(url, {
         transports: ['websocket', 'polling'],
+        timeout: 20000,
+        autoConnect: true,
+        reconnection: true,
+        reconnectionDelay: 2000,
+        reconnectionAttempts: 5,
         auth: {
           token: localStorage.getItem('authToken') // JWT token for authentication
         }
@@ -118,8 +127,14 @@ export function useWebSocket(url: string) {
         logger.logWebSocketEvent('connection_success', data)
       })
 
+      socket.on('connect_error', (error) => {
+        logger.logError(new Error(error.message), 'WebSocket', 'CONNECTION_ERROR')
+        console.warn('WebSocket connection failed:', error.message, '- falling back to polling')
+      })
+
       socket.on('error', (error) => {
         logger.logError(new Error(error), 'WebSocket', 'CONNECTION_ERROR')
+        console.warn('WebSocket error:', error)
       })
 
       socketRef.current = socket

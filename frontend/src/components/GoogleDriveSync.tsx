@@ -15,6 +15,7 @@ import {
   IconButton,
   Tooltip
 } from '@mui/material';
+import { createApiUrl } from '../config/api';
 import {
   CloudSync,
   CloudDone,
@@ -53,7 +54,7 @@ const GoogleDriveSync: React.FC<GoogleDriveSyncProps> = ({ onSyncStatusChange })
       setIsLoading(true);
       logger.logAPICall('/api/integrations/google-drive/status', 'GET', 0, 0, 'GoogleDriveSync');
       
-      const response = await axios.get('/api/integrations/google-drive/status');
+      const response = await axios.get(createApiUrl('/api/integrations/google-drive/status'));
       const status = response.data;
       
       setSyncStatus(status);
@@ -80,7 +81,7 @@ const GoogleDriveSync: React.FC<GoogleDriveSyncProps> = ({ onSyncStatusChange })
 
   const fetchRecentFiles = async () => {
     try {
-      const response = await axios.get('/api/integrations/google-drive/files');
+      const response = await axios.get(createApiUrl('/api/integrations/google-drive/files'));
       setRecentFiles(response.data.slice(0, 5)); // Show last 5 files
       
       logger.logUserInteraction('files', 'FETCH', 'GoogleDriveSync', { 
@@ -98,7 +99,7 @@ const GoogleDriveSync: React.FC<GoogleDriveSyncProps> = ({ onSyncStatusChange })
       setIsCreatingBriefing(true);
       logger.logUserInteraction('create_briefing', 'CLICK', 'GoogleDriveSync');
       
-      const response = await axios.post('/api/integrations/google-drive/test-briefing');
+      const response = await axios.post(createApiUrl('/api/integrations/google-drive/test-briefing'));
       
       if (response.data.success) {
         logger.logUserInteraction('briefing_created', 'SUCCESS', 'GoogleDriveSync', {
@@ -136,7 +137,7 @@ const GoogleDriveSync: React.FC<GoogleDriveSyncProps> = ({ onSyncStatusChange })
         }
       };
       
-      const response = await axios.post('/api/integrations/google-drive/sync', financialData);
+      const response = await axios.post(createApiUrl('/api/integrations/google-drive/sync'), financialData);
       
       if (response.data.success) {
         await Promise.all([fetchSyncStatus(), fetchRecentFiles()]);
@@ -155,7 +156,7 @@ const GoogleDriveSync: React.FC<GoogleDriveSyncProps> = ({ onSyncStatusChange })
       setIsLoading(true);
       logger.logUserInteraction('create_folders', 'TRIGGER', 'GoogleDriveSync');
       
-      const response = await axios.post('/api/integrations/google-drive/create-folders');
+      const response = await axios.post(createApiUrl('/api/integrations/google-drive/create-folders'));
       
       if (response.data.success) {
         await fetchSyncStatus();

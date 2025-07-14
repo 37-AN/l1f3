@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Box, Typography, Button, Alert } from '@mui/material'
 import axios from 'axios'
+import { API_CONFIG } from './config/api'
 
 const TestConnection: React.FC = () => {
   const [backendStatus, setBackendStatus] = useState<string>('Testing...')
@@ -13,11 +14,11 @@ const TestConnection: React.FC = () => {
       setError(null)
       
       // Test basic health endpoint
-      const healthResponse = await axios.get('https://lif3-backend-clean.onrender.com/health')
+      const healthResponse = await axios.get(`${API_CONFIG.BASE_URL}/health`)
       console.log('Health check response:', healthResponse.data)
       
       // Test API endpoint
-      const apiResponse = await axios.get('https://lif3-backend-clean.onrender.com/api/financial/dashboard')
+      const apiResponse = await axios.get(`${API_CONFIG.BASE_URL}/api/financial/dashboard`)
       console.log('API response:', apiResponse.data)
       
       setBackendStatus('✅ Backend Connected')
@@ -70,7 +71,7 @@ const TestConnection: React.FC = () => {
       <Box sx={{ mt: 3 }}>
         <Typography variant="h6">Troubleshooting:</Typography>
         <ul>
-          <li>Backend should be running on https://lif3-backend-clean.onrender.com</li>
+          <li>Backend should be running on {API_CONFIG.BASE_URL}</li>
           <li>Check browser console for errors</li>
           <li>Verify CORS is enabled on backend</li>
           <li>Check if all dependencies are installed</li>

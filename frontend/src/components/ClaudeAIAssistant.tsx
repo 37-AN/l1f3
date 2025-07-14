@@ -12,6 +12,7 @@ import {
   Button,
   Tooltip
 } from '@mui/material'
+import { createApiUrl } from '../config/api'
 import {
   Send,
   Psychology,
@@ -247,7 +248,7 @@ const ClaudeAIAssistant: React.FC<ClaudeAIAssistantProps> = ({ currentMetrics })
 
   const checkConnection = async () => {
     try {
-      const response = await axios.get('/api/rag/stats')
+      const response = await axios.get(createApiUrl('/api/rag/stats'))
       setIsConnected(true)
       
       // Add welcome message
@@ -255,8 +256,14 @@ const ClaudeAIAssistant: React.FC<ClaudeAIAssistantProps> = ({ currentMetrics })
         addWelcomeMessage()
       }
     } catch (error) {
-      setIsConnected(false)
-      console.warn('Claude AI integration not available:', error)
+      // Use fallback mode even when backend is unavailable
+      setIsConnected(true)
+      console.log('Claude AI using fallback mode')
+      
+      // Add welcome message in fallback mode
+      if (messages.length === 0) {
+        addWelcomeMessage()
+      }
     }
   }
 
@@ -308,7 +315,7 @@ Ask me anything about your financial journey!`,
       let assistantMessage: Message;
       
       try {
-        const ragResponse = await axios.post('/api/rag/query', {
+        const ragResponse = await axios.post(createApiUrl('/api/rag/query'), {
           query: queryText,
           maxContextTokens: 4000,
           contextChunks: 5

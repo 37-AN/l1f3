@@ -8,13 +8,14 @@ import BusinessPage from './pages/BusinessPage'
 import SettingsPage from './pages/SettingsPage'
 import { useWebSocket } from './hooks/useWebSocket'
 import logger from './utils/logger'
+import { API_CONFIG } from './config/api'
 
 function App() {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const [notifications, setNotifications] = useState<any[]>([])
   
   // WebSocket connection for real-time updates  
-  const { isConnected, lastEvent } = useWebSocket('https://lif3-backend-clean.onrender.com')
+  const { isConnected, lastEvent } = useWebSocket(API_CONFIG.WS_URL)
 
   useEffect(() => {
     // Handle real-time events

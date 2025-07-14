@@ -1,0 +1,3 @@
+Deployment trigger: 2025-07-13T18:39:00Z
+Updated to connect to production backend: https://lif3-backend-clean.onrender.com
+CORS configured for frontend domain: https://l1f3-frontend-htoz.vercel.app

@@ -4,6 +4,7 @@ import { TrendingUp, AccountBalance, Business, Flag } from '@mui/icons-material'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import logger from '../utils/logger'
+import { API_CONFIG, createApiUrl } from '../config/api'
 import ClaudeAIAssistant from '../components/ClaudeAIAssistant'
 
 interface FinancialData {
@@ -64,7 +65,7 @@ const DashboardPage: React.FC = () => {
     queryFn: async () => {
       const startTime = Date.now()
       try {
-        const response = await axios.get('/api/financial/dashboard')
+        const response = await axios.get(createApiUrl('/api/financial/dashboard'))
         const loadTime = Date.now() - startTime
         logger.logAPICall('/api/financial/dashboard', 'GET', loadTime, response.status, 'DashboardPage')
         return response.data
@@ -79,7 +80,7 @@ const DashboardPage: React.FC = () => {
   // Fetch business strategy data
   useEffect(() => {
     setStrategyLoading(true);
-    axios.get('/api/business-strategy')
+    axios.get(createApiUrl('/api/business-strategy'))
       .then(res => {
         setStrategy(res.data);
         setStrategyDraft(res.data);
@@ -201,7 +202,7 @@ const DashboardPage: React.FC = () => {
     setStrategyLoading(true);
     setStrategyError(null);
     try {
-      await axios.post('/api/business-strategy', strategyDraft);
+      await axios.post(createApiUrl('/api/business-strategy'), strategyDraft);
       setStrategy(strategyDraft);
       setStrategySuccess(true);
     } catch {
