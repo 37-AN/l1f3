@@ -18,7 +18,9 @@
   "regions": ["iad1"],
   "env": {
     "NODE_ENV": "production",
-    "REACT_APP_API_URL": "https://lif3-backend-clean.onrender.com"
+    "VITE_API_BASE_URL": "https://lif3-backend-clean.onrender.com",
+    "VITE_WS_URL": "https://lif3-backend-clean.onrender.com",
+    "VITE_NODE_ENV": "production"
   },
   "cleanUrls": true,
   "trailingSlash": false
