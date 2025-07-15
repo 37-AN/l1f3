@@ -38,7 +38,7 @@ module.exports = {
   resetMocks: true,
   restoreMocks: true,
   // M1 MacBook ARM64 optimization
-  maxWorkers: '50%',
+  maxWorkers: 1,
   cacheDirectory: '<rootDir>/node_modules/.cache/jest',
   // LIF3 specific test categories
   testPathIgnorePatterns: [
@@ -46,7 +46,7 @@ module.exports = {
     '/dist/',
     '/coverage/'
   ],
-  moduleNameMapping: {
+  moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
     '^@test/(.*)$': '<rootDir>/test/$1'
   },
@@ -75,6 +75,8 @@ module.exports = {
     '**/performance/**/*.test.ts',
     '**/security/**/*.test.ts',
     '**/e2e/**/*.test.ts',
-    '**/monitoring/**/*.test.ts'
+    '**/monitoring/**/*.test.ts',
+    '**/mcp-framework/**/*.test.ts',
+    '**/mcp-servers/**/*.test.ts'
   ]
 };

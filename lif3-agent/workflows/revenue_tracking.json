@@ -1,0 +1,69 @@
+{
+  "name": "43V3R Revenue Alert System",
+  "description": "Real-time revenue tracking and alerting for 43V3R business",
+  "version": "1.0.0",
+  "nodes": [
+    {
+      "id": "revenue_webhook",
+      "name": "Revenue Webhook",
+      "type": "webhook",
+      "position": [250, 300],
+      "parameters": {
+        "path": "43v3r-revenue",
+        "method": "POST",
+        "authentication": "none"
+      }
+    },
+    {
+      "id": "log_to_lif3_api",
+      "name": "Log to LIF3 API",
+      "type": "http_request",
+      "position": [450, 300],
+      "parameters": {
+        "url": "http://localhost:8000/revenue/43v3r",
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "amount": "{{$json.amount}}",
+          "description": "{{$json.description}}"
+        }
+      }
+    },
+    {
+      "id": "check_daily_progress",
+      "name": "Check Daily Progress",
+      "type": "http_request",
+      "position": [650, 300],
+      "parameters": {
+        "url": "http://localhost:8000/analytics/business",
+        "method": "GET"
+      }
+    },
+    {
+      "id": "send_progress_alert",
+      "name": "Send Progress Alert",
+      "type": "notification",
+      "position": [850, 300],
+      "parameters": {
+        "message": "💰 43V3R Revenue Update: R{{$json.amount}} logged. Daily progress: {{$node.check_daily_progress.json.daily_progress}}%",
+        "priority": "high"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from": "revenue_webhook",
+      "to": "log_to_lif3_api"
+    },
+    {
+      "from": "log_to_lif3_api",
+      "to": "check_daily_progress"
+    },
+    {
+      "from": "check_daily_progress",
+      "to": "send_progress_alert"
+    }
+  ]
+}

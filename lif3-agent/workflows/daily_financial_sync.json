@@ -1,0 +1,62 @@
+{
+  "name": "LIF3 Daily Financial Sync",
+  "description": "Automated daily financial tracking and briefing generation",
+  "version": "1.0.0",
+  "nodes": [
+    {
+      "id": "schedule_daily_8am",
+      "name": "Schedule Daily 8AM",
+      "type": "cron",
+      "position": [250, 300],
+      "parameters": {
+        "cron": "0 8 * * *",
+        "timezone": "Africa/Johannesburg"
+      }
+    },
+    {
+      "id": "generate_briefing",
+      "name": "Generate Daily Briefing",
+      "type": "http_request",
+      "position": [450, 300],
+      "parameters": {
+        "url": "http://localhost:8000/briefing/generate",
+        "method": "GET",
+        "timeout": 30000
+      }
+    },
+    {
+      "id": "check_revenue_target",
+      "name": "Check Revenue Target",
+      "type": "http_request",
+      "position": [650, 300],
+      "parameters": {
+        "url": "http://localhost:8000/revenue/43v3r/today",
+        "method": "GET"
+      }
+    },
+    {
+      "id": "send_notification",
+      "name": "Send Daily Notification",
+      "type": "notification",
+      "position": [850, 300],
+      "parameters": {
+        "message": "LIF3 Daily Briefing Generated - Revenue: R{{$node.check_revenue_target.json.daily_revenue}} / R4,881",
+        "priority": "normal"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from": "schedule_daily_8am",
+      "to": "generate_briefing"
+    },
+    {
+      "from": "generate_briefing",
+      "to": "check_revenue_target"
+    },
+    {
+      "from": "check_revenue_target",
+      "to": "send_notification"
+    }
+  ]
+}

@@ -50,6 +50,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.15.0",
     "@modelcontextprotocol/server-filesystem": "^2025.7.1",
+    "@sentry/nextjs": "^9.39.0",
     "abbrev": "^1.1.1",
     "abort-controller": "^3.0.0",
     "accepts": "^2.0.0",

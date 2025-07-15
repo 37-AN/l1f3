@@ -1,0 +1,74 @@
+{
+  "name": "LIF3 Goal Monitoring System",
+  "description": "Continuous monitoring of progress toward R1,800,000 net worth goal",
+  "version": "1.0.0",
+  "nodes": [
+    {
+      "id": "hourly_check",
+      "name": "Hourly Goal Check",
+      "type": "cron",
+      "position": [250, 300],
+      "parameters": {
+        "cron": "0 * * * *",
+        "timezone": "Africa/Johannesburg"
+      }
+    },
+    {
+      "id": "get_progress_analytics",
+      "name": "Get Progress Analytics",
+      "type": "http_request",
+      "position": [450, 300],
+      "parameters": {
+        "url": "http://localhost:8000/analytics/progress",
+        "method": "GET"
+      }
+    },
+    {
+      "id": "check_if_behind",
+      "name": "Check if Behind Target",
+      "type": "condition",
+      "position": [650, 300],
+      "parameters": {
+        "condition": "{{$node.get_progress_analytics.json.on_track}} === false"
+      }
+    },
+    {
+      "id": "send_acceleration_alert",
+      "name": "Send Acceleration Alert",
+      "type": "notification",
+      "position": [850, 250],
+      "parameters": {
+        "message": "🚨 LIF3 Alert: Behind target! Current: R{{$node.get_progress_analytics.json.current_net_worth}} ({{$node.get_progress_analytics.json.progress_percentage}}%). Action needed!",
+        "priority": "urgent"
+      }
+    },
+    {
+      "id": "milestone_check",
+      "name": "Check Milestones",
+      "type": "condition",
+      "position": [850, 350],
+      "parameters": {
+        "condition": "{{$node.get_progress_analytics.json.progress_percentage}} >= 25"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "from": "hourly_check",
+      "to": "get_progress_analytics"
+    },
+    {
+      "from": "get_progress_analytics",
+      "to": "check_if_behind"
+    },
+    {
+      "from": "check_if_behind",
+      "to": "send_acceleration_alert",
+      "condition": "true"
+    },
+    {
+      "from": "get_progress_analytics",
+      "to": "milestone_check"
+    }
+  ]
+}

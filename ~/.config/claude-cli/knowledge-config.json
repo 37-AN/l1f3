@@ -1,0 +1,12 @@
+{
+  "knowledge_base_path": "~/Development/claude-knowledge",
+  "auto_include_context": true,
+  "project_mappings": {
+    "lif3": "~/Development/claude-knowledge/lif3",
+    "43v3r": "~/Development/claude-knowledge/43v3r", 
+    "business": "~/Development/claude-knowledge/business"
+  },
+  "default_project": "lif3",
+  "max_context_size": 150000,
+  "exclude_patterns": ["*.log", "node_modules/", ".git/"]
+}
