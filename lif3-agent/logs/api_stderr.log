@@ -2880,3 +2880,11 @@ Traceback (most recent call last):
   File "/Users/ccladysmith/Desktop/dev/l1f3/lif3-agent/lif3_api.py", line 7, in <module>
     from fastapi import FastAPI, HTTPException, BackgroundTasks
 ModuleNotFoundError: No module named 'fastapi'
+Traceback (most recent call last):
+  File "/Users/ccladysmith/Desktop/dev/l1f3/lif3-agent/lif3_api.py", line 7, in <module>
+    from fastapi import FastAPI, HTTPException, BackgroundTasks
+ModuleNotFoundError: No module named 'fastapi'
+Traceback (most recent call last):
+  File "/Users/ccladysmith/Desktop/dev/l1f3/lif3-agent/lif3_api.py", line 7, in <module>
+    from fastapi import FastAPI, HTTPException, BackgroundTasks
+ModuleNotFoundError: No module named 'fastapi'
