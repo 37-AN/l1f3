@@ -77,6 +77,12 @@ module.exports = {
     '**/e2e/**/*.test.ts',
     '**/monitoring/**/*.test.ts',
     '**/mcp-framework/**/*.test.ts',
-    '**/mcp-servers/**/*.test.ts'
+    '**/mcp-servers/**/*.test.ts',
+    '**/database/**/*.test.ts',
+    '**/entities/**/*.test.ts',
+    '**/logger/**/*.test.ts',
+    '**/common/**/*.test.ts',
+    '**/ai-automation/**/*.test.ts',
+    '**/banking-integration/**/*.test.ts'
   ]
 };

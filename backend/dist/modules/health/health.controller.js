@@ -25,6 +25,12 @@ let HealthController = class HealthController {
     async getConnectionStatus() {
         return await this.healthService.checkConnectionStatus();
     }
+    async getMCPHealth() {
+        return await this.healthService.checkMCPHealth();
+    }
+    async triggerMCPSync() {
+        return await this.healthService.triggerMCPSync();
+    }
 };
 exports.HealthController = HealthController;
 __decorate([
@@ -45,6 +51,18 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)
 ], HealthController.prototype, "getConnectionStatus", null);
+__decorate([
+    (0, common_1.Get)('mcp'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], HealthController.prototype, "getMCPHealth", null);
+__decorate([
+    (0, common_1.Post)('mcp/sync'),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", []),
+    __metadata("design:returntype", Promise)
+], HealthController.prototype, "triggerMCPSync", null);
 exports.HealthController = HealthController = __decorate([
     (0, common_1.Controller)('health'),
     __metadata("design:paramtypes", [health_service_1.HealthService])

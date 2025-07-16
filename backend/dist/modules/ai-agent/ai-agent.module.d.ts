@@ -1,1 +1,2 @@
-export declare class AIAgentModule {}
+export declare class AIAgentModule {
+}

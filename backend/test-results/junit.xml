@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="LIF3 Financial Dashboard Tests" tests="5" failures="0" errors="0" time="10.527">
-  <testsuite name="MCP Framework Basic Tests" errors="0" failures="0" skipped="0" timestamp="2025-07-15T17:35:49" time="10.379" tests="5">
-    <testcase classname="MCP Framework Basic Tests should be defined" name="MCP Framework Basic Tests should be defined" time="0.002">
+<testsuites name="LIF3 Financial Dashboard Tests" tests="7" failures="0" errors="0" time="11.678">
+  <testsuite name="Banking Integration Demo Tests" errors="0" failures="0" skipped="0" timestamp="2025-07-16T04:52:35" time="11.536" tests="7">
+    <testcase classname="Banking Integration Demo Tests Banking Integration System should define South African banks" name="Banking Integration Demo Tests Banking Integration System should define South African banks" time="0.002">
     </testcase>
-    <testcase classname="MCP Framework Basic Tests should have unified schema" name="MCP Framework Basic Tests should have unified schema" time="0.001">
+    <testcase classname="Banking Integration Demo Tests Banking Integration System should support transaction categorization" name="Banking Integration Demo Tests Banking Integration System should support transaction categorization" time="0">
     </testcase>
-    <testcase classname="MCP Framework Basic Tests should register server successfully" name="MCP Framework Basic Tests should register server successfully" time="0">
+    <testcase classname="Banking Integration Demo Tests Banking Integration System should support fraud detection rules" name="Banking Integration Demo Tests Banking Integration System should support fraud detection rules" time="0.001">
     </testcase>
-    <testcase classname="MCP Framework Basic Tests should register integration successfully" name="MCP Framework Basic Tests should register integration successfully" time="0.001">
+    <testcase classname="Banking Integration Demo Tests Banking Integration System should handle payment instructions" name="Banking Integration Demo Tests Banking Integration System should handle payment instructions" time="0">
     </testcase>
-    <testcase classname="MCP Framework Basic Tests should get servers and integrations" name="MCP Framework Basic Tests should get servers and integrations" time="0">
+    <testcase classname="Banking Integration Demo Tests Banking Integration System should provide banking insights" name="Banking Integration Demo Tests Banking Integration System should provide banking insights" time="0">
+    </testcase>
+    <testcase classname="Banking Integration Demo Tests LIF3 Financial Goals Integration should track financial goals through banking data" name="Banking Integration Demo Tests LIF3 Financial Goals Integration should track financial goals through banking data" time="0">
+    </testcase>
+    <testcase classname="Banking Integration Demo Tests LIF3 Financial Goals Integration should demonstrate expected performance improvements" name="Banking Integration Demo Tests LIF3 Financial Goals Integration should demonstrate expected performance improvements" time="0">
     </testcase>
   </testsuite>
 </testsuites>

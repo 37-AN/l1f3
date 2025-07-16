@@ -8,11 +8,14 @@ export declare class HealthController {
         version: string;
         environment: any;
         timezone: any;
-        freshStart: {
+        unifiedAI: {
             netWorth: string;
             business: string;
-            journey: string;
+            mrr: string;
+            automation: string;
+            performance: string;
         };
+        mcp: any;
     }>;
     getDetailedHealth(): Promise<{
         system: {
@@ -33,17 +36,27 @@ export declare class HealthController {
             discord: boolean;
             claude: boolean;
             email: boolean;
+            mcp: {
+                sentry: boolean;
+                notion: boolean;
+                asana: boolean;
+                github: boolean;
+                slack: boolean;
+            };
         };
         status: string;
         timestamp: string;
         version: string;
         environment: any;
         timezone: any;
-        freshStart: {
+        unifiedAI: {
             netWorth: string;
             business: string;
-            journey: string;
+            mrr: string;
+            automation: string;
+            performance: string;
         };
+        mcp: any;
     }>;
     getConnectionStatus(): Promise<{
         summary: {
@@ -56,4 +69,18 @@ export declare class HealthController {
         overall: string;
         timestamp: string;
     }>;
+    getMCPHealth(): Promise<{
+        status: string;
+        framework: any;
+        targets: any;
+        timestamp: string;
+        error?: undefined;
+    } | {
+        status: string;
+        error: any;
+        timestamp: string;
+        framework?: undefined;
+        targets?: undefined;
+    }>;
+    triggerMCPSync(): Promise<any>;
 }

@@ -13,22 +13,29 @@ exports.HealthService = void 0;
 const common_1 = require("@nestjs/common");
 const config_1 = require("@nestjs/config");
 const test_connections_1 = require("../../scripts/test-connections");
+const mcp_initialization_service_1 = require("../mcp-framework/mcp-initialization.service");
 let HealthService = class HealthService {
-    constructor(configService) {
+    constructor(configService, mcpInitService) {
         this.configService = configService;
+        this.mcpInitService = mcpInitService;
     }
     async checkHealth() {
+        const mcpHealth = await this.mcpInitService.getHealthStatus();
+        const financialTargets = this.mcpInitService.getFinancialTargets();
         return {
             status: 'healthy',
             timestamp: new Date().toISOString(),
             version: '1.0.0',
             environment: this.configService.get('NODE_ENV', 'development'),
             timezone: this.configService.get('TZ', 'Africa/Johannesburg'),
-            freshStart: {
-                netWorth: 'R0 → R1,800,000',
-                business: '43V3R R0 → R4,881 daily',
-                journey: 'Fresh Start Automation Active'
-            }
+            unifiedAI: {
+                netWorth: `R0 → R${financialTargets.netWorthTarget.toLocaleString()}`,
+                business: `43V3R R0 → R${financialTargets.dailyRevenueTarget} daily`,
+                mrr: `Target: R${financialTargets.mrrTarget.toLocaleString()}`,
+                automation: 'MCP Framework Active',
+                performance: '30% faster, 25% savings, 90% automation'
+            },
+            mcp: mcpHealth
         };
     }
     async checkDetailedHealth() {
@@ -52,7 +59,14 @@ let HealthService = class HealthService {
                 googleDrive: !!this.configService.get('GOOGLE_CLIENT_ID'),
                 discord: !!this.configService.get('DISCORD_BOT_TOKEN'),
                 claude: !!this.configService.get('CLAUDE_API_KEY'),
-                email: !!this.configService.get('SMTP_USER')
+                email: !!this.configService.get('SMTP_USER'),
+                mcp: {
+                    sentry: !!this.configService.get('SENTRY_AUTH_TOKEN'),
+                    notion: !!this.configService.get('NOTION_API_TOKEN'),
+                    asana: !!this.configService.get('ASANA_ACCESS_TOKEN'),
+                    github: !!this.configService.get('GITHUB_ACCESS_TOKEN'),
+                    slack: !!this.configService.get('SLACK_BOT_TOKEN')
+                }
             }
         };
     }
@@ -72,10 +86,45 @@ let HealthService = class HealthService {
             timestamp: new Date().toISOString()
         };
     }
+    async checkMCPHealth() {
+        try {
+            const mcpHealth = await this.mcpInitService.getHealthStatus();
+            return {
+                status: 'healthy',
+                framework: mcpHealth,
+                targets: this.mcpInitService.getFinancialTargets(),
+                timestamp: new Date().toISOString()
+            };
+        }
+        catch (error) {
+            return {
+                status: 'error',
+                error: error.message,
+                timestamp: new Date().toISOString()
+            };
+        }
+    }
+    async triggerMCPSync() {
+        try {
+            const result = await this.mcpInitService.triggerFullSync();
+            return {
+                status: 'success',
+                ...result
+            };
+        }
+        catch (error) {
+            return {
+                status: 'error',
+                error: error.message,
+                timestamp: new Date().toISOString()
+            };
+        }
+    }
 };
 exports.HealthService = HealthService;
 exports.HealthService = HealthService = __decorate([
     (0, common_1.Injectable)(),
-    __metadata("design:paramtypes", [config_1.ConfigService])
+    __metadata("design:paramtypes", [config_1.ConfigService,
+        mcp_initialization_service_1.MCPInitializationService])
 ], HealthService);
 //# sourceMappingURL=health.service.js.map

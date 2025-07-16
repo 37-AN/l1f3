@@ -22,13 +22,24 @@ import { RAGModule } from "./modules/rag/rag.module";
 import { JwtModule } from "@nestjs/jwt";
 import { BusinessStrategyModule } from "./modules/business-strategy/business-strategy.module";
 import { AIAgentModule } from "./modules/ai-agent/ai-agent.module";
+import { MCPFrameworkModule } from "./modules/mcp-framework/mcp-framework.module";
+import { AIAutomationModule } from "./modules/ai-automation/ai-automation.module";
+import { BankingIntegrationModule } from "./modules/banking-integration/banking-integration.module";
+import configuration, { mcpConfig } from "./config/configuration";
+import { configValidationSchema } from "./config/validation.schema";
 
 @Module({
   imports: [
-    // Configuration module
+    // Configuration module with validation and structured config
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: [".env.local", ".env"],
+      load: [configuration, mcpConfig],
+      validationSchema: configValidationSchema,
+      validationOptions: {
+        allowUnknown: true,
+        abortEarly: true,
+      },
     }),
 
     // Schedule module for cron jobs
@@ -53,6 +64,12 @@ import { AIAgentModule } from "./modules/ai-agent/ai-agent.module";
     BusinessStrategyModule,
     // AI Agent module
     AIAgentModule,
+    // MCP Framework module for unified integrations
+    MCPFrameworkModule,
+    // AI Automation module for financial goal tracking and intelligent automation
+    AIAutomationModule,
+    // Banking Integration module for South African banking APIs
+    BankingIntegrationModule,
   ],
   controllers: [
     FinancialController,
@@ -74,9 +91,11 @@ import { AIAgentModule } from "./modules/ai-agent/ai-agent.module";
 })
 export class AppModule {
   constructor() {
-    console.log("🏗️  LIF3 Financial Dashboard - App Module Initialized");
-    console.log("📊 FRESH START: Net Worth R0 → R1,800,000 (18-month target)");
+    console.log("🏗️  LIF3 Unified AI Automation Strategy - App Module Initialized");
+    console.log("📊 TARGET: Net Worth R0 → R1,800,000 (30% faster achievement)");
     console.log("🚀 43V3R Daily Revenue Target: R0 → R4,881");
-    console.log("🔄 Database schema ready for fresh start automation");
+    console.log("🤖 MCP Framework: Unified integrations with intelligent automation");
+    console.log("⚡ Performance Targets: 25% expense reduction, 90% task automation");
+    console.log("🔄 Database schema ready for AI-powered financial acceleration");
   }
 }

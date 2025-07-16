@@ -1,0 +1,52 @@
+import { ConfigService } from '@nestjs/config';
+import { AdvancedLoggerService } from '../../../common/logger/advanced-logger.service';
+import { Transaction, BankAccount, FraudAlert } from '../interfaces/banking.interface';
+export interface FraudRule {
+    id: string;
+    name: string;
+    type: 'amount' | 'velocity' | 'location' | 'time' | 'merchant' | 'pattern';
+    enabled: boolean;
+    threshold: number;
+    severity: 'low' | 'medium' | 'high' | 'critical';
+    description: string;
+    weight: number;
+}
+export declare class FraudDetectionService {
+    private readonly configService;
+    private readonly advancedLogger;
+    private readonly logger;
+    private fraudRules;
+    private activeAlerts;
+    private userProfiles;
+    private blacklistedMerchants;
+    private highRiskLocations;
+    constructor(configService: ConfigService, advancedLogger: AdvancedLoggerService);
+    initializeFraudRules(): Promise<void>;
+    analyzeTransaction(transaction: Transaction, account: BankAccount): Promise<number>;
+    private loadFraudRules;
+    private loadBlacklistedMerchants;
+    private loadHighRiskLocations;
+    private buildFraudContext;
+    private calculateFraudScore;
+    private checkAmountAnomaly;
+    private checkVelocityAnomaly;
+    private checkTimeAnomaly;
+    private checkLocationAnomaly;
+    private checkMerchantRisk;
+    private checkPatternAnomaly;
+    private checkDuplicateTransaction;
+    private checkRoundAmountPattern;
+    private checkCardNotPresent;
+    private checkSpendingSurge;
+    private createFraudAlert;
+    private getRecentTransactions;
+    private buildUserProfile;
+    private determineFraudType;
+    private determineSeverity;
+    private getTriggeredRules;
+    getActiveAlertsCount(userId: string): Promise<number>;
+    getAccountAlerts(accountId: string): Promise<FraudAlert[]>;
+    resolveAlert(alertId: string, resolution: string): Promise<void>;
+    getFraudRules(): FraudRule[];
+    updateFraudRule(ruleId: string, updates: Partial<FraudRule>): Promise<void>;
+}

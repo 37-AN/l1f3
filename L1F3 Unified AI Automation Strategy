@@ -1,0 +1,845 @@
+<!DOCTYPE html><html lang="en"><head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>L1F3 Unified AI Automation Strategy: Project Brief for Cursor</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+    <style>
+        :root {
+            --primary: #1e293b;
+            --secondary: #475569;
+            --accent: #3b82f6;
+            --muted: #64748b;
+            --background: #f8fafc;
+            --surface: #ffffff;
+            --border: #e2e8f0;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--background);
+            color: var(--primary);
+            line-height: 1.6;
+        }
+        
+        .serif { font-family: 'Playfair Display', serif; }
+        
+        .toc-container {
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--surface);
+            border-right: 1px solid var(--border);
+            overflow-y: auto;
+            z-index: 1000;
+            padding: 2rem 1.5rem;
+        }
+        
+        .main-content {
+            margin-left: 280px;
+            min-height: 100vh;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+            align-items: center;
+            min-height: 60vh;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff 0%, #94a3b8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .metric-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .metric-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-2px);
+        }
+        
+        .section-header {
+            border-bottom: 3px solid var(--accent);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+        
+        .chart-container {
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            background: var(--surface);
+            border-radius: 12px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th {
+            background: var(--primary);
+            color: white;
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        tr:hover {
+            background: rgba(59, 130, 246, 0.05);
+        }
+        
+        .citation {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .citation:hover {
+            text-decoration: underline;
+        }
+        
+        .pull-quote {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            margin: 2rem 0;
+            font-style: italic;
+            font-size: 1.125rem;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .toc-link {
+            display: block;
+            padding: 0.5rem 0;
+            color: var(--secondary);
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+        
+        .toc-link:hover {
+            color: var(--accent);
+            border-bottom-color: var(--accent);
+        }
+        
+        .toc-link.active {
+            color: var(--accent);
+            font-weight: 600;
+        }
+        
+        @media (max-width: 1024px) {
+            .toc-container {
+                transform: translateX(-100%);
+                transition: transform 0.3s ease;
+            }
+            
+            .toc-container.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+            
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .hero-title {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1rem;
+            }
+            
+            .hero-section {
+                padding: 2rem 0;
+            }
+            
+            .metric-card {
+                padding: 1rem;
+            }
+            
+            .metric-card .text-3xl {
+                font-size: 1.5rem;
+            }
+            
+            section {
+                padding: 1rem;
+            }
+        }
+    </style>
+  </head>
+
+  <body>
+    <!-- Table of Contents -->
+    <nav class="toc-container">
+      <div class="mb-8">
+        <h3 class="serif text-xl font-bold text-slate-800 mb-4">Contents</h3>
+        <a href="#overview" class="toc-link">1. Project Overview &amp; Objectives</a>
+        <a href="#technology" class="toc-link">2. Technology Stack &amp; Integration</a>
+        <a href="#performance" class="toc-link">3. Performance &amp; Financial Targets</a>
+        <a href="#instructions" class="toc-link">4. Instructions for Cursor</a>
+      </div>
+    </nav>
+
+    <!-- Mobile Menu Button -->
+    <button id="mobile-menu-button" class="fixed top-4 left-4 z-50 p-2 bg-blue-600 text-white rounded-lg shadow-lg lg:hidden">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Hero Section -->
+      <section class="hero-section">
+        <div class="container mx-auto px-8 py-16">
+          <div class="hero-grid">
+            <div>
+              <h1 class="hero-title serif">
+                <em>L1F3 Unified AI</em>
+                <br/>
+                Automation Strategy
+              </h1>
+              <p class="hero-subtitle">
+                Transforming financial tracking into intelligent automation for accelerated wealth creation
+              </p>
+              <div class="flex flex-wrap gap-4 mt-8">
+                <span class="px-4 py-2 bg-blue-600 text-white rounded-full text-sm">R1.8M Net Worth Target</span>
+                <span class="px-4 py-2 bg-purple-600 text-white rounded-full text-sm">30% Faster Achievement</span>
+                <span class="px-4 py-2 bg-green-600 text-white rounded-full text-sm">90% Automation</span>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+              <div class="metric-card">
+                <div class="text-3xl font-bold mb-2">R1,800,000</div>
+                <div class="text-sm opacity-80">Net Worth Goal</div>
+              </div>
+              <div class="metric-card">
+                <div class="text-3xl font-bold mb-2">30%</div>
+                <div class="text-sm opacity-80">Faster Achievement</div>
+              </div>
+              <div class="metric-card">
+                <div class="text-3xl font-bold mb-2">R147,917</div>
+                <div class="text-sm opacity-80">Target MRR</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Overview -->
+      <section id="overview" class="container mx-auto px-8 py-16">
+        <div class="section-header">
+          <h2 class="serif text-3xl font-bold text-slate-800">1. Project Overview &amp; Objectives</h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-12">
+          <div class="lg:col-span-2">
+            <h3 class="serif text-2xl font-semibold mb-4 text-slate-800">Core Mission: Implement LIF3 Unified AI Automation Strategy</h3>
+            <p class="text-slate-600 mb-6">
+              The <strong>core mission of this project is the comprehensive implementation of the LIF3 Unified AI Automation Strategy</strong>. This strategy aims to fundamentally transform the existing financial tracking system into a sophisticated, AI-driven command center. The transformation will involve leveraging advanced artificial intelligence, specifically through the <strong>Model Context Protocol (MCP)</strong>, to enable intelligent decision-making and automate a significant portion of financial tasks.
+            </p>
+
+            <div class="pull-quote">
+              &#34;The integration of MCP is a critical enabler for this strategy, allowing the AI to dynamically access and utilize external information, thereby enhancing its capabilities beyond static, pre-trained knowledge.&#34;
+            </div>
+          </div>
+
+          <div class="bg-slate-50 p-6 rounded-lg">
+            <h4 class="font-semibold mb-4 text-slate-800">Key Objectives</h4>
+            <ul class="space-y-3 text-sm text-slate-600">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                AI-driven financial command center
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                MCP integration for dynamic data access
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                Unified approach to financial management
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-green-500 mr-3"></i>
+                Accelerated net worth achievement
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="serif text-2xl font-semibold mb-4 text-slate-800">System Transformation: NestJS/React to Unified Command Center</h3>
+          <p class="text-slate-600 mb-6">
+            The project entails a <strong>significant system transformation, evolving the current NestJS and React-based financial tracking application into a unified AI-powered command center</strong>. This transformation goes beyond mere feature additions; it involves a fundamental architectural shift to support advanced AI capabilities and seamless data integration.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8">
+            <div class="bg-blue-50 p-6 rounded-lg border-l-4 border-blue-500">
+              <h4 class="font-semibold text-blue-800 mb-2">Current State</h4>
+              <ul class="text-sm text-blue-700 space-y-1">
+                <li>• NestJS backend application</li>
+                <li>• React frontend interface</li>
+                <li>• Basic financial tracking</li>
+                <li>• Manual analysis &amp; decisions</li>
+              </ul>
+            </div>
+            <div class="bg-green-50 p-6 rounded-lg border-l-4 border-green-500">
+              <h4 class="font-semibold text-green-800 mb-2">Future State</h4>
+              <ul class="text-sm text-green-700 space-y-1">
+                <li>• AI-powered command center</li>
+                <li>• MCP integration for data access</li>
+                <li>• Predictive analytics &amp; automation</li>
+                <li>• Intelligent decision-making</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-slate-800 text-white p-8 rounded-lg">
+          <h3 class="serif text-2xl font-semibold mb-4">Primary Goal: Accelerate R1,800,000 Net Worth Achievement</h3>
+          <p class="mb-4 opacity-90">
+            The <strong>primary and quantifiable objective of implementing the LIF3 Unified AI Automation Strategy is to significantly accelerate the achievement of a net worth goal of R1,800,000</strong>. This financial target serves as the central benchmark for the project&#39;s success.
+          </p>
+          <p class="opacity-90">
+            The strategy anticipates that the integration of predictive analytics will provide foresight into market trends and investment performance, while advanced AI automation will streamline financial operations, freeing up resources and capital. The <strong>30% faster goal achievement</strong> directly links the technological advancements to this core financial objective.
+          </p>
+        </div>
+      </section>
+
+      <!-- Technology Stack -->
+      <section id="technology" class="bg-slate-50 py-16">
+        <div class="container mx-auto px-8">
+          <div class="section-header">
+            <h2 class="serif text-3xl font-bold text-slate-800">2. Technology Stack &amp; Integration</h2>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-12">
+            <div>
+              <h3 class="serif text-2xl font-semibold mb-4 text-slate-800">Existing Codebase Foundation</h3>
+              <p class="text-slate-600 mb-6">
+                The development will build upon the <strong>existing codebase located in the GitHub repository</strong>
+                <a href="https://github.com/37-AN/l1f3" class="citation" target="_blank">https://github.com/37-AN/l1f3</a>. This repository contains the current implementation of the financial tracking system, built using <strong>NestJS for the backend and React for the frontend</strong>.
+              </p>
+
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h4 class="font-semibold mb-4 text-slate-800">Repository Structure</h4>
+                <div class="font-mono text-sm bg-slate-100 p-4 rounded">
+                  l1f3/
+                  <br/>
+                  ├── frontend/ # React application
+                  <br/>
+                  └── backend/ # NestJS server
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <img src="https://kimi-web-img.moonshot.cn/img/developer.okta.com/93e3fb7c55910602f2c864e71f2d8abba339777e.png" alt="NestJS and React technology stack" class="rounded-lg shadow-lg w-full" size="medium" aspect="wide" query="NestJS React architecture" referrerpolicy="no-referrer" data-modified="1" data-score="11599.00"/>
+            </div>
+          </div>
+
+          <div class="mb-12">
+            <h3 class="serif text-2xl font-semibold mb-6 text-slate-800">Model Context Protocol (MCP) Integration</h3>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h4 class="font-semibold mb-4 text-slate-800 flex items-center">
+                  <i class="fas fa-network-wired text-blue-500 mr-3"></i>
+                  What is MCP?
+                </h4>
+                <p class="text-slate-600 text-sm mb-4">
+                  MCP is an open standard developed by Anthropic, designed to facilitate seamless interaction between AI models and external systems, data sources, and tools.
+                </p>
+                <ul class="text-sm text-slate-600 space-y-2">
+                  <li>• Dynamic context retrieval</li>
+                  <li>• Real-time data integration</li>
+                  <li>• Standardized query format</li>
+                  <li>• Enhanced AI capabilities</li>
+                </ul>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h4 class="font-semibold mb-4 text-slate-800 flex items-center">
+                  <i class="fas fa-cogs text-green-500 mr-3"></i>
+                  Implementation Benefits
+                </h4>
+                <p class="text-slate-600 text-sm mb-4">
+                  MCP will enable the AI command center to access real-time financial data, market information, and user-specific details for intelligent decision-making.
+                </p>
+                <ul class="text-sm text-slate-600 space-y-2">
+                  <li>• Live market data feeds</li>
+                  <li>• External API integration</li>
+                  <li>• Dynamic context awareness</li>
+                  <li>• Enhanced predictive accuracy</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg">
+            <h3 class="serif text-2xl font-semibold mb-4">AI &amp; Analytics Capabilities</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div>
+                <h4 class="font-semibold mb-3 text-blue-200">Advanced AI Automation</h4>
+                <p class="text-blue-100 mb-4">
+                  Sophisticated AI techniques to automate complex financial tasks that traditionally require human intelligence and intervention.
+                </p>
+                <ul class="text-blue-200 text-sm space-y-1">
+                  <li>• Automated investment rebalancing</li>
+                  <li>• Intelligent budget allocation</li>
+                  <li>• Fraud detection systems</li>
+                  <li>• Personalized financial advice</li>
+                </ul>
+              </div>
+              <div>
+                <h4 class="font-semibold mb-3 text-blue-200">Predictive Analytics</h4>
+                <p class="text-blue-100 mb-4">
+                  Using historical and real-time data with machine learning to forecast future financial outcomes and trends.
+                </p>
+                <ul class="text-blue-200 text-sm space-y-1">
+                  <li>• Cash flow trend prediction</li>
+                  <li>• Investment opportunity identification</li>
+                  <li>• Market volatility forecasting</li>
+                  <li>• Net worth projection modeling</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Performance Targets -->
+      <section id="performance" class="container mx-auto px-8 py-16">
+        <div class="section-header">
+          <h2 class="serif text-3xl font-bold text-slate-800">3. Performance &amp; Financial Targets</h2>
+        </div>
+
+        <!-- Net Worth Goal -->
+        <div class="mb-12">
+          <h3 class="serif text-2xl font-semibold mb-6 text-slate-800">Net Worth Goal: R1,800,000</h3>
+          <div class="bg-gradient-to-r from-blue-600 to-purple-600 text-white p-8 rounded-lg mb-8">
+            <div class="text-center">
+              <div class="text-6xl font-bold mb-4">R1,800,000</div>
+              <div class="text-xl opacity-90">Primary Financial Target</div>
+              <p class="mt-4 opacity-90 max-w-2xl mx-auto">
+                The central financial target and key driver for the AI implementation, serving as the primary quantifiable objective against which success will be measured.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Efficiency Gains -->
+        <div class="mb-12">
+          <h3 class="serif text-2xl font-semibold mb-6 text-slate-800">Efficiency Gains</h3>
+
+          <div class="table-container mb-8">
+            <table>
+              <thead>
+                <tr>
+                  <th>Efficiency Metric</th>
+                  <th>Target Value</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-semibold">Faster Goal Achievement</td>
+                  <td class="text-green-600 font-bold">30%</td>
+                  <td>Accelerate achievement of R1,800,000 net worth goal by 30% compared to traditional methods.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold">Reduction in Unnecessary Expenses</td>
+                  <td class="text-green-600 font-bold">25%</td>
+                  <td>Achieve 25% reduction in identified unnecessary expenses through AI-driven analysis.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold">Automation of Routine Financial Tasks</td>
+                  <td class="text-green-600 font-bold">90%</td>
+                  <td>Automate 90% of routine financial tasks like categorization, payments, and reporting.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+              <div class="text-3xl font-bold text-green-600 mb-2">30%</div>
+              <h4 class="font-semibold mb-2">Faster Achievement</h4>
+              <p class="text-sm text-slate-600">
+                AI-driven acceleration through predictive analytics and intelligent automation of wealth-building processes.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+              <div class="text-3xl font-bold text-blue-600 mb-2">25%</div>
+              <h4 class="font-semibold mb-2">Cost Reduction</h4>
+              <p class="text-sm text-slate-600">
+                Identification and elimination of unnecessary expenses through continuous AI monitoring and analysis.
+              </p>
+            </div>
+            <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-purple-500">
+              <div class="text-3xl font-bold text-purple-600 mb-2">90%</div>
+              <h4 class="font-semibold mb-2">Task Automation</h4>
+              <p class="text-sm text-slate-600">
+                Comprehensive automation of routine financial operations, freeing human resources for strategic work.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Business Growth Targets -->
+        <div class="mb-12">
+          <h3 class="serif text-2xl font-semibold mb-6 text-slate-800">43V3R Business Growth Targets</h3>
+
+          <div class="table-container mb-8">
+            <table>
+              <thead>
+                <tr>
+                  <th>Business Growth Metric</th>
+                  <th>Target Value</th>
+                  <th>Description</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="font-semibold">Daily Revenue (43V3R)</td>
+                  <td class="text-blue-600 font-bold">R4,881</td>
+                  <td>Achieve consistent daily revenue stream through optimized business operations.</td>
+                </tr>
+                <tr>
+                  <td class="font-semibold">Monthly Recurring Revenue (MRR)</td>
+                  <td class="text-blue-600 font-bold">R147,917</td>
+                  <td>Establish predictable monthly recurring revenue through subscription-based models.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg">
+              <div class="flex items-center justify-between mb-4">
+                <h4 class="font-semibold text-blue-800">Daily Revenue Target</h4>
+                <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+              </div>
+              <div class="text-4xl font-bold text-blue-600 mb-2">R4,881</div>
+              <p class="text-blue-700 text-sm">
+                Consistent daily income stream supported by AI-optimized sales, marketing, and operational efficiency.
+              </p>
+            </div>
+
+            <div class="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-lg">
+              <div class="flex items-center justify-between mb-4">
+                <h4 class="font-semibold text-purple-800">Monthly Recurring Revenue</h4>
+                <i class="fas fa-sync-alt text-purple-600 text-2xl"></i>
+              </div>
+              <div class="text-4xl font-bold text-purple-600 mb-2">R147,917</div>
+              <p class="text-purple-700 text-sm">
+                Predictable MRR through enhanced customer retention, optimized pricing, and automated subscription management.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Instructions for Cursor -->
+      <section id="instructions" class="bg-slate-50 py-16">
+        <div class="container mx-auto px-8">
+          <div class="section-header">
+            <h2 class="serif text-3xl font-bold text-slate-800">4. Instructions </h2>
+          </div>
+
+          <div class="mb-12">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="serif text-xl font-semibold mb-4 text-slate-800">Code Utilization</h3>
+                <p class="text-slate-600 mb-4">
+                  <strong>Comprehensively utilize all existing code from the designated GitHub repository</strong> at
+                  <a href="https://github.com/37-AN/l1f3" class="citation" target="_blank">https://github.com/37-AN/l1f3</a>.
+                </p>
+                <p class="text-slate-600 text-sm">
+                  The objective is to refactor, enhance, and build upon the current NestJS backend and React frontend rather than starting from scratch.
+                </p>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-sm">
+                <h3 class="serif text-xl font-semibold mb-4 text-slate-800">Documentation Review</h3>
+                <p class="text-slate-600 mb-4">
+                  <strong>Meticulously check the GitHub repository for Markdown (MD) files</strong> including README and documentation.
+                </p>
+                <p class="text-slate-600 text-sm">
+                  This documentation may contain vital information about project setup, architecture, API references, and development plans.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Development Tasks -->
+          <div class="mb-12">
+            <h3 class="serif text-2xl font-semibold mb-6 text-slate-800">Development Tasks</h3>
+
+            <div class="table-container mb-8">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Task ID</th>
+                    <th>Development Task</th>
+                    <th>Key Objectives</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="font-mono text-sm">4.3.1</td>
+                    <td class="font-semibold">Code Analysis</td>
+                    <td>Understand current structure, architecture, data flow, and identify existing AI component usage.</td>
+                  </tr>
+                  <tr>
+                    <td class="font-mono text-sm">4.3.2</td>
+                    <td class="font-semibold">System Refactoring &amp; Updating</td>
+                    <td>Enhance performance, scalability, maintainability; update dependencies; prepare for AI integration.</td>
+                  </tr>
+                  <tr>
+                    <td class="font-mono text-sm">4.3.3</td>
+                    <td class="font-semibold">MCP Integration</td>
+                    <td>Seamlessly connect AI with data sources and APIs by implementing Model Context Protocol.</td>
+                  </tr>
+                  <tr>
+                    <td class="font-mono text-sm">4.3.4</td>
+                    <td class="font-semibold">AI Capability Enhancement</td>
+                    <td>Implement intelligent decision-making and advanced automation (anomaly detection, AI agents).</td>
+                  </tr>
+                  <tr>
+                    <td class="font-mono text-sm">4.3.5</td>
+                    <td class="font-semibold">Predictive Analytics Implementation</td>
+                    <td>Develop models for forecasting financial trends, net worth projection, and risk assessment.</td>
+                  </tr>
+                  <tr>
+                    <td class="font-mono text-sm">4.3.6</td>
+                    <td class="font-semibold">Feature Focus</td>
+                    <td>Prioritize features contributing directly to R1.8M net worth and automation metrics goals.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Task Details -->
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+              <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-blue-500">
+                <h4 class="font-semibold mb-3 text-blue-800">Code Analysis &amp; Refactoring</h4>
+                <p class="text-slate-600 text-sm mb-3">
+                  Thorough analysis of NestJS backend and React frontend to understand architecture and identify integration points for AI capabilities.
+                </p>
+                <ul class="text-sm text-slate-600 space-y-1">
+                  <li>• Architectural pattern identification</li>
+                  <li>• Data flow analysis</li>
+                  <li>• Performance bottleneck detection</li>
+                  <li>• Technical debt assessment</li>
+                </ul>
+              </div>
+
+              <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-green-500">
+                <h4 class="font-semibold mb-3 text-green-800">MCP Integration &amp; AI Enhancement</h4>
+                <p class="text-slate-600 text-sm mb-3">
+                  Implementation of Model Context Protocol to enable dynamic data access and advanced AI decision-making capabilities.
+                </p>
+                <ul class="text-sm text-slate-600 space-y-1">
+                  <li>• MCP client/server setup</li>
+                  <li>• External API integration</li>
+                  <li>• Real-time data processing</li>
+                  <li>• Intelligent automation workflows</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div class="bg-white p-6 rounded-lg shadow-sm border-l-4 border-purple-500">
+                <h4 class="font-semibold mb-3 text-purple-800">Predictive Analytics &amp; Goal Focus</h4>
+                <p class="text-slate-600 text-sm mb-3">
+                  Development of predictive models and strategic feature prioritization to maximize impact on financial targets.
+                </p>
+                <ul class="text-sm text-slate-600 space-y-1">
+                  <li>• Financial trend forecasting</li>
+                  <li>• Risk assessment models</li>
+                  <li>• Net worth projection algorithms</li>
+                  <li>• High-impact feature prioritization</li>
+                </ul>
+              </div>
+
+              <div class="bg-slate-800 text-white p-6 rounded-lg">
+                <h4 class="font-semibold mb-3">Success Metrics</h4>
+                <p class="text-sm opacity-90 mb-3">
+                  All development tasks must align with and contribute to the primary financial and efficiency targets.
+                </p>
+                <div class="grid grid-cols-2 gap-4 text-sm">
+                  <div>
+                    <div class="font-bold text-green-400">R1.8M</div>
+                    <div class="opacity-80">Net Worth Goal</div>
+                  </div>
+                  <div>
+                    <div class="font-bold text-blue-400">30%</div>
+                    <div class="opacity-80">Faster Achievement</div>
+                  </div>
+                  <div>
+                    <div class="font-bold text-purple-400">25%</div>
+                    <div class="opacity-80">Cost Reduction</div>
+                  </div>
+                  <div>
+                    <div class="font-bold text-yellow-400">90%</div>
+                    <div class="opacity-80">Automation Level</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-slate-800 text-white py-12">
+        <div class="container mx-auto px-8">
+          <div class="text-center">
+            <h3 class="serif text-2xl font-bold mb-4">L1F3 Unified AI Automation Strategy</h3>
+            <p class="text-slate-300 mb-6">
+              Transforming financial tracking into intelligent automation for accelerated wealth creation
+            </p>
+            <div class="flex justify-center space-x-8 text-sm">
+              <a href="https://github.com/37-AN/l1f3" class="citation text-blue-400" target="_blank">
+                <i class="fab fa-github mr-2"></i>GitHub Repository
+              </a>
+              <span>•</span>
+              <span>Target Net Worth: R1,800,000</span>
+              <span>•</span>
+              <span>Acceleration Target: 30%</span>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const tocContainer = document.querySelector('.toc-container');
+        
+        mobileMenuButton.addEventListener('click', function(e) {
+            e.stopPropagation();
+            tocContainer.classList.toggle('open');
+        });
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (tocContainer.classList.contains('open') && 
+                !tocContainer.contains(event.target) && 
+                event.target !== mobileMenuButton) {
+                tocContainer.classList.remove('open');
+            }
+        });
+        
+        // Close mobile menu when clicking a TOC link
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 1024) {
+                    tocContainer.classList.remove('open');
+                }
+            });
+        });
+        
+        // Smooth scrolling for TOC links
+        document.querySelectorAll('.toc-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Active TOC link highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const tocLinks = document.querySelectorAll('.toc-link');
+        
+        function updateActiveTocLink() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                // const sectionHeight = section.clientHeight; // Not used in this logic
+                if (window.scrollY >= sectionTop - 60) { // Adjusted threshold
+                    current = section.getAttribute('id');
+                }
+            });
+            
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', updateActiveTocLink);
+        updateActiveTocLink(); // Initial call
+    </script>
+  
+
+</body></html>

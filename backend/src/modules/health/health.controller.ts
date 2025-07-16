@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post } from '@nestjs/common';
 import { HealthService } from './health.service';
 
 @Controller('health')
@@ -18,5 +18,15 @@ export class HealthController {
   @Get('connections')
   async getConnectionStatus() {
     return await this.healthService.checkConnectionStatus();
+  }
+
+  @Get('mcp')
+  async getMCPHealth() {
+    return await this.healthService.checkMCPHealth();
+  }
+
+  @Post('mcp/sync')
+  async triggerMCPSync() {
+    return await this.healthService.triggerMCPSync();
   }
 }

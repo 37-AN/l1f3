@@ -1,18 +1,23 @@
 import { ConfigService } from '@nestjs/config';
+import { MCPInitializationService } from '../mcp-framework/mcp-initialization.service';
 export declare class HealthService {
     private readonly configService;
-    constructor(configService: ConfigService);
+    private readonly mcpInitService;
+    constructor(configService: ConfigService, mcpInitService: MCPInitializationService);
     checkHealth(): Promise<{
         status: string;
         timestamp: string;
         version: string;
         environment: any;
         timezone: any;
-        freshStart: {
+        unifiedAI: {
             netWorth: string;
             business: string;
-            journey: string;
+            mrr: string;
+            automation: string;
+            performance: string;
         };
+        mcp: any;
     }>;
     checkDetailedHealth(): Promise<{
         system: {
@@ -33,17 +38,27 @@ export declare class HealthService {
             discord: boolean;
             claude: boolean;
             email: boolean;
+            mcp: {
+                sentry: boolean;
+                notion: boolean;
+                asana: boolean;
+                github: boolean;
+                slack: boolean;
+            };
         };
         status: string;
         timestamp: string;
         version: string;
         environment: any;
         timezone: any;
-        freshStart: {
+        unifiedAI: {
             netWorth: string;
             business: string;
-            journey: string;
+            mrr: string;
+            automation: string;
+            performance: string;
         };
+        mcp: any;
     }>;
     checkConnectionStatus(): Promise<{
         summary: {
@@ -56,4 +71,18 @@ export declare class HealthService {
         overall: string;
         timestamp: string;
     }>;
+    checkMCPHealth(): Promise<{
+        status: string;
+        framework: any;
+        targets: any;
+        timestamp: string;
+        error?: undefined;
+    } | {
+        status: string;
+        error: any;
+        timestamp: string;
+        framework?: undefined;
+        targets?: undefined;
+    }>;
+    triggerMCPSync(): Promise<any>;
 }
